@@ -6,3 +6,10 @@
 .button{background:var(--blue);color:#fff}.button:hover{background:#287e98}.dark{background:var(--ink)}.dark:hover{background:#303436}.cta{background:var(--blue);color:white}.program:hover{background:#e8f3f7}.brand svg{stroke:white}.hero em{color:white}.split-image span{background:var(--yellow);color:#050505}nav a:hover,nav a[aria-current]{color:#89cce0}.tag{color:#62676b}.hero .eyebrow{color:var(--yellow)}.page-hero em{color:#26758d}
 
 .snow-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}.hero-content,.hero-bottom{z-index:2}@media(prefers-reduced-motion:reduce){.snow-canvas{display:none}}
+
+.reveal-waiting{opacity:0;transform:translateY(24px)}
+.split-image,.page-photo{overflow:hidden}
+.scroll-photo{animation:none;transform:translate3d(0,var(--photo-shift,0px),0) scale(1.12)}
+.hero-content{transform:translate3d(0,var(--hero-shift,0px),0)}
+@media(prefers-reduced-motion:reduce){.reveal-waiting{opacity:1;transform:none}.scroll-photo,.hero-content{transform:none}}
+@media print{.reveal-waiting{opacity:1;transform:none}}

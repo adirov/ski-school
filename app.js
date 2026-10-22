@@ -1,4 +1,5 @@
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('nav');
+import('./scroll-motion.js').catch(()=>{});
 if(document.querySelector('.hero') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const loadSnow=()=>import('./snow.js').catch(()=>{});
   if('requestIdleCallback' in window) requestIdleCallback(loadSnow,{timeout:1500});

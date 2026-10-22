@@ -3,9 +3,9 @@ import html
 
 root=Path(__file__).parent
 photos={
-'hero':'https://images.unsplash.com/photo-1551524164-687a55dd1126?auto=format&fit=crop&w=2400&q=85',
+'hero':'https://images.unsplash.com/photo-1664436341001-b02974ae7524?auto=format&fit=crop&w=2400&q=85',
 'ski':'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1200&q=85',
-'snow':'https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1400&q=85',
+'snow':'https://images.unsplash.com/photo-1660830026772-f8eff2fcb610?auto=format&fit=crop&w=1400&q=85',
 }
 programs=[
 ('private','Индивидуальные уроки','Ваш темп. Ваш прогресс.','Всё внимание инструктора — вам. Разбираем движения, находим уверенность и работаем над тем, что важно именно сейчас.','Один на один','Первый выход на склон или работа над техникой','Персональный план занятия','Темп и сложность под ваш уровень'),
@@ -34,3 +34,4 @@ for p in programs:pages[p[0]]=(p[1],program(p))
 for slug,(title,body) in pages.items():
  (root/link(slug)).write_text(f'<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{title} — СКЛОН</title><meta name="description" content="Горные лыжи и сноуборд: индивидуальные и групповые уроки, курсы, детские занятия. Подберите свой формат обучения."><meta name="theme-color" content="#141614"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head><body class="{slug}"><a class="skip" href="#main">К содержимому</a>{header(slug)}<main id="main">{body}</main>{footer()}</body></html>',encoding='utf-8')
 print('Generated',len(pages),'pages')
+

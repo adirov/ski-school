@@ -4,3 +4,5 @@
 
 /* Revelstoke reference palette: black, white, glacier blue, yellow accent. */
 .button{background:var(--blue);color:#fff}.button:hover{background:#287e98}.dark{background:var(--ink)}.dark:hover{background:#303436}.cta{background:var(--blue);color:white}.program:hover{background:#e8f3f7}.brand svg{stroke:white}.hero em{color:white}.split-image span{background:var(--yellow);color:#050505}nav a:hover,nav a[aria-current]{color:#89cce0}.tag{color:#62676b}.hero .eyebrow{color:var(--yellow)}.page-hero em{color:#26758d}
+
+.snow-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}.hero-content,.hero-bottom{z-index:2}@media(prefers-reduced-motion:reduce){.snow-canvas{display:none}}

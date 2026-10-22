@@ -1,4 +1,9 @@
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('nav');
+if(document.querySelector('.hero') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const loadSnow=()=>import('./snow.js').catch(()=>{});
+  if('requestIdleCallback' in window) requestIdleCallback(loadSnow,{timeout:1500});
+  else setTimeout(loadSnow,300);
+}
 toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);toggle.innerHTML=open?'Закрыть <span>×</span>':'Меню <span>☰</span>'});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){toggle.click();toggle.focus()}});
 const form=document.querySelector('#lesson-form');

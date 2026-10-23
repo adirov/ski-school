@@ -4,7 +4,7 @@ let cleanup = () => {};
 function setup() {
   cleanup();
   if (preference.matches || !('IntersectionObserver' in window)) return;
-  const targets = [...document.querySelectorAll('.section-heading > *, .program, .split-copy > *, .preparation > h2, .preparation > .eyebrow, .three article, .cta > *, .page-hero > :not(.page-photo), .detail-layout > div:first-child, .detail, .faq > *, .contact > *, footer > *')];
+  const targets = [...document.querySelectorAll('.section-heading > *, .program, .split-copy > *, .preparation > h2, .preparation > .eyebrow, .three article, .cta > *, .page-hero > :not(.page-photo), .detail-layout > div:first-child, .detail, .faq > *, .contact > *, .coach, .lesson-step, .lesson-copy > h2, .schedule-row, .location-copy > *, .finder-layout, .lesson-summary > *, .booking-info > *, footer > *')];
   const animations = new Set();
   targets.forEach(element => {
     element.classList.add('reveal-waiting');

@@ -55,8 +55,8 @@
   },
   "snowboard-group-summit": {
     "src": "/images/snowboard-group-summit.jpg",
-    "width": 2150,
-    "height": 1416,
+    "width": 2560,
+    "height": 1686,
     "alt": {
       "ru": "Группа сноубордистов застёгивает крепления на вершине",
       "en": "Group of snowboarders strapping in on a summit"
@@ -82,8 +82,8 @@
   },
   "snowboarders-gear-check": {
     "src": "/images/snowboarders-gear-check.jpg",
-    "width": 2254,
-    "height": 1450,
+    "width": 2560,
+    "height": 1647,
     "alt": {
       "ru": "Сноубордисты проверяют снаряжение перед спуском",
       "en": "Snowboarders checking gear before a descent"

@@ -7,18 +7,22 @@ const slugRedirects = JSON.parse(readFileSync(new URL("./content/redirects.json"
 const STATIC_EXPORT = process.env.NEXT_PUBLIC_STATIC_EXPORT === "1";
 const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "");
 
+/** Image widths for srcset. The static build pre-renders exactly these (scripts/build-pages.mjs). */
+export const DEVICE_SIZES = [480, 640, 828, 1080, 1280, 1600, 2048, 2560];
+export const IMAGE_SIZES = [256, 384];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
   reactStrictMode: true,
   experimental: { globalNotFound: true },
-  images: { formats: ["image/avif", "image/webp"], deviceSizes: [480, 640, 828, 1080, 1280, 1600, 2048] },
+  images: { formats: ["image/avif", "image/webp"], deviceSizes: DEVICE_SIZES, imageSizes: IMAGE_SIZES, qualities: [80] },
 };
 
 if (STATIC_EXPORT) {
   // No server: redirects and headers are written as static files by scripts/build-pages.mjs.
-  Object.assign(nextConfig, { output: "export", basePath, images: { unoptimized: true } });
+  Object.assign(nextConfig, { output: "export", basePath, images: { ...nextConfig.images, loader: "custom", loaderFile: "./src/lib/img-loader.ts" } });
 } else {
   nextConfig.redirects = async () => [
     // Language root. Temporary, so the default can change later without cached 301s.

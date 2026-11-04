@@ -15,6 +15,7 @@ export function Pic({ id, locale, sizes, priority, className, decorative }: Prop
       height={m.height}
       alt={decorative ? "" : m.alt[locale] ?? m.alt.ru ?? ""}
       sizes={sizes}
+      quality={80}
       priority={priority}
       fetchPriority={priority ? "high" : undefined}
       className={className}

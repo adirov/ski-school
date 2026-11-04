@@ -163,7 +163,7 @@ p { margin: 0 0 1em; }
 .wide > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; opacity: .45; }
 .wide .wrap { position: relative; padding-block: clamp(80px, 12vw, 160px); display: grid; gap: 18px; }
 .wide .wrap > * { margin: 0; }
-.wide h2 { max-width: 12ch; }
+.wide h2 { max-width: 18ch; }
 .wide p { max-width: 36em; color: #e2e6e7; font-size: 18px; }
 .wide .label { color: var(--yellow); }
 .band img { width: 100%; height: clamp(200px, 32vw, 420px); object-fit: cover; }

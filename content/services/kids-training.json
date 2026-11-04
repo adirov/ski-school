@@ -1,0 +1,35 @@
+{
+  "slug": "kids-training",
+  "status": "demo",
+  "order": 3,
+  "source": "WhatsApp 03.11.2026: «Детские тренировки». Детали не подтверждены.",
+  "title": {
+    "ru": "Детские тренировки",
+    "en": "Kids' snowboard training"
+  },
+  "summary": {
+    "ru": "Занятия для детей с инструктором.",
+    "en": "Snowboard sessions for children with an instructor."
+  },
+  "body": {
+    "ru": [
+      "Формат для детей с инструктором. Минимальный возраст, длительность, состав групп и правила для родителей ещё не подтверждены."
+    ],
+    "en": [
+      "Sessions for children with an instructor. Minimum age, duration, group composition and rules for parents are not yet confirmed."
+    ]
+  },
+  "levels": [
+    "beginner",
+    "intermediate"
+  ],
+  "format": "both",
+  "image": "shymbulak-beginner-slope",
+  "todo": [
+    "Минимальный возраст",
+    "Длительность",
+    "Индивидуально или группы",
+    "Шлем и защита",
+    "Фото с детских занятий (с согласием родителей)"
+  ]
+}

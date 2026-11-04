@@ -1,0 +1,93 @@
+[
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Что такое Almaty Snowboard?",
+      "en": "What is Almaty Snowboard?"
+    },
+    "a": {
+      "ru": "Almaty Snowboard — бренд сноуборда и активного отдыха в горах Алматы. На сайте собраны предложения школы и полезные материалы для тех, кто хочет кататься в Алматы. Точный список услуг сейчас уточняется, поэтому часть карточек помечена как примеры.",
+      "en": "Almaty Snowboard is a snowboarding and mountain activity brand in Almaty, Kazakhstan. The site lists the school's offers and practical guides for riding in Almaty. The exact list of services is still being confirmed, so some cards are marked as examples."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Заявка на сайте — это бронирование?",
+      "en": "Is a request on the site a booking?"
+    },
+    "a": {
+      "ru": "Нет. Заявка — это запрос. Мы связываемся с вами, уточняем даты, уровень и условия. Бронирование считается подтверждённым только после нашего ответа с подтверждением.",
+      "en": "No. A request is an enquiry. We contact you to confirm dates, level and terms. A booking is confirmed only when we reply with a confirmation."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Как узнать цену?",
+      "en": "How do I find out the price?"
+    },
+    "a": {
+      "ru": "Цены публикуются в карточках после подтверждения владельцем. Пока цены не указаны, мы называем стоимость в ответ на заявку с учётом формата, дат и количества участников.",
+      "en": "Prices appear on the cards once the owner confirms them. Until then we quote a price in reply to your request, based on the format, dates and group size."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Нужен ли опыт, чтобы начать?",
+      "en": "Do I need experience to start?"
+    },
+    "a": {
+      "ru": "Нет. Для новичков подходит занятие с инструктором на пологом учебном склоне. Подробнее в статье «Как начать кататься на сноуборде в Алматы».",
+      "en": "No. Beginners start with an instructor on a gentle learning slope. See our guide on how to start snowboarding in Almaty."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Нужно ли покупать снаряжение?",
+      "en": "Do I need to buy equipment?"
+    },
+    "a": {
+      "ru": "Покупать доску до первых занятий не нужно. Можно ли взять снаряжение у школы, уточняется; на крупных курортах обычно работают пункты проката. Шлем обязателен.",
+      "en": "You do not need to buy a board before your first lessons. Whether the school provides equipment is being confirmed; large resorts usually have rental shops. A helmet is a must."
+    }
+  },
+  {
+    "confirmed": false,
+    "todo": "Языки занятий",
+    "q": {
+      "ru": "На каких языках проходят занятия?",
+      "en": "Which languages are lessons taught in?"
+    },
+    "a": {
+      "ru": "TODO: подтвердить языки.",
+      "en": "TODO: confirm languages."
+    }
+  },
+  {
+    "confirmed": false,
+    "todo": "Политика при непогоде",
+    "q": {
+      "ru": "Что будет, если испортится погода?",
+      "en": "What happens if the weather turns bad?"
+    },
+    "a": {
+      "ru": "TODO: правила переноса и возврата при непогоде.",
+      "en": "TODO: rescheduling and refund rules for bad weather."
+    }
+  },
+  {
+    "confirmed": false,
+    "todo": "Минимальный возраст",
+    "q": {
+      "ru": "С какого возраста можно заниматься?",
+      "en": "What is the minimum age?"
+    },
+    "a": {
+      "ru": "TODO: минимальный возраст для детских тренировок.",
+      "en": "TODO: minimum age for kids' training."
+    }
+  }
+]

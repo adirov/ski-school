@@ -1,0 +1,101 @@
+{
+  "slug": "shymbulak-first-snowboard-day",
+  "status": "demo",
+  "order": 1,
+  "title": {
+    "ru": "Первый день на сноуборде на Шымбулаке",
+    "en": "First snowboard day at Shymbulak"
+  },
+  "summary": {
+    "ru": "Пример программы для новичков: занятие с инструктором на учебном склоне.",
+    "en": "Example program for beginners: a lesson with an instructor on a learning slope."
+  },
+  "description": {
+    "ru": [
+      "Это демонстрационная карточка. Она показывает, как будет выглядеть программа для тех, кто встаёт на сноуборд впервые. Все параметры ниже ждут подтверждения владельцем.",
+      "Идея программы: встреча в оговорённом месте, подбор снаряжения, занятие на пологом склоне и разбор, что тренировать дальше."
+    ],
+    "en": [
+      "This is a demo card. It shows what a program for first-time riders will look like. Every detail below is waiting for the owner's confirmation.",
+      "Program idea: meet at an agreed point, sort out equipment, a lesson on a gentle slope, and a debrief on what to practise next."
+    ]
+  },
+  "images": [
+    "shymbulak-beginner-slope",
+    "shymbulak-slopes-blue-sky"
+  ],
+  "location": {
+    "ru": "Шымбулак, Алматы",
+    "en": "Shymbulak, Almaty"
+  },
+  "route": {
+    "value": null,
+    "todo": "Маршрут и место занятий"
+  },
+  "duration": {
+    "value": null,
+    "todo": "Длительность"
+  },
+  "levels": [
+    "beginner"
+  ],
+  "languages": {
+    "value": null,
+    "todo": "Языки сопровождения"
+  },
+  "format": "both",
+  "groupSize": {
+    "min": null,
+    "max": null,
+    "todo": "Мин./макс. размер группы"
+  },
+  "season": {
+    "value": null,
+    "todo": "Сезон и расписание"
+  },
+  "availability": "request",
+  "price": {
+    "amount": null,
+    "currency": "KZT",
+    "unit": null,
+    "todo": "Цена и единица расчёта (человек или группа)"
+  },
+  "included": {
+    "value": null,
+    "todo": "Что включено"
+  },
+  "notIncluded": {
+    "value": null,
+    "todo": "Что не включено (ски-пасс, прокат, трансфер?)"
+  },
+  "meetingPoint": {
+    "value": null,
+    "todo": "Место встречи и трансфер"
+  },
+  "equipment": {
+    "value": null,
+    "todo": "Необходимое снаряжение и прокат"
+  },
+  "restrictions": {
+    "value": null,
+    "todo": "Возраст и другие ограничения"
+  },
+  "weatherPolicy": {
+    "value": null,
+    "todo": "Что происходит при непогоде или закрытии подъёмников"
+  },
+  "bookingTerms": {
+    "value": null,
+    "todo": "Условия бронирования, предоплаты и отмены"
+  },
+  "faq": [],
+  "relatedArticles": [
+    "how-to-start-snowboarding-almaty",
+    "first-snowboard-lesson-preparation"
+  ],
+  "relatedServices": [
+    "private-lessons",
+    "group-courses"
+  ],
+  "getYourGuideUrl": null
+}

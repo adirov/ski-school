@@ -1,0 +1,33 @@
+{
+  "_readme": "Единый файл фактов о бренде. Всё, где confirmed=false, на сайте в режиме production не показывается и не попадает в JSON-LD. В режиме preview показывается с пометкой TODO. Меняйте confirmed на true только после подтверждения владельцем.",
+  "brand": {
+    "name": "Almaty Snowboard",
+    "legalName": { "value": null, "confirmed": false, "todo": "Юридическое лицо или ИП, БИН/ИИН: нужно для политики конфиденциальности и условий бронирования." },
+    "shortDescription": {
+      "ru": "Almaty Snowboard — сноуборд и активный отдых в горах Алматы и окрестностях.",
+      "en": "Almaty Snowboard is a snowboarding and mountain activity brand in Almaty, Kazakhstan, and the surrounding mountains."
+    },
+    "logo": "/brand/logo.svg",
+    "foundedNote": { "value": { "ru": "Обучаем с 2005 года", "en": "Teaching since 2005" }, "confirmed": false, "todo": "Фраза взята с макета визитки. Подтвердить год и кого он касается (школа, тренер)." },
+    "credentialsNote": { "value": { "ru": "Дипломированные тренеры", "en": "Certified coaches" }, "confirmed": false, "todo": "С макета визитки. Нужны реальные документы: какой диплом или сертификат, у кого из тренеров." }
+  },
+  "contacts": {
+    "person": { "value": { "ru": "Артур Ковалевский", "en": "Artur Kovalevskiy" }, "confirmed": false, "todo": "Имя с макета визитки. Подтвердить, что это контакт для клиентов." },
+    "phone": { "value": "+77005259885", "display": "+7 700 525 9885", "confirmed": false, "todo": "Номер с макета визитки. Отличается от номера агентства (+7 777 525 98 85). Подтвердить номер для звонков." },
+    "whatsapp": { "value": null, "confirmed": false, "todo": "Номер WhatsApp для кнопки. Пока не задан: кнопка WhatsApp на сайте скрыта." },
+    "email": { "value": null, "confirmed": false, "todo": "Почта для клиентов и для политики конфиденциальности." },
+    "instagram": { "value": null, "confirmed": false, "todo": "Ссылка на Instagram школы, если есть." },
+    "telegram": { "value": null, "confirmed": false, "todo": "Telegram, если используется." }
+  },
+  "address": { "value": null, "confirmed": false, "todo": "Физического офиса может не быть. Если его нет, адрес не указываем, а Google Business Profile оформляем как бизнес с зоной обслуживания." },
+  "serviceArea": {
+    "value": { "ru": ["Алматы", "Шымбулак", "горы Заилийского Алатау"], "en": ["Almaty", "Shymbulak", "Trans-Ili Alatau mountains"] },
+    "confirmed": false,
+    "todo": "Подтвердить, где реально проходят занятия и выезды (Шымбулак, Ак-Булак, Космостанция, другие)."
+  },
+  "languages": { "value": ["ru", "en"], "confirmed": false, "todo": "На каких языках ведутся занятия. Казахский?" },
+  "team": [],
+  "teamTodo": "Раздел «Команда» не публикуется, пока нет реальных данных: имя, роль, опыт, квалификация с документами, фото с согласием.",
+  "legal": { "approved": false, "todo": "Тексты условий бронирования и политики — черновики. Нужна проверка владельцем и юристом." },
+  "seasonNote": { "value": null, "confirmed": false, "todo": "Сезон работы школы (месяцы). Не публикуем даты курортов без официального источника." }
+}

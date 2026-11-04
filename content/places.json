@@ -1,0 +1,26 @@
+[
+  {
+    "name": { "ru": "Шымбулак", "en": "Shymbulak" },
+    "text": {
+      "ru": "Главный горнолыжный курорт Алматы над Медеу. Подходит и для первых занятий, и для катания на длинных трассах.",
+      "en": "Almaty's main ski resort above Medeu. Good both for first lessons and for long runs."
+    },
+    "image": "shymbulak-slopes-blue-sky"
+  },
+  {
+    "name": { "ru": "Ак-Булак", "en": "Ak-Bulak" },
+    "text": {
+      "ru": "Курорт в Талгарском ущелье. Спокойная атмосфера для обучения и семейного отдыха.",
+      "en": "A resort in the Talgar gorge. A calm setting for learning and family trips."
+    },
+    "image": "ak-bulak-resort-winter"
+  },
+  {
+    "name": { "ru": "Космостанция", "en": "Kosmostantsiya" },
+    "text": {
+      "ru": "Высокогорье над Большим Алматинским озером. Направление для внетрассового катания с гидом.",
+      "en": "High mountains above Big Almaty Lake. A destination for guided off-piste riding."
+    },
+    "image": "kosmostantsiya-freeride-slopes"
+  }
+]

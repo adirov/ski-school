@@ -1,1 +1,7 @@
-__pycache__/
+node_modules
+.next
+out
+.env
+.env.local
+*.tsbuildinfo
+.api-parked/

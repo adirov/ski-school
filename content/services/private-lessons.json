@@ -1,0 +1,40 @@
+{
+  "slug": "private-lessons",
+  "status": "demo",
+  "order": 1,
+  "source": "Макет визитки и сообщение владельца в WhatsApp 03.11.2026: «Индивидуальные уроки по сноуборду». Детали не подтверждены.",
+  "title": {
+    "ru": "Индивидуальные уроки сноуборда",
+    "en": "Private snowboard lessons"
+  },
+  "summary": {
+    "ru": "Занятие один на один с инструктором: с нуля или чтобы подтянуть технику.",
+    "en": "One-to-one lessons with an instructor, from your first day or to improve your technique."
+  },
+  "body": {
+    "ru": [
+      "Инструктор работает только с вами, поэтому темп и упражнения подстраиваются под ваш уровень и цель.",
+      "Новичку обычно начинают со стойки, торможения и первых поворотов на пологом склоне. Если вы уже катаетесь, занятие можно посвятить конкретной задаче: связанным поворотам, скорости или уверенности на более крутых трассах."
+    ],
+    "en": [
+      "The instructor works only with you, so pace and drills follow your level and goal.",
+      "Beginners usually start with stance, stopping and first turns on a gentle slope. If you already ride, the lesson can focus on one goal: linked turns, speed or confidence on steeper runs."
+    ]
+  },
+  "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+  ],
+  "format": "private",
+  "image": "snowboarder-carving-blue-jacket",
+  "todo": [
+    "Длительность занятия",
+    "Цена и единица расчёта",
+    "Где проходят занятия",
+    "Языки",
+    "Снаряжение и прокат",
+    "Возраст",
+    "Условия отмены"
+  ]
+}

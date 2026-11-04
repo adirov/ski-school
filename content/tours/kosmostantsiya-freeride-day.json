@@ -1,0 +1,99 @@
+{
+  "slug": "kosmostantsiya-freeride-day",
+  "status": "demo",
+  "order": 2,
+  "title": {
+    "ru": "Фрирайд-день у Космостанции",
+    "en": "Freeride day near Kosmostantsiya"
+  },
+  "summary": {
+    "ru": "Пример выезда для опытных райдеров вне подготовленных трасс с гидом.",
+    "en": "Example guided off-piste day for experienced riders."
+  },
+  "description": {
+    "ru": [
+      "Демонстрационная карточка выезда вне трасс. Космостанция — высокогорный район над Большим Алматинским озером; фото в карточке из альбома агентства.",
+      "Перед публикацией владелец должен подтвердить, проводятся ли такие выезды, кто гид, какое снаряжение обязательно и как принимается решение об отмене."
+    ],
+    "en": [
+      "A demo card for an off-piste day. Kosmostantsiya is a high-altitude area above Big Almaty Lake; the photos come from the agency's album.",
+      "Before publishing, the owner needs to confirm whether these trips run, who guides them, which equipment is required and how cancellation decisions are made."
+    ]
+  },
+  "images": [
+    "kosmostantsiya-freeride-slopes",
+    "freeride-tracks-from-above"
+  ],
+  "location": {
+    "ru": "Космостанция, над Большим Алматинским озером",
+    "en": "Kosmostantsiya, above Big Almaty Lake"
+  },
+  "route": {
+    "value": null,
+    "todo": "Маршрут, подъём, перепад высот"
+  },
+  "duration": {
+    "value": null,
+    "todo": "Длительность"
+  },
+  "levels": [
+    "advanced"
+  ],
+  "languages": {
+    "value": null,
+    "todo": "Языки"
+  },
+  "format": "both",
+  "groupSize": {
+    "min": null,
+    "max": null,
+    "todo": "Размер группы"
+  },
+  "season": {
+    "value": null,
+    "todo": "Сезон"
+  },
+  "availability": "request",
+  "price": {
+    "amount": null,
+    "currency": "KZT",
+    "unit": null,
+    "todo": "Цена"
+  },
+  "included": {
+    "value": null,
+    "todo": "Что включено (гид, транспорт, лавинный набор?)"
+  },
+  "notIncluded": {
+    "value": null,
+    "todo": "Что не включено"
+  },
+  "meetingPoint": {
+    "value": null,
+    "todo": "Место встречи и трансфер"
+  },
+  "equipment": {
+    "value": null,
+    "todo": "Обязательное снаряжение: датчик, лопата, щуп?"
+  },
+  "restrictions": {
+    "value": null,
+    "todo": "Требования к уровню, возраст, страховка"
+  },
+  "weatherPolicy": {
+    "value": null,
+    "todo": "Отмена или замена маршрута при лавинной опасности"
+  },
+  "bookingTerms": {
+    "value": null,
+    "todo": "Условия бронирования и отмены"
+  },
+  "faq": [],
+  "relatedArticles": [
+    "what-to-bring-to-the-mountains-almaty"
+  ],
+  "relatedServices": [
+    "off-piste-guiding"
+  ],
+  "getYourGuideUrl": null
+}

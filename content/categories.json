@@ -1,0 +1,5 @@
+{
+  "beginners": { "ru": { "name": "Новичкам", "description": "С чего начать сноуборд в Алматы, первые занятия и типичные ошибки." }, "en": { "name": "Beginners", "description": "How to start snowboarding in Almaty, first lessons and common mistakes." } },
+  "preparation": { "ru": { "name": "Подготовка и снаряжение", "description": "Что взять с собой, как одеться и как выбрать снаряжение." }, "en": { "name": "Preparation & gear", "description": "What to bring, how to dress and how to choose equipment." } },
+  "travel": { "ru": { "name": "Поездки и курорты", "description": "Как добраться до курортов и спланировать зимнюю поездку в Алматы." }, "en": { "name": "Trips & resorts", "description": "Getting to the resorts and planning a winter trip to Almaty." } }
+}

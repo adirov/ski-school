@@ -10,20 +10,11 @@
   },
   "freeride-tracks-from-above": {
     "src": "/images/freeride-tracks-from-above.jpg",
-    "width": 1365,
-    "height": 1843,
+    "width": 1800,
+    "height": 2430,
     "alt": {
       "ru": "Следы сноубордиста на нетронутом снегу, вид сверху",
       "en": "Snowboard tracks in untouched snow, seen from above"
-    }
-  },
-  "heliski-landing-group": {
-    "src": "/images/heliski-landing-group.jpg",
-    "width": 807,
-    "height": 602,
-    "alt": {
-      "ru": "Группа райдеров у вертолёта на высокогорной площадке",
-      "en": "Group of riders beside a helicopter on a high landing spot"
     }
   },
   "kosmostantsiya-freeride-slopes": {
@@ -37,8 +28,8 @@
   },
   "shymbulak-beginner-slope": {
     "src": "/images/shymbulak-beginner-slope.jpg",
-    "width": 800,
-    "height": 533,
+    "width": 2560,
+    "height": 1706,
     "alt": {
       "ru": "Пологий склон Шымбулака в ясный день",
       "en": "Gentle slope at Shymbulak on a clear day"
@@ -64,8 +55,8 @@
   },
   "snowboard-group-summit": {
     "src": "/images/snowboard-group-summit.jpg",
-    "width": 1075,
-    "height": 708,
+    "width": 2150,
+    "height": 1416,
     "alt": {
       "ru": "Группа сноубордистов застёгивает крепления на вершине",
       "en": "Group of snowboarders strapping in on a summit"
@@ -73,8 +64,8 @@
   },
   "snowboarder-carving-blue-jacket": {
     "src": "/images/snowboarder-carving-blue-jacket.jpg",
-    "width": 640,
-    "height": 353,
+    "width": 2560,
+    "height": 1412,
     "alt": {
       "ru": "Сноубордист в синей куртке на склоне, снято с палки для камеры",
       "en": "Snowboarder in a blue jacket on a slope, filmed from a camera pole"
@@ -82,8 +73,8 @@
   },
   "snowboarder-powder-spray": {
     "src": "/images/snowboarder-powder-spray.jpg",
-    "width": 960,
-    "height": 768,
+    "width": 2560,
+    "height": 2048,
     "alt": {
       "ru": "Сноубордист поднимает облако снега на целине под ярким солнцем",
       "en": "Snowboarder spraying powder under bright sun"
@@ -91,8 +82,8 @@
   },
   "snowboarders-gear-check": {
     "src": "/images/snowboarders-gear-check.jpg",
-    "width": 1127,
-    "height": 725,
+    "width": 2254,
+    "height": 1450,
     "alt": {
       "ru": "Сноубордисты проверяют снаряжение перед спуском",
       "en": "Snowboarders checking gear before a descent"
@@ -107,5 +98,14 @@
       "en": "Winter panorama of the Trans-Ili Alatau range"
     }
   },
-  "_note": "Фото из галереи almaty-travel.kz (альбомы Heli Ski, Фрирайд Космостанция, Чимбулак и Медео, Ак Булак). TODO владельцу: подтвердить право использования и прислать свежие фото школы."
+  "_note": "Фото из галереи almaty-travel.kz (альбомы Heli Ski, Фрирайд Космостанция, Чимбулак и Медео, Ак Булак). TODO владельцу: подтвердить право использования и прислать свежие фото школы.",
+  "kosmostantsiya-ridge": {
+    "src": "/images/kosmostantsiya-ridge.jpg",
+    "width": 2560,
+    "height": 1440,
+    "alt": {
+      "ru": "Заснеженные склоны и хребет у Космостанции",
+      "en": "Snowy slopes and ridge near Kosmostantsiya"
+    }
+  }
 }

@@ -168,7 +168,7 @@ export default async function Home({ params }: P) {
 
       {offpiste && (
         <section className="wide" aria-labelledby="wide-h">
-          <Pic id="heliski-landing-group" locale={locale} sizes="100vw" decorative />
+          <Pic id="kosmostantsiya-ridge" locale={locale} sizes="100vw" decorative />
           <div className="wrap">
             <p className="label">{H.wideLabel}</p>
             <h2 id="wide-h">{H.wideTitle}</h2>

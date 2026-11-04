@@ -2,7 +2,9 @@
 // API routes need a server, so they are moved aside for the build and restored afterwards.
 import { execSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync, mkdirSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { dirname, join, extname, basename } from "node:path";
+import sharp from "sharp";
+import { DEVICE_SIZES, IMAGE_SIZES } from "../next.config.mjs";
 
 const base = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "");
 const api = "src/app/api", parked = ".api-parked";
@@ -27,6 +29,13 @@ for (const r of JSON.parse(readFileSync("content/redirects.json", "utf8"))) {
 const walk = (d) => readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(join(d, e.name)) : [join(d, e.name)]));
 for (const f of walk("out").filter((f) => f.endsWith("index.html"))) {
   if (readFileSync(f, "utf8").includes("NEXT_HTTP_ERROR_FALLBACK;404")) rmSync(dirname(f), { recursive: true });
+}
+// Pre-render responsive WebP variants for src/lib/img-loader.ts (no image server on Pages).
+for (const f of readdirSync("public/images").filter((f) => /\.(jpe?g|png|webp)$/i.test(f))) {
+  const name = basename(f, extname(f));
+  for (const w of [...IMAGE_SIZES, ...DEVICE_SIZES]) {
+    await sharp(join("public/images", f)).resize({ width: w, withoutEnlargement: true }).webp({ quality: 80 }).toFile(join("out/images", `${name}-${w}w.webp`));
+  }
 }
 writeFileSync("out/.nojekyll", "");
 console.log(`Static site in out/ (base path "${base || "/"}")`);

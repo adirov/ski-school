@@ -14,11 +14,11 @@
   "body": {
     "ru": [
       "Групповой формат подходит тем, кто хочет учиться вместе с друзьями или в компании людей своего уровня: инструктор ведёт группу, а упражнения подбираются под общий уровень.",
-      "Количество занятий в курсе, размер группы и ближайшие даты мы сообщаем в ответ на заявку."
+      "Курс состоит из пяти занятий по два часа. Размер группы и ближайшие даты сообщаем в ответ на заявку."
     ],
     "en": [
       "The group format suits people who want to learn with friends or with others at the same level: the instructor leads the group and picks drills for its level.",
-      "We share the number of sessions, group size and upcoming dates in reply to your request."
+      "The course has five two-hour sessions. We share group size and upcoming dates in reply to your request."
     ]
   },
   "levels": [
@@ -26,9 +26,12 @@
     "intermediate"
   ],
   "format": "group",
+  "duration": {
+    "ru": "5 занятий по 2 часа",
+    "en": "5 sessions, 2 hours each"
+  },
   "image": "snowboard-group-summit",
   "todo": [
-    "Количество и длительность занятий",
     "Мин./макс. размер группы",
     "Цена",
     "Расписание",

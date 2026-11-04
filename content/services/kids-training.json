@@ -14,11 +14,11 @@
   "body": {
     "ru": [
       "Тренировки для детей с инструктором: спокойный темп, понятные упражнения и внимание к безопасности.",
-      "Возраст, длительность занятия и формат (индивидуально или в детской группе) обсуждаем с родителями при записи."
+      "Занимаемся с детьми от 5 лет, занятие длится полтора часа. Формат (индивидуально или в детской группе) обсуждаем с родителями при записи."
     ],
     "en": [
       "Snowboard sessions for children with an instructor: a calm pace, clear drills and attention to safety.",
-      "We agree on age, session length and format (private or in a kids group) with parents when you book."
+      "We teach children from 5 years old, and a session lasts an hour and a half. We agree on the format (private or in a kids group) with parents when you book."
     ]
   },
   "levels": [
@@ -26,10 +26,16 @@
     "intermediate"
   ],
   "format": "both",
+  "duration": {
+    "ru": "1,5 часа",
+    "en": "1.5 hours"
+  },
+  "age": {
+    "ru": "от 5 лет",
+    "en": "from 5 years"
+  },
   "image": "shymbulak-beginner-slope",
   "todo": [
-    "Минимальный возраст",
-    "Длительность",
     "Индивидуально или группы",
     "Шлем и защита",
     "Фото с детских занятий (с согласием родителей)"

@@ -79,15 +79,14 @@
     }
   },
   {
-    "confirmed": false,
-    "todo": "Минимальный возраст",
+    "confirmed": true,
     "q": {
       "ru": "С какого возраста можно заниматься?",
       "en": "What is the minimum age?"
     },
     "a": {
-      "ru": "TODO: минимальный возраст для детских тренировок.",
-      "en": "TODO: minimum age for kids' training."
+      "ru": "Детские тренировки проводим с 5 лет. Занятие длится полтора часа.",
+      "en": "Kids' training starts from 5 years old. A session lasts an hour and a half."
     }
   }
 ]

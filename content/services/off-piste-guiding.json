@@ -25,6 +25,10 @@
     "advanced"
   ],
   "format": "both",
+  "duration": {
+    "ru": "Полный день",
+    "en": "Full day"
+  },
   "image": "freeride-tracks-from-above",
   "todo": [
     "Квалификация гидов (документы)",

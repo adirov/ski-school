@@ -74,6 +74,9 @@ const ServiceSchema = z.object({
   body: LList,
   levels: z.array(Level),
   format: z.enum(["private", "group", "both"]),
+  /** Typical duration / age shown on the site. Set by Emil 04.11.2026 as defaults until the owner gives exact values. */
+  duration: LText.optional(),
+  age: LText.optional(),
   image: z.string(),
   todo: z.array(z.string()).default([]),
 });

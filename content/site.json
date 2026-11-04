@@ -45,9 +45,9 @@
       "todo": "С визитки школы (материалы владельца, 04.11.2026). Перепроверить при запуске; если этот номер в WhatsApp, заполнить contacts.whatsapp."
     },
     "whatsapp": {
-      "value": null,
-      "confirmed": false,
-      "todo": "Номер WhatsApp для кнопки. Пока не задан: кнопка WhatsApp на сайте скрыта."
+      "value": "+77005259885",
+      "confirmed": true,
+      "todo": "Номер с визитки; запись через WhatsApp согласована Эмилем 04.11.2026."
     },
     "email": {
       "value": null,

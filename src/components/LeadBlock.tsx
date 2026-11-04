@@ -5,6 +5,7 @@ import { STATIC_EXPORT } from "@/lib/env";
 import { deliveryConfigured, isDryRun } from "@/lib/lead-server";
 import { offerOptions } from "@/lib/offers";
 import { LeadForm } from "./LeadForm";
+import { WaForm } from "./WaForm";
 
 /**
  * The request form is rendered only when the server can actually deliver requests
@@ -19,6 +20,8 @@ export function LeadBlock({ locale, preselect, id }: { locale: Locale; preselect
   const phone = site.contacts.phone;
   const person = site.contacts.person;
   const wa = site.contacts.whatsapp;
+  if (factVisible(wa) && wa.value)
+    return <WaForm d={{ form: d.form, levels: d.levels }} offers={offerOptions(locale)} preselect={preselect} id={id} wa={String(wa.value).replace(/\D/g, "")} phone={factVisible(phone) ? { value: String(phone.value), display: String(phone.display) } : null} />;
   const name = factVisible(person) ? (person.value as Record<string, string>)[locale] ?? (person.value as Record<string, string>).ru : null;
   return (
     <div className="offline" id={id}>

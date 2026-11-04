@@ -65,6 +65,18 @@ export default async function ServicePage({ params }: P) {
               <dt>{d.tour.format}</dt>
               <dd>{d.format[s.format]}</dd>
             </div>
+            {s.age && (
+              <div>
+                <dt>{d.tour.age}</dt>
+                <dd>{t(s.age, locale)}</dd>
+              </div>
+            )}
+            {s.duration && (
+              <div>
+                <dt>{d.tour.duration}</dt>
+                <dd>{t(s.duration, locale)}</dd>
+              </div>
+            )}
             <div>
               <dt>{d.tour.price}</dt>
               <dd>{d.tour.priceOnRequest}</dd>

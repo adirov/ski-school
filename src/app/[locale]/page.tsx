@@ -138,9 +138,15 @@ export default async function Home({ params }: P) {
                   <span>{T.format}</span>
                   <span>{d.format[s.format]}</span>
                 </li>
+                {s.age && (
+                  <li>
+                    <span>{T.age}</span>
+                    <span>{t(s.age, locale)}</span>
+                  </li>
+                )}
                 <li>
                   <span>{T.duration}</span>
-                  <span className="tbd">{T.tbd}</span>
+                  {s.duration ? <span>{t(s.duration, locale)}</span> : <span className="tbd">{T.tbd}</span>}
                 </li>
                 <li>
                   <span>{T.price}</span>

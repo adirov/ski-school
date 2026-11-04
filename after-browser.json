@@ -1,0 +1,52 @@
+[
+  {
+    "phase": "after",
+    "label": "desktop",
+    "width": 1440,
+    "height": 900,
+    "deviceScaleFactor": 2,
+    "errors": [],
+    "hero": {
+      "src": "http://127.0.0.1:4173/ski-school/images/snowboarder-powder-spray-2560w.webp",
+      "width": 1440,
+      "height": 1152,
+      "rect": {
+        "x": 0,
+        "y": 73,
+        "width": 1440,
+        "height": 742.59375,
+        "top": 73,
+        "right": 1440,
+        "bottom": 815.59375,
+        "left": 0
+      },
+      "objectPosition": "50% 70%"
+    },
+    "horizontalOverflow": false
+  },
+  {
+    "phase": "after",
+    "label": "mobile",
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2,
+    "errors": [],
+    "hero": {
+      "src": "http://127.0.0.1:4173/ski-school/images/snowboarder-powder-spray-828w.webp",
+      "width": 390,
+      "height": 311,
+      "rect": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 607.515625,
+        "top": 65,
+        "right": 390,
+        "bottom": 672.515625,
+        "left": 0
+      },
+      "objectPosition": "50% 70%"
+    },
+    "horizontalOverflow": false
+  }
+]

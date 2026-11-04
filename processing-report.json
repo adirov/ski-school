@@ -1,0 +1,112 @@
+{
+  "device": "NVIDIA GeForce RTX 5060",
+  "torch": "2.11.0+cu128",
+  "models": {
+    "fbcnn_color.pth": "8b0e4ef23d59cf7ac934a342cb31a17619e4fa4a0b3374a9d78c5174312387e8",
+    "RealESRGAN_x4plus.pth": "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1"
+  },
+  "pipeline": "FBCNN color blind QF -> RealESRGAN_x4plus 4x FP16, tiles 256/pad32 -> Lanczos <=2560 -> B&W -> fine grain sigma1.25% -> JPEG q88 4:4:4",
+  "face_restoration": false,
+  "files": [
+    {
+      "name": "shymbulak-beginner-slope.jpg",
+      "input": [
+        800,
+        533
+      ],
+      "upscaled": [
+        3200,
+        2132
+      ],
+      "output": [
+        2560,
+        1706
+      ],
+      "bytes": 782436,
+      "fbcnn_predicted_control": 0.318115234375,
+      "elapsed_seconds": 4.13,
+      "input_sha256": "0b93720742ab356d0e02935c4bf3defac3ce161405e16b840aab5b07b2763493",
+      "output_sha256": "50c53c3de32e4ad9ec54a031ac61f11a148ae49f7142173e98f49cdcdb92e242"
+    },
+    {
+      "name": "snowboard-group-summit.jpg",
+      "input": [
+        1075,
+        708
+      ],
+      "upscaled": [
+        4300,
+        2832
+      ],
+      "output": [
+        2560,
+        1686
+      ],
+      "bytes": 617445,
+      "fbcnn_predicted_control": 0.158203125,
+      "elapsed_seconds": 5.62,
+      "input_sha256": "9f38132db5060c5edce86ad7b3ab357f7aafc9dd652adfac4142ea0e92843867",
+      "output_sha256": "493023cf4380aff37120aaa3d0c09db678d66fea3a5ac65a75e1158484707569"
+    },
+    {
+      "name": "snowboarder-carving-blue-jacket.jpg",
+      "input": [
+        640,
+        353
+      ],
+      "upscaled": [
+        2560,
+        1412
+      ],
+      "output": [
+        2560,
+        1412
+      ],
+      "bytes": 637104,
+      "fbcnn_predicted_control": 0.1622314453125,
+      "elapsed_seconds": 1.78,
+      "input_sha256": "be1ca4a0c21c2d06f64fac77cb0db628d5e2086cae056b7d33da088dde79b6a1",
+      "output_sha256": "c5b23f7c8ead7cf672e40c1abafe0ba5fd721b60156486323c7ba71ac87a40e4"
+    },
+    {
+      "name": "snowboarder-powder-spray.jpg",
+      "input": [
+        960,
+        768
+      ],
+      "upscaled": [
+        3840,
+        3072
+      ],
+      "output": [
+        2560,
+        2048
+      ],
+      "bytes": 647519,
+      "fbcnn_predicted_control": 0.1607666015625,
+      "elapsed_seconds": 5.44,
+      "input_sha256": "f79db85120233298809ce168df92075967d5289dd0b65e47e59581b73fc04282",
+      "output_sha256": "6282d4811e6228b702e16440a8e2383e4676062afec40cd1a779b514fd13e063"
+    },
+    {
+      "name": "snowboarders-gear-check.jpg",
+      "input": [
+        1127,
+        725
+      ],
+      "upscaled": [
+        4508,
+        2900
+      ],
+      "output": [
+        2560,
+        1647
+      ],
+      "bytes": 597448,
+      "fbcnn_predicted_control": 0.153564453125,
+      "elapsed_seconds": 5.69,
+      "input_sha256": "000ac26020cd39241f6a8e9aa4739c89b211238c82459b82975c5e7138be014a",
+      "output_sha256": "3c0a4f64560a505dec4961e1a95624a021300a6bb22d049d9c7c85dfe5ea630f"
+    }
+  ]
+}

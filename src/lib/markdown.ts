@@ -1,4 +1,5 @@
 import { Marked, type Tokens } from "marked";
+import { BASE_PATH } from "./env";
 
 export type TocItem = { id: string; text: string; depth: number };
 
@@ -42,7 +43,8 @@ export function renderMarkdown(md: string): { html: string; toc: TocItem[] } {
       },
     },
   });
-  const html = marked.parse(md, { async: false }) as string;
+  // Site-absolute links in content ("/ru/contact/") must carry the deploy sub-path (GitHub Pages).
+  const html = (marked.parse(md, { async: false }) as string).replace(/href="\/(?!\/)/g, `href="${BASE_PATH}/`);
   return { html, toc };
 }
 

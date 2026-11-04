@@ -3,7 +3,7 @@ title: "Как подготовиться к первому занятию по 
 description: "Что сделать за неделю, накануне и утром перед первым уроком сноуборда: физическая подготовка, одежда, прокат, еда и что сказать инструктору."
 translationKey: first-lesson
 category: beginners
-status: draft
+status: published
 author: "Редакция Almaty Snowboard"
 reviewer: null
 published: "2026-11-04"

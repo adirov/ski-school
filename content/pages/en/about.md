@@ -1,20 +1,23 @@
 ---
 title: "About us"
-description: "What Almaty Snowboard is: snowboarding and mountain activities in Almaty, Kazakhstan. How we work and which details are still being confirmed."
+description: "Almaty Snowboard is a snowboard school in Almaty: private lessons, group courses, kids training and guided off-piste riding. How we work."
 ---
 
 ## In short
 
-Almaty Snowboard is a snowboarding and mountain activity brand in Almaty, Kazakhstan, and the surrounding mountains. We help you choose how to ride: lessons, mountain trips and guiding, and we explain how to prepare for your trip.
+Almaty Snowboard is a snowboard school in Almaty, Kazakhstan. We ride in the Trans-Ili Alatau mountains above the city and help you start from scratch, improve your technique or go off-piste with a guide.
+
+## What we offer
+
+- **Private lessons**: the instructor works only with you, at your pace and level.
+- **Group courses**: several sessions in a group of riders at the same level.
+- **Kids training**: a calm pace and attention to safety.
+- **Guided off-piste riding**: for experienced riders, with the route chosen by snow and weather.
 
 ## How we work
 
-1. You send a request or ask a question.
-2. We check your level, dates, group size and wishes.
-3. We suggest a format and terms, and confirm the booking once you agree.
+1. You call us or send a request with your dates, level and group size.
+2. We suggest a format and tell you the price and meeting point.
+3. A booking is confirmed only once we reply to confirm it.
 
-A request on the site is not a booking until we confirm it.
-
-## What is still being confirmed
-
-The site is being prepared for launch. We publish the list of services, prices, team members and coach qualifications only once they are confirmed and documented. Until then those sections are hidden or marked as examples.
+Mountain weather changes fast. For safety the instructor may adjust the program or move a session; we agree on this in advance.

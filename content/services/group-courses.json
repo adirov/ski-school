@@ -1,8 +1,8 @@
 {
   "slug": "group-courses",
-  "status": "demo",
+  "status": "confirmed",
   "order": 2,
-  "source": "Макет визитки и WhatsApp 03.11.2026: «Групповые курсы по сноуборду». Детали не подтверждены.",
+  "source": "Макет визитки и WhatsApp 03.11.2026: «Групповые курсы по сноуборду». Направление подтверждено владельцем; длительность, цены и расписание сообщаются по заявке.",
   "title": {
     "ru": "Групповые курсы сноуборда",
     "en": "Group snowboard courses"
@@ -13,12 +13,12 @@
   },
   "body": {
     "ru": [
-      "Групповой формат подходит тем, кто хочет учиться вместе с друзьями или в компании людей своего уровня.",
-      "Количество занятий, размер группы и расписание пока уточняются."
+      "Групповой формат подходит тем, кто хочет учиться вместе с друзьями или в компании людей своего уровня: инструктор ведёт группу, а упражнения подбираются под общий уровень.",
+      "Количество занятий в курсе, размер группы и ближайшие даты мы сообщаем в ответ на заявку."
     ],
     "en": [
-      "The group format suits people who want to learn with friends or with others at the same level.",
-      "The number of sessions, group size and schedule are still being confirmed."
+      "The group format suits people who want to learn with friends or with others at the same level: the instructor leads the group and picks drills for its level.",
+      "We share the number of sessions, group size and upcoming dates in reply to your request."
     ]
   },
   "levels": [

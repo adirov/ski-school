@@ -10,7 +10,7 @@ import { getDict } from "@/i18n/dictionaries";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
-import { IS_PREVIEW, SITE_URL } from "@/lib/env";
+import { SITE_URL } from "@/lib/env";
 import { routesFor } from "@/lib/routes";
 import { site } from "@/lib/content";
 
@@ -39,7 +39,6 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         <a className="skip" href="#main">
           {d.skip}
         </a>
-        {IS_PREVIEW && <div className="previewbar">{d.previewBar}</div>}
         <Header locale={locale} pathsByLocale={pathsByLocale} />
         <main id="main" tabIndex={-1}>
           {children}

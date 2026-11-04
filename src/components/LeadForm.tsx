@@ -6,7 +6,7 @@ import type { Dict } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import type { LeadResult } from "@/lib/lead";
 import { track } from "@/lib/track";
-import { IS_PREVIEW, STATIC_EXPORT } from "@/lib/env";
+import { STATIC_EXPORT } from "@/lib/env";
 
 type Option = { value: string; label: string };
 type Props = { locale: Locale; d: Pick<Dict, "form" | "levels">; offers: Option[]; preselect?: string; id?: string };
@@ -179,7 +179,6 @@ export function LeadForm({ locale, d, offers, preselect, id = "lead" }: Props) {
         {state === "error" && (
           <p className="alert alert--error">
             {f.errors[code] ?? f.errors.server}
-            {code === "not_configured" && IS_PREVIEW && <span className="alert__dev"> {STATIC_EXPORT ? f.devStaticExport : f.devNotConfigured}</span>}
           </p>
         )}
         {state === "dry" && <p className="alert alert--info">{f.dryRun}</p>}

@@ -5,18 +5,19 @@ import { getDict } from "@/i18n/dictionaries";
 import { categories, getArticle, getArticles, getService, getTour, img, site, t } from "@/lib/content";
 import { renderMarkdown } from "@/lib/markdown";
 import { abs, buildMetadata } from "@/lib/seo";
-import { availableLocales } from "@/lib/routes";
+import { availableLocales, nonEmptyParams } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Pic } from "@/components/Pic";
 import { Prose } from "@/components/Prose";
 import { Badge, Todo } from "@/components/Badge";
 import { JsonLd } from "@/components/JsonLd";
+import { IS_PREVIEW } from "@/lib/env";
 
 type P = { params: Promise<{ locale: string; slug: string }> };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return publishedLocales.flatMap((locale) => getArticles(locale).map((a) => ({ locale, slug: a.slug })));
+  return nonEmptyParams(publishedLocales.flatMap((locale) => getArticles(locale).map((a) => ({ locale, slug: a.slug }))), { locale: "ru", slug: "_none" });
 }
 
 export async function generateMetadata({ params }: P) {
@@ -149,7 +150,7 @@ export default async function ArticlePage({ params }: P) {
                       ) : (
                         s.title
                       )}{" "}
-                      <span className="small">({s.checked ? `${G.sourceChecked} ${s.checked}` : G.sourceUnchecked})</span>
+                      {s.checked ? <span className="small">({G.sourceChecked} {s.checked})</span> : IS_PREVIEW ? <span className="small">({G.sourceUnchecked})</span> : null}
                     </li>
                   ))}
                 </ul>

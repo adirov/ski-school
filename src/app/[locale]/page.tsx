@@ -7,10 +7,9 @@ import { availableLocales } from "@/lib/routes";
 import { IS_PREVIEW } from "@/lib/env";
 import { Pic } from "@/components/Pic";
 import { OfferCard } from "@/components/OfferCard";
-import { LeadForm } from "@/components/LeadForm";
+import { LeadBlock } from "@/components/LeadBlock";
 import { JsonLd } from "@/components/JsonLd";
 import { Badge, Todo } from "@/components/Badge";
-import { offerOptions } from "@/lib/offers";
 
 type P = { params: Promise<{ locale: string }> };
 
@@ -39,7 +38,7 @@ export default async function Home({ params }: P) {
   const articles = getArticles(locale).slice(0, 3);
   const faq = getFaq(locale).slice(0, 5);
   const creds = [site.brand.foundedNote, site.brand.credentialsNote].filter(factVisible);
-  const area = factVisible(site.serviceArea) ? (site.serviceArea.value[locale] as string[]) : null;
+  const showPlaces = site.placesConfirmed || IS_PREVIEW;
   const phone = site.contacts.phone;
   const person = site.contacts.person;
   const offpiste = services.find((s) => s.slug === "off-piste-guiding");
@@ -56,7 +55,7 @@ export default async function Home({ params }: P) {
         <div className="wrap hero__body">
           <p className="label">{H.eyebrow}</p>
           <h1>
-            {h1a} <em>{h1em}</em> {h1b}
+            <span>{h1a}</span> <em>{h1em}</em> <span>{h1b}</span>
           </h1>
           {creds.length > 0 && (
             <ul className="creds">
@@ -81,13 +80,13 @@ export default async function Home({ params }: P) {
             </Link>
           </div>
         </div>
-        {area && (
+        {showPlaces && (
           <div className="hero__meta">
             <div className="wrap">
-              {area.map((a) => (
-                <span key={a}>{a}</span>
+              {places.map((pl) => (
+                <span key={pl.image}>{t(pl.name, locale)}</span>
               ))}
-              {!site.serviceArea.confirmed && <Todo>{site.serviceArea.todo}</Todo>}
+              {!site.placesConfirmed && <Todo>{site.serviceArea.todo}</Todo>}
             </div>
           </div>
         )}
@@ -210,11 +209,11 @@ export default async function Home({ params }: P) {
         </div>
       </section>
 
-      {area && (
+      {showPlaces && (
         <section className="places" aria-labelledby="places-h">
           <div className="wrap">
             <h2 id="places-h">{H.placesTitle}</h2>
-            {!site.serviceArea.confirmed && <Todo>{site.serviceArea.todo}</Todo>}
+            {!site.placesConfirmed && <Todo>{site.serviceArea.todo}</Todo>}
             <div className="places__grid">
               {places.map((pl) => (
                 <article key={pl.image} className="place">
@@ -324,7 +323,7 @@ export default async function Home({ params }: P) {
               </div>
             )}
           </div>
-          <LeadForm locale={locale} d={{ form: d.form, levels: d.levels }} offers={offerOptions(locale)} />
+          <LeadBlock locale={locale} />
         </div>
       </section>
     </>

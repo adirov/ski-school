@@ -11,6 +11,19 @@ export default function GlobalNotFound() {
   return (
     <html lang="ru">
       <body>
+        <header className="hdr">
+          <div className="wrap hdr__row">
+            <Link href="/ru/" className="logo">
+              <svg viewBox="0 0 54 32" aria-hidden="true" width="54" height="32">
+                <path fill="currentColor" d="M1 31 17 9l3.2 4.6L26 2l7.6 13.2 3.4-4.4L53 31H45L37 20.5 34.2 24 26 10.5 21.6 19.5 17 14 7.5 31z" />
+              </svg>
+              <span>
+                <b>ALMATY</b>
+                <small>SNOWBOARD SCHOOL<i>.</i></small>
+              </span>
+            </Link>
+          </div>
+        </header>
         <main id="main" className="nf">
           <div className="wrap nf__inner">
             <p className="kicker">404</p>
@@ -19,6 +32,7 @@ export default function GlobalNotFound() {
             <p lang="en">Page not found. The address may have changed.</p>
             <div className="btns">
               <Link className="btn btn--accent" href="/ru/">На главную</Link>
+              <Link className="btn btn--ghost" href="/ru/tours/">Туры и занятия</Link>
               <Link className="btn btn--ghost" href="/en/" lang="en">English home</Link>
             </div>
           </div>

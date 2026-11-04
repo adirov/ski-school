@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LOCALES, X_DEFAULT_LOCALE, type Locale } from "@/i18n/config";
-import { IS_PREVIEW, SITE_URL } from "./env";
+import { INDEXABLE, SITE_URL } from "./env";
 import { site, img } from "./content";
 
 export const abs = (p: string) => (p.startsWith("http") ? p : `${SITE_URL}${p}`);
@@ -33,7 +33,7 @@ export function buildMetadata(m: MetaInput): Metadata {
     languages["x-default"] = abs(localePath(xd, m.path));
   }
   const image = img(m.image ?? "trans-ili-alatau-panorama");
-  const noindex = IS_PREVIEW || m.noindex;
+  const noindex = !INDEXABLE || m.noindex;
   return {
     title: m.title,
     description: m.description,

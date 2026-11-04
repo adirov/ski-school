@@ -1,8 +1,8 @@
 {
   "slug": "kids-training",
-  "status": "demo",
+  "status": "confirmed",
   "order": 3,
-  "source": "WhatsApp 03.11.2026: «Детские тренировки». Детали не подтверждены.",
+  "source": "WhatsApp 03.11.2026: «Детские тренировки». Направление подтверждено владельцем; длительность, цены и расписание сообщаются по заявке.",
   "title": {
     "ru": "Детские тренировки",
     "en": "Kids' snowboard training"
@@ -13,10 +13,12 @@
   },
   "body": {
     "ru": [
-      "Формат для детей с инструктором. Минимальный возраст, длительность, состав групп и правила для родителей ещё не подтверждены."
+      "Тренировки для детей с инструктором: спокойный темп, понятные упражнения и внимание к безопасности.",
+      "Возраст, длительность занятия и формат (индивидуально или в детской группе) обсуждаем с родителями при записи."
     ],
     "en": [
-      "Sessions for children with an instructor. Minimum age, duration, group composition and rules for parents are not yet confirmed."
+      "Snowboard sessions for children with an instructor: a calm pace, clear drills and attention to safety.",
+      "We agree on age, session length and format (private or in a kids group) with parents when you book."
     ]
   },
   "levels": [

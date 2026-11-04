@@ -1,8 +1,8 @@
 {
   "slug": "off-piste-guiding",
-  "status": "demo",
+  "status": "confirmed",
   "order": 4,
-  "source": "Макет плаката и WhatsApp 03.11.2026: «Внетрассовое катание/гиды». Детали не подтверждены.",
+  "source": "Макет плаката и WhatsApp 03.11.2026: «Внетрассовое катание/гиды». Направление подтверждено владельцем; длительность, цены и расписание сообщаются по заявке.",
   "title": {
     "ru": "Внетрассовое катание с гидом",
     "en": "Guided off-piste riding"
@@ -13,12 +13,12 @@
   },
   "body": {
     "ru": [
-      "Катание вне трасс связано с лавинной опасностью и требует опыта, снаряжения и сопровождения. Маршрут зависит от снега, погоды и подготовки группы.",
-      "Квалификация гидов, обязательное лавинное снаряжение и порядок отмены из-за условий пока не подтверждены."
+      "Катание вне трасс связано с лавинной опасностью и требует опыта, снаряжения и сопровождения гида. Маршрут выбирается по снегу, погоде и подготовке группы.",
+      "Требования к снаряжению, маршрут и условия переноса из-за погоды мы согласуем с вами до выезда."
     ],
     "en": [
-      "Off-piste riding involves avalanche risk and needs experience, equipment and a guide. The route depends on snow, weather and the group's ability.",
-      "Guide qualifications, required avalanche equipment and the cancellation rules for poor conditions are not yet confirmed."
+      "Off-piste riding carries avalanche risk and needs experience, equipment and a guide. The route is chosen by snow, weather and the group’s ability.",
+      "We agree on required equipment, the route and weather rescheduling with you before the trip."
     ]
   },
   "levels": [

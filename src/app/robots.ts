@@ -1,6 +1,6 @@
 export const dynamic = "force-static";
 import type { MetadataRoute } from "next";
-import { IS_PREVIEW, SITE_URL } from "@/lib/env";
+import { INDEXABLE, SITE_URL } from "@/lib/env";
 
 /**
  * Pages we do not want indexed (thank-you, search, preview builds) use <meta name="robots" content="noindex">,
@@ -9,6 +9,6 @@ import { IS_PREVIEW, SITE_URL } from "@/lib/env";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: "*", allow: "/", disallow: ["/api/"] }],
-    sitemap: IS_PREVIEW ? undefined : `${SITE_URL}/sitemap.xml`,
+    sitemap: !INDEXABLE ? undefined : `${SITE_URL}/sitemap.xml`,
   };
 }

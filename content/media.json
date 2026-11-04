@@ -107,5 +107,14 @@
       "ru": "Заснеженные склоны и хребет у Космостанции",
       "en": "Snowy slopes and ridge near Kosmostantsiya"
     }
+  },
+  "kosmostantsiya-tracks": {
+    "src": "/images/kosmostantsiya-tracks.jpg",
+    "width": 2560,
+    "height": 1440,
+    "alt": {
+      "ru": "Следы райдеров на склоне у Космостанции",
+      "en": "Riders' tracks on a slope near Kosmostantsiya"
+    }
   }
 }

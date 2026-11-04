@@ -51,7 +51,7 @@ export default async function Home({ params }: P) {
       <JsonLd data={[organizationLd(locale), websiteLd(locale)]} />
 
       <section className="hero">
-        <Pic id="snowboarder-powder-spray" locale={locale} sizes="100vw" priority className="hero__img" />
+        <Pic id="kosmostantsiya-ridge" locale={locale} sizes="100vw" priority className="hero__img" />
         <div className="wrap hero__body">
           <p className="label">{H.eyebrow}</p>
           <h1>
@@ -168,7 +168,7 @@ export default async function Home({ params }: P) {
 
       {offpiste && (
         <section className="wide" aria-labelledby="wide-h">
-          <Pic id="kosmostantsiya-ridge" locale={locale} sizes="100vw" decorative />
+          <Pic id="kosmostantsiya-tracks" locale={locale} sizes="100vw" decorative />
           <div className="wrap">
             <p className="label">{H.wideLabel}</p>
             <h2 id="wide-h">{H.wideTitle}</h2>

@@ -4,7 +4,7 @@ import { publishedLocales, type Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
 import { getArticles, getCategories } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
-import { availableLocales } from "@/lib/routes";
+import { availableLocales, nonEmptyParams } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PostList } from "@/components/PostList";
 
@@ -12,7 +12,7 @@ type P = { params: Promise<{ locale: string; category: string }> };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return publishedLocales.flatMap((locale) => getCategories(locale).map((c) => ({ locale, category: c.key })));
+  return nonEmptyParams(publishedLocales.flatMap((locale) => getCategories(locale).map((c) => ({ locale, category: c.key }))), { locale: "ru", category: "_none" });
 }
 
 export async function generateMetadata({ params }: P) {

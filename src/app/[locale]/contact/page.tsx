@@ -3,9 +3,8 @@ import { getDict } from "@/i18n/dictionaries";
 import { factVisible, site } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { availableLocales } from "@/lib/routes";
-import { offerOptions } from "@/lib/offers";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { LeadForm } from "@/components/LeadForm";
+import { LeadBlock } from "@/components/LeadBlock";
 import { Todo } from "@/components/Badge";
 
 type P = { params: Promise<{ locale: string }> };
@@ -73,7 +72,7 @@ export default async function ContactPage({ params }: P) {
             </>
           )}
         </div>
-        <LeadForm locale={locale} d={{ form: d.form, levels: d.levels }} offers={offerOptions(locale)} />
+        <LeadBlock locale={locale} />
       </div>
     </div>
   );

@@ -30,3 +30,11 @@ export function routesFor(locale: Locale): RouteEntry[] {
 export function availableLocales(path: string): Locale[] {
   return publishedLocales.filter((l) => routesFor(l).some((r) => r.path === path));
 }
+
+/**
+ * `output: export` refuses a dynamic route with no params. When a collection is empty (e.g. no confirmed tours yet),
+ * emit one placeholder that renders notFound(); scripts/build-pages.mjs deletes such pages from the export.
+ */
+export function nonEmptyParams<T extends Record<string, string>>(params: T[], placeholder: T): T[] {
+  return params.length ? params : [placeholder];
+}

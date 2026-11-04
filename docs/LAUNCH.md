@@ -19,7 +19,7 @@
 
 ```
 NEXT_PUBLIC_SITE_URL=https://ваш-домен
-NEXT_PUBLIC_SITE_MODE=preview          # пока не готов контент
+NEXT_PUBLIC_ALLOW_INDEXING=0          # 1 только на боевом домене
 LEAD_FORM_SECRET=<длинная случайная строка>
 LEAD_TELEGRAM_BOT_TOKEN=… и LEAD_TELEGRAM_CHAT_ID=…   (или LEAD_WEBHOOK_URL)
 ```
@@ -33,7 +33,7 @@ LEAD_TELEGRAM_BOT_TOKEN=… и LEAD_TELEGRAM_CHAT_ID=…   (или LEAD_WEBHOOK_
 1. Создать бота у @BotFather, добавить его в рабочий чат, узнать chat id.
 2. Вписать токен и chat id в переменные, пересобрать.
 3. Отправить тестовую заявку с сайта и убедиться, что она пришла.
-4. Пока канал не настроен, форма честно пишет «отправка не подключена» и не показывает успех.
+4. Пока канал не настроен, формы на сайте нет: вместо неё показывается запись по телефону. Форма появляется после пересборки с настроенным каналом.
 
 ## 4. Домен
 
@@ -42,14 +42,16 @@ LEAD_TELEGRAM_BOT_TOKEN=… и LEAD_TELEGRAM_CHAT_ID=…   (или LEAD_WEBHOOK_
 3. Дождаться HTTPS-сертификата. Проверить, что `http://` и `www.` перенаправляют на один основной адрес.
 4. `NEXT_PUBLIC_SITE_URL` = этот адрес, пересобрать.
 
-## 5. Production-режим
+## 5. Включение индексации
 
-Когда владелец подтвердил услуги, цены и контакты:
+Сайт по умолчанию собирается в рабочем режиме (без плашек и TODO), но закрыт от поиска, пока индексацию не включили явно:
 
-1. В `content/` выставить `status: confirmed` для услуг и туров, `published` для статей, `confirmed: true` для фактов.
-2. Юридические тексты проверены → `site.json → legal.approved: true`.
-3. `NEXT_PUBLIC_SITE_MODE=production`, пересобрать.
-4. Проверить: нет плашек «Пример», `/sitemap.xml` содержит страницы, в коде страниц нет `noindex` (кроме служебных: спасибо, поиск).
+1. `NEXT_PUBLIC_SITE_URL=https://ваш-домен` (настоящий https-адрес; с localhost или example.com сборка остановится с ошибкой).
+2. `NEXT_PUBLIC_ALLOW_INDEXING=1`, пересобрать.
+3. Проверить: на страницах `<meta name="robots" content="index, follow">`, `/sitemap.xml` содержит страницы, `/robots.txt` ссылается на sitemap. Страницы «Спасибо», поиск и юридические тексты (пока `legal.approved: false`) остаются noindex.
+4. На GitHub Pages то же самое задаётся переменными репозитория `SITE_URL` и `ALLOW_INDEXING` (Settings → Secrets and variables → Actions → Variables).
+
+Режим `NEXT_PUBLIC_SITE_MODE=preview` нужен только для внутренней проверки: показывает примеры, черновики и TODO, всегда noindex.
 
 ## 6. Google Search Console
 

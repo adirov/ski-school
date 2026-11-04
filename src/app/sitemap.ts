@@ -1,12 +1,12 @@
 export const dynamic = "force-static";
 import type { MetadataRoute } from "next";
 import { LOCALES, X_DEFAULT_LOCALE, publishedLocales } from "@/i18n/config";
-import { IS_PREVIEW, SITE_URL } from "@/lib/env";
+import { INDEXABLE, SITE_URL } from "@/lib/env";
 import { availableLocales, routesFor } from "@/lib/routes";
 
-/** Only canonical, indexable pages of published locales. Empty in preview mode (everything is noindex there). */
+/** Only canonical, indexable pages of published locales. Empty unless the build is indexable (see INDEXABLE in lib/env.ts). */
 export default function sitemap(): MetadataRoute.Sitemap {
-  if (IS_PREVIEW) return [];
+  if (!INDEXABLE) return [];
   const out: MetadataRoute.Sitemap = [];
   for (const locale of publishedLocales) {
     for (const r of routesFor(locale)) {

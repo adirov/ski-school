@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { IS_PREVIEW } from "@/lib/env";
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
 import { getPage, site } from "@/lib/content";
@@ -27,7 +28,7 @@ export function MdPage({ name, locale, legal }: { name: string; locale: Locale; 
     <div className="wrap page wrap--narrow">
       <Breadcrumbs label="Breadcrumbs" items={[{ name: d.breadcrumbs.home, href: `/${locale}/` }, { name: p.title, href: `/${locale}/${name}/` }]} />
       <h1>{p.title}</h1>
-      {legal && !site.legal.approved && <p className="alert alert--warn">{d.legalDraft}</p>}
+      {legal && !site.legal.approved && IS_PREVIEW && <p className="alert alert--warn">{d.legalDraft}</p>}
       <Prose html={html} />
     </div>
   );

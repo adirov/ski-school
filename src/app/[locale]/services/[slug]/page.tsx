@@ -4,19 +4,18 @@ import { publishedLocales, type Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
 import { getArticles, getService, getServices, getTours, t } from "@/lib/content";
 import { abs, buildMetadata } from "@/lib/seo";
-import { availableLocales } from "@/lib/routes";
-import { offerOptions } from "@/lib/offers";
+import { availableLocales, nonEmptyParams } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Pic } from "@/components/Pic";
 import { Badge, Todo } from "@/components/Badge";
-import { LeadForm } from "@/components/LeadForm";
+import { LeadBlock } from "@/components/LeadBlock";
 import { JsonLd } from "@/components/JsonLd";
 
 type P = { params: Promise<{ locale: string; slug: string }> };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return publishedLocales.flatMap((locale) => getServices(locale).map((s) => ({ locale, slug: s.slug })));
+  return nonEmptyParams(publishedLocales.flatMap((locale) => getServices(locale).map((s) => ({ locale, slug: s.slug }))), { locale: "ru", slug: "_none" });
 }
 
 export async function generateMetadata({ params }: P) {
@@ -118,7 +117,7 @@ export default async function ServicePage({ params }: P) {
           <h2 id="req-h">{d.cta.request}</h2>
           <p>{d.tour.bookingNote}</p>
         </div>
-        <LeadForm locale={locale} d={{ form: d.form, levels: d.levels }} offers={offerOptions(locale)} preselect={title} id="request-form" />
+        <LeadBlock locale={locale} preselect={title} id="request-form" />
       </section>
     </div>
   );

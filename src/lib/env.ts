@@ -2,11 +2,23 @@
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, "");
 
 /**
- * preview: demo offers and draft articles are visible with badges, every page is noindex.
- * production: only confirmed/published content, indexing allowed.
+ * Content mode.
+ * production (default): only confirmed services and published articles, no badges or TODO notes.
+ * preview: internal review build. Demo offers, drafts and TODO notes are visible and every page is noindex.
  */
-export const SITE_MODE: "preview" | "production" = process.env.NEXT_PUBLIC_SITE_MODE === "production" ? "production" : "preview";
+export const SITE_MODE: "preview" | "production" = process.env.NEXT_PUBLIC_SITE_MODE === "preview" ? "preview" : "production";
 export const IS_PREVIEW = SITE_MODE === "preview";
+
+/**
+ * Indexing is a separate switch so a staging copy can show the real site and still stay out of search.
+ * Pages are indexable only in production mode, with NEXT_PUBLIC_ALLOW_INDEXING=1 and a real public origin.
+ */
+const wantsIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === "1";
+const hasRealOrigin = /^https:\/\//.test(SITE_URL) && !/localhost|127\.0\.0\.1|example\.(com|org)/.test(SITE_URL);
+if (wantsIndexing && !IS_PREVIEW && !hasRealOrigin) {
+  throw new Error(`NEXT_PUBLIC_ALLOW_INDEXING=1 needs NEXT_PUBLIC_SITE_URL set to the public https origin (got "${SITE_URL}").`);
+}
+export const INDEXABLE = wantsIndexing && !IS_PREVIEW && hasRealOrigin;
 
 export const ANALYTICS = {
   ga4: process.env.NEXT_PUBLIC_GA4_ID || "",

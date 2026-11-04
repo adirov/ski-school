@@ -17,13 +17,17 @@
   --yellow: #f3c623;
   --on-accent: #0b0b0c;
   --danger: #ff8a7a;
-  --f-display: "Montserrat Variable", "Montserrat", "Segoe UI", Arial, sans-serif;
-  --f-body: "Golos Text", "Segoe UI", Roboto, Arial, sans-serif;
+  --f-display: "Montserrat Variable", "Montserrat", "Montserrat Fallback", "Segoe UI", Arial, sans-serif;
+  --f-body: "Golos Text", "Golos Fallback", "Segoe UI", Roboto, Arial, sans-serif;
   --wrap: 1240px;
   --gut: max(16px, env(safe-area-inset-left, 0px));
   --gut-r: max(16px, env(safe-area-inset-right, 0px));
   --radius: 3px;
 }
+
+/* Metric-matched local fallbacks (same widths and line boxes as the web fonts) so the swap does not shift the layout. */
+@font-face { font-family: "Montserrat Fallback"; src: local("Arial Bold"), local("Arial-BoldMT"), local("Arial"); size-adjust: 112.5%; ascent-override: 86%; descent-override: 22.3%; line-gap-override: 0%; }
+@font-face { font-family: "Golos Fallback"; src: local("Arial"), local("ArialMT"); size-adjust: 108.6%; ascent-override: 90.3%; descent-override: 20.3%; line-gap-override: 0%; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; background: var(--bg); }
@@ -60,7 +64,6 @@ p { margin: 0 0 1em; }
 
 .skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--accent); color: var(--on-accent); padding: 10px 16px; border-radius: var(--radius); }
 .skip:focus { top: 12px; color: var(--on-accent); }
-.previewbar { background: var(--surface); color: var(--muted); font: 500 12.5px/1.4 var(--f-body); text-align: center; padding: 8px var(--gut-r) 8px var(--gut); border-bottom: 1px solid var(--line); }
 .stripe { height: 5px; background: linear-gradient(90deg, var(--accent) 0 62%, var(--yellow) 62% 100%); }
 
 /* buttons */
@@ -436,3 +439,22 @@ p { margin: 0 0 1em; }
   .creds li + li::before { content: none; }
   .ftr__grid { grid-template-columns: 1fr; }
 }
+
+/* contact fallback when the request form is not connected */
+.offline { background: var(--bg); border: 1px solid var(--line); border-top: 4px solid var(--accent); padding: clamp(20px, 3vw, 34px); display: grid; gap: 14px; align-content: start; min-width: 0; }
+.offline > * { margin: 0; }
+.offline p { color: var(--ink-2); }
+.offline .btn { white-space: normal; text-align: center; }
+
+/* audit fixes: comfortable tap targets, long words */
+.link-arrow { display: inline-flex; align-items: center; min-height: 44px; }
+.form__check input { width: 24px; height: 24px; }
+.prose, .page__head, .article__head { overflow-wrap: break-word; }
+.prog__txt h2 { font-size: clamp(28px, 3.3vw, 46px); overflow-wrap: break-word; hyphens: auto; max-width: 100%; }
+h1, h2 { overflow-wrap: break-word; }
+@media (max-width: 640px) {
+  .hero::after { background: linear-gradient(0deg, rgba(11,11,12,.92) 0%, rgba(11,11,12,.78) 55%, rgba(11,11,12,.55) 100%); }
+}
+/* One line per phrase: the line count no longer depends on font metrics, so the font swap cannot push the hero down. */
+.hero h1 > span, .hero h1 > em { display: block; }
+@media (max-width: 640px) { .hero h1 { font-size: clamp(30px, 9vw, 46px); } }

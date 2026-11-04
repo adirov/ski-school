@@ -48,6 +48,7 @@ const SiteSchema = z.object({
   contacts: z.object({ person: Fact, phone: Fact, whatsapp: Fact, email: Fact, instagram: Fact, telegram: Fact }),
   address: Fact,
   serviceArea: Fact,
+  placesConfirmed: z.boolean().default(false),
   languages: Fact,
   team: z.array(z.object({ name: LText, role: LText, bio: LText, photo: z.string().optional(), credentials: z.array(z.string()).default([]) })),
   teamTodo: z.string().optional(),

@@ -1,4 +1,4 @@
-# Static copy of the site on GitHub Pages (no lead form: Pages has no server).
+# Static copy of the site on GitHub Pages. Pages has no server, so the request form is replaced by phone booking.
 # Settings → Pages → Source: GitHub Actions.
 name: Deploy to GitHub Pages
 on:
@@ -27,8 +27,10 @@ jobs:
       - run: npm run build:pages
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
-          NEXT_PUBLIC_SITE_MODE: preview
+          # Public origin for canonical/sitemap. Set the repository variable SITE_URL once a custom domain is attached.
+          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || steps.pages.outputs.base_url }}
+          # Search indexing stays off until the repository variable ALLOW_INDEXING is set to 1.
+          NEXT_PUBLIC_ALLOW_INDEXING: ${{ vars.ALLOW_INDEXING }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

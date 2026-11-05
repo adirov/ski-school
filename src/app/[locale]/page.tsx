@@ -26,7 +26,6 @@ export async function generateMetadata({ params }: P) {
   });
 }
 
-const pad = (n: number) => String(n).padStart(2, "0");
 
 export default async function Home({ params }: P) {
   const locale = (await params).locale as Locale;
@@ -41,7 +40,6 @@ export default async function Home({ params }: P) {
   const showPlaces = site.placesConfirmed || IS_PREVIEW;
   const phone = site.contacts.phone;
   const person = site.contacts.person;
-  const offpiste = services.find((s) => s.slug === "off-piste-guiding");
   const [h1a, h1em, h1b] = H.h1Parts;
   const pv = person.value as unknown;
   const personName = typeof pv === "string" ? pv : (pv as Record<string, string> | null)?.[locale] ?? (pv as Record<string, string> | null)?.ru;
@@ -53,7 +51,6 @@ export default async function Home({ params }: P) {
       <section className="hero">
         <Pic id="snowboarder-powder-spray" locale={locale} sizes="100vw" priority className="hero__img" />
         <div className="wrap hero__body">
-          <p className="label">{H.eyebrow}</p>
           <h1>
             <span>{h1a}</span> <em>{h1em}</em> <span>{h1b}</span>
           </h1>
@@ -69,9 +66,6 @@ export default async function Home({ params }: P) {
           )}
           <p className="hero__lead">{H.lead}</p>
           <div className="btns">
-            <Link className="btn btn--accent" href={`/${locale}/tours/`}>
-              {d.cta.pick}
-            </Link>
             <a className="btn btn--yellow" href="#lead">
               {d.cta.request}
             </a>
@@ -98,7 +92,6 @@ export default async function Home({ params }: P) {
           <div className="wrap">
             <div className="idx__head">
               <h2 id="idx-h">{services.length === 4 ? H.idxTitle : d.tours.services}</h2>
-              <p>{H.idxLead}</p>
             </div>
             <div className={`tiles tiles--${Math.min(services.length, 4)}`}>
               {services.map((s, i) => (
@@ -106,7 +99,6 @@ export default async function Home({ params }: P) {
                   <Pic id={s.image} locale={locale} sizes="(max-width: 1080px) 50vw, 300px" decorative />
                   {s.status === "demo" && <Badge kind="demo">{d.badge.demo}</Badge>}
                   <span className="tile__txt">
-                    <span className="label">{d.format[s.format]}</span>
                     <span className="tile__h">{t(s.title, locale)}</span>
                   </span>
                 </Link>
@@ -123,9 +115,6 @@ export default async function Home({ params }: P) {
               <Pic id={s.image} locale={locale} sizes="(max-width: 820px) 100vw, 55vw" />
             </div>
             <div className="prog__txt">
-              <p className="label">
-                {pad(i + 1)} · {d.format[s.format]}
-              </p>
               {s.status === "demo" && <Badge kind="demo">{d.badge.demo}</Badge>}
               <h2 id={`svc-${s.slug}-h`}>{t(s.title, locale)}</h2>
               <p>{t(s.summary, locale)}</p>
@@ -166,21 +155,6 @@ export default async function Home({ params }: P) {
         </section>
       ))}
 
-      {offpiste && (
-        <section className="wide" aria-labelledby="wide-h">
-          <Pic id="kosmostantsiya-ridge" locale={locale} sizes="100vw" decorative />
-          <div className="wrap">
-            <p className="label">{H.wideLabel}</p>
-            <h2 id="wide-h">{H.wideTitle}</h2>
-            <p>{H.wideText}</p>
-            <div>
-              <Link className="btn btn--accent" href={`/${locale}/services/${offpiste.slug}/`}>
-                {H.wideCta}
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
 
       {tours.length > 0 && (
         <section className="section" aria-labelledby="offers-h">
@@ -201,19 +175,6 @@ export default async function Home({ params }: P) {
         </section>
       )}
 
-      <section className="steps-sec" aria-labelledby="process-h">
-        <div className="wrap">
-          <h2 id="process-h">{H.processTitle}</h2>
-          <ol className="steps">
-            {H.process.map(([h, p]) => (
-              <li key={h}>
-                <h3>{h}</h3>
-                <p>{p}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
 
       {showPlaces && (
         <section className="places" aria-labelledby="places-h">
@@ -309,7 +270,6 @@ export default async function Home({ params }: P) {
           <div className="book__info">
             <h2 id="lead-h">{H.formTitle}</h2>
             <p>{H.formLead}</p>
-            <span className="rule" aria-hidden="true" />
             {(factVisible(person) || factVisible(phone)) && (
               <div className="person">
                 <span className="person__ico" aria-hidden="true">

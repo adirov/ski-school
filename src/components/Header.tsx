@@ -40,8 +40,8 @@ export function Header({ locale, pathsByLocale }: { locale: Locale; pathsByLocal
           </ul>
         </nav>
         <LangSwitch locale={locale} pathsByLocale={pathsByLocale} label={d.langSwitch} />
-        <Link href={`/${locale}/tours/`} className="btn btn--accent hdr__cta">
-          {d.cta.pick}
+        <Link href={`/${locale}/contact/`} className="btn btn--accent hdr__cta">
+          {d.cta.request}
         </Link>
         <MobileNav links={links} labels={{ menu: d.menu, close: d.close }} cta={{ href: `/${locale}/contact/`, label: d.cta.request }} />
       </div>

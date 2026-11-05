@@ -41,7 +41,7 @@ export default async function ToursPage({ params }: P) {
               <h2 id="svc-h">{d.tours.services}</h2>
               <div className="grid grid--4">
                 {services.map((s, i) => (
-                  <OfferCard priority={i < 2} key={s.slug} locale={locale} href={`/${locale}/services/${s.slug}/`} title={t(s.title, locale)!} summary={t(s.summary, locale)!} image={s.image} levels={s.levels} status={s.status} kicker={d.format[s.format]} />
+                  <OfferCard priority={i < 2} key={s.slug} locale={locale} href={`/${locale}/services/${s.slug}/`} title={t(s.title, locale)!} summary={t(s.summary, locale)!} image={s.image} levels={s.levels} status={s.status} />
                 ))}
               </div>
             </section>

@@ -30,7 +30,7 @@ export function LeadBlock({ locale, preselect, id }: { locale: Locale; preselect
       {factVisible(phone) && (
         <div className="btns">
           <a className="btn btn--accent" href={`tel:${phone.value}`} data-track="phone_click">
-            {d.form.call}: {phone.display}
+            <span>{d.form.call}: <span className="nowrap">{phone.display}</span></span>
           </a>
           {factVisible(wa) && (
             <a className="btn btn--ghost" href={`https://wa.me/${String(wa.value).replace(/\D/g, "")}`} target="_blank" rel="noopener" data-track="whatsapp_click">

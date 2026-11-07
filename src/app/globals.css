@@ -447,3 +447,28 @@ h1, h2 { overflow-wrap: break-word; }
 /* One line per phrase: the line count no longer depends on font metrics, so the font swap cannot push the hero down. */
 .hero h1 > span, .hero h1 > em { display: block; }
 @media (max-width: 640px) { .hero h1 { font-size: clamp(30px, 9vw, 46px); } }
+
+/* mobile layout pass (2026-11-07) */
+/* Buttons: wrapped labels stay centred, keep breathing room when they take two lines. */
+.btn { text-align: center; padding-block: 10px; }
+.nowrap { white-space: nowrap; }
+/* Long Russian words in headings: real hyphenation instead of a bare mid-word break. */
+h1, h2, h3, .h3, .tile__h { -webkit-hyphens: auto; hyphens: auto; }
+/* Long option labels in selects: ellipsis instead of a cut glyph under the arrow. */
+.form select { text-overflow: ellipsis; padding-right: 36px; }
+/* Form actions: one column of equal full-width buttons. */
+.form__row.btns { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 4px; }
+.form__row.btns .btn { width: 100%; }
+/* Filter chips: equal-width rows instead of a ragged wrap. */
+@media (max-width: 640px) {
+  h1 { font-size: clamp(26px, 8vw, 36px); }
+  .article__head h1 { font-size: clamp(26px, 8vw, 36px); }
+  .btn { letter-spacing: 0.02em; padding-inline: 16px; }
+  .lf--chips .lf__opts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lf--chips .lf__opts button { text-align: center; padding-inline: 4px; font-size: 11.5px; letter-spacing: 0.02em; -webkit-hyphens: auto; hyphens: auto; }
+  .cats ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cats li { display: flex; }
+  .cats a, .cats span { display: flex; align-items: center; justify-content: center; width: 100%; text-align: center; font-size: 11.5px; letter-spacing: 0.04em; line-height: 1.25; padding-inline: 8px; }
+  .cats li:first-child:nth-last-child(odd) { grid-column: 1 / -1; }
+  .search__form { flex: 1 1 100%; }
+}

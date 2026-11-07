@@ -96,7 +96,7 @@ export function WaForm({ d, offers, preselect, id = "booking", wa, phone }: Prop
         </button>
         {phone && (
           <a className="btn btn--ghost" href={`tel:${phone.value}`} data-track="phone_click">
-            {f.call}: {phone.display}
+            <span>{f.call}: <span className="nowrap">{phone.display}</span></span>
           </a>
         )}
       </div>

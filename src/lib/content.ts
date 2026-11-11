@@ -54,6 +54,13 @@ const SiteSchema = z.object({
   teamTodo: z.string().optional(),
   legal: z.object({ approved: z.boolean(), todo: z.string().optional() }),
   seasonNote: Fact,
+  /** Owner's travel agency: cross-links for transfers and excursions. Remove the block to hide them. */
+  partner: z
+    .object({
+      name: z.string(),
+      links: z.object({ transfer: LText, tours: LText }),
+    })
+    .optional(),
 });
 export type Fact = z.infer<typeof Fact>;
 export const site = SiteSchema.parse(readJson("site.json"));
@@ -70,6 +77,8 @@ const ServiceSchema = z.object({
   order: z.number().default(100),
   source: z.string().optional(),
   title: LText,
+  /** Short label for narrow places such as the booking form select (iPhone cuts long option text). */
+  shortTitle: LText.optional(),
   summary: LText,
   body: LList,
   levels: z.array(Level),

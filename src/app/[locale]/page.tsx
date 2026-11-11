@@ -8,6 +8,7 @@ import { IS_PREVIEW } from "@/lib/env";
 import { Pic } from "@/components/Pic";
 import { OfferCard } from "@/components/OfferCard";
 import { LeadBlock } from "@/components/LeadBlock";
+import { PartnerBlock } from "@/components/PartnerBlock";
 import { JsonLd } from "@/components/JsonLd";
 import { Badge, Todo } from "@/components/Badge";
 
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: P) {
   return buildMetadata({
     locale,
     path: "/",
-    title: locale === "ru" ? "Almaty Snowboard — сноуборд в горах Алматы" : "Almaty Snowboard — snowboarding in the mountains of Almaty",
+    title: locale === "ru" ? "Школа сноуборда в Алматы: уроки и фрирайд — Almaty Snowboard School" : "Snowboard school in Almaty: lessons & off-piste — Almaty Snowboard School",
     description: d.home.lead,
     available: availableLocales("/"),
     image: "snowboarder-powder-spray",
@@ -263,6 +264,8 @@ export default async function Home({ params }: P) {
           </div>
         </section>
       )}
+
+      <PartnerBlock locale={locale} />
 
       <section className="book" id="lead" aria-labelledby="lead-h">
         <Pic id="kosmostantsiya-freeride-slopes" locale={locale} sizes="100vw" decorative className="book__bg" />

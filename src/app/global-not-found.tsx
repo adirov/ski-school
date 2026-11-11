@@ -4,7 +4,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "404 · Almaty Snowboard", robots: { index: false } };
+export const metadata: Metadata = { title: "404 · Almaty Snowboard School", robots: { index: false } };
 
 /** Real 404 for any unmatched URL (HTTP status 404). Bilingual because the locale is unknown here. */
 export default function GlobalNotFound() {

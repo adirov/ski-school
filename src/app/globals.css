@@ -1,5 +1,5 @@
 /*
-  Almaty Snowboard — brand print kit theme (same look as the approved one-page demo).
+  Almaty Snowboard School — brand print kit theme (same look as the approved one-page demo).
   Black ground, white mountain mark, turquoise + yellow accent pair, black-and-white photos, bold geometric sans.
 */
 :root {
@@ -472,3 +472,33 @@ h1, h2, h3, .h3, .tile__h { -webkit-hyphens: auto; hyphens: auto; }
   .cats li:first-child:nth-last-child(odd) { grid-column: 1 / -1; }
   .search__form { flex: 1 1 100%; }
 }
+
+/* iPhone form fixes (2026-11-11) */
+/* iOS Safari gives date inputs an intrinsic min width and collapses them when empty: keep them inside the column. */
+.form input, .form select, .form textarea { min-width: 0; max-width: 100%; }
+.form input[type="date"] { -webkit-appearance: none; appearance: none; display: block; min-height: 50px; text-align: left; }
+.form input[type="date"]::-webkit-date-and-time-value { text-align: left; }
+.form input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1); opacity: 0.7; }
+/* Selects: own chevron, so the text area is the same in every browser and long labels are not drawn under the arrow. */
+.form select {
+  -webkit-appearance: none; appearance: none; padding-right: 40px; white-space: nowrap; overflow: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23a3a9ac' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; background-size: 12px 8px;
+}
+.form__levels { list-style: none; padding: 0; margin: 2px 0 0; display: grid; gap: 2px; }
+.form__levels b { font-weight: 600; color: var(--ink-2); }
+@media (max-width: 640px) { .form { padding: 18px 16px; } }
+
+/* Partner travel agency block (almaty-travel.kz) */
+.partner { background: var(--bg); border-top: 1px solid var(--line); padding-block: clamp(48px, 7vw, 88px); }
+.partner__in { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 56px); align-items: center; }
+.partner__txt > * { margin: 0; }
+.partner__txt .label { margin-bottom: 10px; }
+.partner__txt h2 { margin: 0 0 12px; }
+.partner__txt p:not(.label) { color: var(--ink-2); max-width: 62ch; }
+.partner__btns { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.partner__btns .btn { width: 100%; }
+.partner--compact { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--yellow); padding: clamp(20px, 3vw, 34px); margin-top: clamp(40px, 6vw, 72px); }
+@media (max-width: 820px) { .partner__in { grid-template-columns: 1fr; } }
+.partner__txt h2 { font-size: clamp(24px, 3.2vw, 40px); -webkit-hyphens: manual; hyphens: manual; }
+.partner--compact .partner__txt h2 { font-size: clamp(21px, 2.4vw, 28px); }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LOCALES, X_DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 import { INDEXABLE, SITE_URL } from "./env";
-import { site, img } from "./content";
+import { site, img, getServices, t } from "./content";
 
 export const abs = (p: string) => (p.startsWith("http") ? p : `${SITE_URL}${p}`);
 
@@ -66,6 +66,15 @@ export function organizationLd(locale: Locale) {
     url: `${SITE_URL}/${locale}/`,
     logo: abs(site.brand.logo),
     description: site.brand.shortDescription[locale] ?? site.brand.shortDescription.ru,
+    alternateName: ["Almaty Snowboard", locale === "ru" ? "Школа сноуборда Алматы" : "Almaty snowboard school"],
+    knowsAbout: locale === "ru" ? ["сноуборд", "обучение сноуборду", "фрирайд", "Заилийский Алатау"] : ["snowboarding", "snowboard lessons", "freeride", "Trans-Ili Alatau"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: locale === "ru" ? "Занятия по сноуборду" : "Snowboard lessons",
+      itemListElement: getServices(locale)
+        .filter((x) => x.status === "confirmed")
+        .map((x) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: t(x.title, locale), url: abs(`/${locale}/services/${x.slug}/`) } })),
+    },
   };
   if (sameAs.length) ld.sameAs = sameAs;
   if (c.phone.confirmed && c.phone.value) ld.contactPoint = { "@type": "ContactPoint", telephone: c.phone.value, contactType: "customer service" };

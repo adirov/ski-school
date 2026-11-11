@@ -4,7 +4,7 @@ description: "A step-by-step plan for beginners: where to learn in Almaty, wheth
 translationKey: how-to-start
 category: beginners
 status: published
-author: "Almaty Snowboard editorial team"
+author: "Almaty Snowboard School editorial team"
 reviewer: null
 published: "2026-11-04"
 updated: "2026-11-04"
@@ -37,7 +37,7 @@ You can learn to snowboard at any age if you start with the right basics. On day
 | Group course | People learning with friends or who enjoy company | The group should be at the same level |
 | On your own | People with ski or skateboard experience | Higher risk of bad habits and injury |
 
-Almaty Snowboard offers private lessons, group courses and kids training; we share durations and prices on request. Ask us on the [contact page](/en/contact/).
+Almaty Snowboard School offers private lessons, group courses and kids training; we share durations and prices on request. Ask us on the [contact page](/en/contact/).
 
 ## Step 2. Sort out equipment
 

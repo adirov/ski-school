@@ -1,11 +1,11 @@
 ---
 title: "Privacy policy"
-description: "What data Almaty Snowboard receives when you send a request or call, why we need it and how to ask us to delete it."
+description: "What data Almaty Snowboard School receives when you send a request or call, why we need it and how to ask us to delete it."
 ---
 
 ## 1. Who processes your data
 
-Your data is processed by the Almaty Snowboard snowboard school. For any data question, call the number on the [Contact](/en/contact/) page.
+Your data is processed by the Almaty Snowboard School snowboard school. For any data question, call the number on the [Contact](/en/contact/) page.
 
 This policy follows the Law of the Republic of Kazakhstan "On Personal Data and Their Protection".
 

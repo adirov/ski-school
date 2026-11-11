@@ -6,6 +6,7 @@ import { availableLocales } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LeadBlock } from "@/components/LeadBlock";
 import { Todo } from "@/components/Badge";
+import { PartnerBlock } from "@/components/PartnerBlock";
 
 type P = { params: Promise<{ locale: string }> };
 
@@ -74,6 +75,7 @@ export default async function ContactPage({ params }: P) {
         </div>
         <LeadBlock locale={locale} />
       </div>
+      <PartnerBlock locale={locale} compact />
     </div>
   );
 }

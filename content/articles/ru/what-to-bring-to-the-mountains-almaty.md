@@ -4,7 +4,7 @@ description: "Чек-лист одежды, защиты, документов �
 translationKey: packing-list
 category: preparation
 status: published
-author: "Редакция Almaty Snowboard"
+author: "Редакция Almaty Snowboard School"
 reviewer: null
 published: "2026-11-04"
 updated: "2026-11-04"

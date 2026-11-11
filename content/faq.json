@@ -2,12 +2,12 @@
   {
     "confirmed": true,
     "q": {
-      "ru": "Что такое Almaty Snowboard?",
-      "en": "What is Almaty Snowboard?"
+      "ru": "Что такое Almaty Snowboard School?",
+      "en": "What is Almaty Snowboard School?"
     },
     "a": {
-      "ru": "Almaty Snowboard — школа сноуборда в Алматы. Мы проводим индивидуальные уроки, групповые курсы, детские тренировки и выезды вне трасс с гидом в горах Заилийского Алатау.",
-      "en": "Almaty Snowboard is a snowboard school in Almaty. We run private lessons, group courses, kids training and guided off-piste trips in the Trans-Ili Alatau mountains."
+      "ru": "Almaty Snowboard School — школа сноуборда в Алматы. Мы проводим индивидуальные уроки, групповые курсы, детские тренировки и выезды вне трасс с гидом в горах Заилийского Алатау.",
+      "en": "Almaty Snowboard School is a snowboard school in Almaty. We run private lessons, group courses, kids training and guided off-piste trips in the Trans-Ili Alatau mountains."
     }
   },
   {
@@ -87,6 +87,17 @@
     "a": {
       "ru": "Детские тренировки проводим с 5 лет. Занятие длится полтора часа.",
       "en": "Kids' training starts from 5 years old. A session lasts an hour and a half."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Поможете с трансфером из аэропорта и экскурсиями?",
+      "en": "Can you help with an airport transfer and sightseeing?"
+    },
+    "a": {
+      "ru": "Да. Встречу в аэропорту, трансфер и экскурсии по Алматы и области организует наше партнёрское турагентство almaty-travel.kz: www.almaty-travel.kz/ru/pages/26.html.",
+      "en": "Yes. Airport meeting, transfers and tours around Almaty are arranged by our partner travel agency almaty-travel.kz: www.almaty-travel.kz/en/pages/26.html."
     }
   }
 ]

@@ -1,15 +1,15 @@
 {
   "_readme": "Единый файл фактов о бренде. Всё, где confirmed=false, на сайте в режиме production не показывается и не попадает в JSON-LD. В режиме preview показывается с пометкой TODO. Меняйте confirmed на true только после подтверждения владельцем.",
   "brand": {
-    "name": "Almaty Snowboard",
+    "name": "Almaty Snowboard School",
     "legalName": {
       "value": null,
       "confirmed": false,
       "todo": "Юридическое лицо или ИП, БИН/ИИН: нужно для политики конфиденциальности и условий бронирования."
     },
     "shortDescription": {
-      "ru": "Almaty Snowboard — школа сноуборда в Алматы: индивидуальные уроки, групповые курсы, детские тренировки и внетрассовое катание с гидом в горах Заилийского Алатау.",
-      "en": "Almaty Snowboard is a snowboard school in Almaty: private lessons, group courses, kids training and guided off-piste riding in the Trans-Ili Alatau mountains."
+      "ru": "Almaty Snowboard School — школа сноуборда в Алматы: индивидуальные уроки, групповые курсы, детские тренировки и внетрассовое катание с гидом в горах Заилийского Алатау.",
+      "en": "Almaty Snowboard School is a snowboard school in Almaty: private lessons, group courses, kids training and guided off-piste riding in the Trans-Ili Alatau mountains."
     },
     "logo": "/brand/logo.svg",
     "foundedNote": {
@@ -103,5 +103,19 @@
     "confirmed": false,
     "todo": "Сезон работы школы (месяцы). Не публикуем даты курортов без официального источника."
   },
-  "placesConfirmed": false
+  "placesConfirmed": false,
+  "partner": {
+    "_readme": "Турагентство владельца. Блок «Приезжаете в Алматы?» на главной, страницах услуг и в контактах. Ссылки проверены на живом сайте 11.11.2026.",
+    "name": "almaty-travel.kz",
+    "links": {
+      "transfer": {
+        "ru": "https://www.almaty-travel.kz/ru/pages/26.html",
+        "en": "https://www.almaty-travel.kz/en/pages/26.html"
+      },
+      "tours": {
+        "ru": "https://www.almaty-travel.kz/ru/tours/",
+        "en": "https://www.almaty-travel.kz/en/tours/"
+      }
+    }
+  }
 }

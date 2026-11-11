@@ -80,10 +80,17 @@ export function WaForm({ d, offers, preselect, id = "booking", wa, phone }: Prop
           <option value="unknown">—</option>
           {(["beginner", "intermediate", "advanced"] as const).map((l) => (
             <option key={l} value={l}>
-              {d.levels[l].name}: {d.levels[l].hint}
+              {d.levels[l].name}
             </option>
           ))}
         </select>
+        <ul className="form__hint form__levels">
+          {(["beginner", "intermediate", "advanced"] as const).map((l) => (
+            <li key={l}>
+              <b>{d.levels[l].name}:</b> {d.levels[l].hint.toLowerCase()}
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="form__row form__row--full">
         <label htmlFor={`${id}-comment`}>{f.comment}</label>

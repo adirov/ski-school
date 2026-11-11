@@ -7,6 +7,10 @@
     "ru": "Индивидуальные уроки сноуборда",
     "en": "Private snowboard lessons"
   },
+  "shortTitle": {
+    "ru": "Индивидуальные уроки",
+    "en": "Private lessons"
+  },
   "summary": {
     "ru": "Занятие один на один с инструктором: с нуля или чтобы подтянуть технику.",
     "en": "One-to-one lessons with an instructor, from your first day or to improve your technique."

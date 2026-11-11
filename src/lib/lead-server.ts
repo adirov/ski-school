@@ -53,7 +53,7 @@ const LEVEL = { beginner: "новичок", intermediate: "продолжающ�
 
 function format(l: Lead) {
   return [
-    "Новая заявка с сайта Almaty Snowboard",
+    "Новая заявка с сайта Almaty Snowboard School",
     `Имя: ${l.name}`,
     `Контакт: ${l.contact}`,
     `Интерес: ${l.offer || "не выбрано"}`,

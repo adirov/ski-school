@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IS_PREVIEW } from "@/lib/env";
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { site, factVisible, getArticles } from "@/lib/content";
+import { site, factVisible, getArticles, t } from "@/lib/content";
 import { Todo } from "./Badge";
 
 export function Footer({ locale }: { locale: Locale }) {
@@ -30,6 +30,9 @@ export function Footer({ locale }: { locale: Locale }) {
           <ul>
             <li><Link href={`/${locale}/booking-terms/`}>{d.footer.terms}</Link>{draft && IS_PREVIEW && <small> ({d.footer.draftLegal})</small>}</li>
             <li><Link href={`/${locale}/privacy/`}>{d.footer.privacy}</Link>{draft && IS_PREVIEW && <small> ({d.footer.draftLegal})</small>}</li>
+            {site.partner && (
+              <li><a href={t(site.partner.links.transfer, locale)} target="_blank" rel="noopener" data-track="partner_click" data-track-item="footer">{d.partner.footer}</a></li>
+            )}
           </ul>
           {factVisible(phone) && (
             <p className="ftr__phone">

@@ -10,6 +10,7 @@ import { Pic } from "@/components/Pic";
 import { Badge, Todo } from "@/components/Badge";
 import { LeadBlock } from "@/components/LeadBlock";
 import { JsonLd } from "@/components/JsonLd";
+import { PartnerBlock } from "@/components/PartnerBlock";
 
 type P = { params: Promise<{ locale: string; slug: string }> };
 export const dynamicParams = false;
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: P) {
   const locale = _l as Locale;
   const s = getService(slug, locale);
   if (!s) return {};
-  return buildMetadata({ locale, path: `/services/${slug}/`, title: t(s.title, locale)!, description: t(s.summary, locale)!, available: availableLocales(`/services/${slug}/`), image: s.image, noindex: s.status !== "confirmed" });
+  return buildMetadata({ locale, path: `/services/${slug}/`, title: `${t(s.title, locale)} ${locale === "ru" ? "в Алматы" : "in Almaty"}`, description: `${t(s.summary, locale)} ${getDict(locale).seo.serviceSuffix}`, available: availableLocales(`/services/${slug}/`), image: s.image, noindex: s.status !== "confirmed" });
 }
 
 export default async function ServicePage({ params }: P) {
@@ -38,7 +39,7 @@ export default async function ServicePage({ params }: P) {
   return (
     <div className="wrap page">
       {s.status === "confirmed" && (
-        <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: title, description: t(s.summary, locale), url: abs(`/${locale}/services/${s.slug}/`), provider: { "@id": abs("/#organization") } }} />
+        <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: title, description: t(s.summary, locale), url: abs(`/${locale}/services/${s.slug}/`), provider: { "@id": abs("/#organization") }, serviceType: title, areaServed: { "@type": "City", name: locale === "ru" ? "Алматы" : "Almaty" }, audience: { "@type": "Audience", audienceType: s.levels.map((l) => d.levels[l].name).join(", ") }, offers: { "@type": "Offer", url: abs(`/${locale}/services/${s.slug}/`), availability: "https://schema.org/InStock" } }} />
       )}
       <Breadcrumbs
         label="Breadcrumbs"
@@ -131,6 +132,8 @@ export default async function ServicePage({ params }: P) {
         </div>
         <LeadBlock locale={locale} preselect={title} id="request-form" />
       </section>
+
+      <PartnerBlock locale={locale} compact />
     </div>
   );
 }

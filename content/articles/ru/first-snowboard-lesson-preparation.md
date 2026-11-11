@@ -4,7 +4,7 @@ description: "Что сделать за неделю, накануне и ут�
 translationKey: first-lesson
 category: beginners
 status: published
-author: "Редакция Almaty Snowboard"
+author: "Редакция Almaty Snowboard School"
 reviewer: null
 published: "2026-11-04"
 updated: "2026-11-04"

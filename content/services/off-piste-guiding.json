@@ -7,6 +7,10 @@
     "ru": "Внетрассовое катание с гидом",
     "en": "Guided off-piste riding"
   },
+  "shortTitle": {
+    "ru": "Вне трасс с гидом",
+    "en": "Off-piste with a guide"
+  },
   "summary": {
     "ru": "Выезды за пределы подготовленных трасс для опытных райдеров.",
     "en": "Riding beyond groomed runs for experienced riders."

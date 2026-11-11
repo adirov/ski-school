@@ -1,6 +1,6 @@
 ---
 title: "Booking and cancellation terms"
-description: "How to book a lesson or trip with Almaty Snowboard: requests, confirmation, prices, weather changes and safety."
+description: "How to book a lesson or trip with Almaty Snowboard School: requests, confirmation, prices, weather changes and safety."
 ---
 
 ## 1. Requests and confirmation

@@ -7,6 +7,10 @@
     "ru": "Групповые курсы сноуборда",
     "en": "Group snowboard courses"
   },
+  "shortTitle": {
+    "ru": "Групповые курсы",
+    "en": "Group courses"
+  },
   "summary": {
     "ru": "Курс из нескольких занятий в группе с инструктором.",
     "en": "A course of several sessions in a group with an instructor."

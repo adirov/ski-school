@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { imageSize } from "image-size";
 import { z } from "zod";
 import type { Locale } from "@/i18n/config";
 import { IS_PREVIEW } from "./env";
@@ -8,18 +9,45 @@ import { IS_PREVIEW } from "./env";
 const ROOT = path.join(process.cwd(), "content");
 const readJson = (p: string) => JSON.parse(fs.readFileSync(path.join(ROOT, p), "utf8"));
 
+/**
+ * The admin panel (/admin, Sveltia CMS) saves cleared inputs as "", [] or {}. Drop them, so an empty field reads
+ * as "not set" (shown as "on request" with a TODO in preview) instead of an empty value on the page.
+ */
+export function clean(v: unknown): unknown {
+  if (v === "" || v === null) return v === "" ? undefined : null;
+  if (Array.isArray(v)) {
+    const a = v.map(clean).filter((x) => x !== undefined);
+    return a.length ? a : undefined;
+  }
+  // Plain objects only: YAML dates arrive as Date and must pass through untouched.
+  if (v && typeof v === "object" && Object.getPrototypeOf(v) === Object.prototype) {
+    const o: Record<string, unknown> = {};
+    for (const [k, x] of Object.entries(v)) {
+      const c = clean(x);
+      if (c !== undefined) o[k] = c;
+    }
+    return Object.keys(o).length ? o : undefined;
+  }
+  return v;
+}
+
 /* ---------- shared ---------- */
 const LText = z.object({ ru: z.string(), en: z.string().optional(), kk: z.string().optional() });
 const LList = z.object({ ru: z.array(z.string()), en: z.array(z.string()).optional(), kk: z.array(z.string()).optional() });
 export type LText = z.infer<typeof LText>;
 
 /** Field that may be unknown yet. `value` null means "not confirmed"; `todo` says what to ask the owner. */
-const Pending = <T extends z.ZodTypeAny>(t: T) => z.object({ value: t.nullable(), todo: z.string().nullable().optional() });
+const Pending = <T extends z.ZodTypeAny>(t: T) =>
+  z.preprocess((v) => v ?? {}, z.object({ value: t.nullable().default(null), todo: z.string().nullable().optional() }));
 const Level = z.enum(["beginner", "intermediate", "advanced"]);
 export type Level = z.infer<typeof Level>;
-const Status = z.enum(["demo", "confirmed", "hidden"]);
+/** demo: preview only · confirmed: published · hidden: taken off the site · trash: "deleted" in the admin panel, restorable. */
+const Status = z.enum(["demo", "confirmed", "hidden", "trash"]);
+/** Optional per-locale SEO overrides set in the admin panel. Empty means "use the title / summary". */
+const Seo = z.object({ title: z.object({ ru: z.string().optional(), en: z.string().optional() }).optional(), description: z.object({ ru: z.string().optional(), en: z.string().optional() }).optional() }).optional();
+export type Seo = z.infer<typeof Seo>;
 
-export function t<T>(v: { ru: T; en?: T; kk?: T } | null | undefined, locale: Locale): T | undefined {
+export function t<T>(v: { ru?: T; en?: T; kk?: T } | null | undefined, locale: Locale): T | undefined {
   if (!v) return undefined;
   return (v as Record<string, T | undefined>)[locale];
 }
@@ -28,9 +56,24 @@ export function t<T>(v: { ru: T; en?: T; kk?: T } | null | undefined, locale: Lo
 const Media = z.record(z.string(), z.any());
 export type Img = { src: string; width: number; height: number; alt: Partial<Record<Locale, string>> };
 const media = Media.parse(readJson("media.json")) as Record<string, Img>;
-export function img(id: string): Img {
-  const m = media[id];
-  if (!m || typeof m !== "object" || !("src" in m)) throw new Error(`Unknown image id "${id}" (content/media.json)`);
+const bySrc = new Map(Object.values(media).filter((m) => m && typeof m === "object" && "src" in m).map((m) => [m.src, m]));
+const PUBLIC = path.join(process.cwd(), "public");
+/**
+ * Image by id from content/media.json ("snowboarder-powder-spray") or by path under public/ ("/images/x.jpg").
+ * Paths come from the admin panel uploads; their size is read from the file and alt falls back to the page text.
+ */
+export function img(ref: string): Img {
+  if (ref.startsWith("/")) {
+    const known = bySrc.get(ref);
+    if (known) return known;
+    const file = path.join(PUBLIC, ref);
+    if (!file.startsWith(PUBLIC + path.sep) || !fs.existsSync(file)) throw new Error(`Image file not found: public${ref}`);
+    const { width, height } = imageSize(fs.readFileSync(file));
+    if (!width || !height) throw new Error(`Cannot read image size: public${ref}`);
+    return { src: ref, width, height, alt: {} };
+  }
+  const m = media[ref];
+  if (!m || typeof m !== "object" || !("src" in m)) throw new Error(`Unknown image id "${ref}" (content/media.json)`);
   return m;
 }
 
@@ -88,6 +131,7 @@ const ServiceSchema = z.object({
   age: LText.optional(),
   image: z.string(),
   todo: z.array(z.string()).default([]),
+  seo: Seo,
 });
 export type Service = z.infer<typeof ServiceSchema>;
 
@@ -106,11 +150,11 @@ const TourSchema = z.object({
   levels: z.array(Level),
   languages: Pending(z.array(z.string())),
   format: z.enum(["private", "group", "both"]),
-  groupSize: z.object({ min: z.number().nullable(), max: z.number().nullable(), todo: z.string().optional() }),
+  groupSize: z.preprocess((v) => v ?? {}, z.object({ min: z.number().nullable().default(null), max: z.number().nullable().default(null), todo: z.string().optional() })),
   season: Pending(LText),
   /** "request": no live calendar, visitors request availability. Only set "live" with a connected booking system. */
   availability: z.enum(["request", "live"]).default("request"),
-  price: z.object({ amount: z.number().nullable(), currency: z.string().default("KZT"), unit: z.enum(["person", "group"]).nullable(), todo: z.string().optional() }),
+  price: z.preprocess((v) => v ?? {}, z.object({ amount: z.number().nullable().default(null), currency: z.string().default("KZT"), unit: z.enum(["person", "group"]).nullable().default(null), todo: z.string().optional() })),
   included: Pending(LList),
   notIncluded: Pending(LList),
   meetingPoint: Pending(LText),
@@ -122,6 +166,7 @@ const TourSchema = z.object({
   relatedArticles: z.array(z.string()).default([]),
   relatedServices: z.array(z.string()).default([]),
   getYourGuideUrl: z.string().url().nullable().default(null),
+  seo: Seo,
 });
 export type Tour = z.infer<typeof TourSchema>;
 
@@ -131,13 +176,13 @@ function loadDir<S extends z.ZodTypeAny>(dir: string, schema: S): z.infer<S>[] {
     .readdirSync(full)
     .filter((f) => f.endsWith(".json"))
     .map((f) => {
-      const parsed = schema.safeParse(JSON.parse(fs.readFileSync(path.join(full, f), "utf8")));
+      const parsed = schema.safeParse(clean(JSON.parse(fs.readFileSync(path.join(full, f), "utf8"))));
       if (!parsed.success) throw new Error(`content/${dir}/${f}: ${parsed.error.message}`);
       return parsed.data as z.infer<S>;
     });
 }
 
-/** Demo items exist only in preview mode. Hidden items never render. */
+/** Demo items exist only in preview mode. Hidden and trashed items never render. */
 const visible = (s: z.infer<typeof Status>) => s === "confirmed" || (s === "demo" && IS_PREVIEW);
 const byOrder = (a: { order: number }, b: { order: number }) => a.order - b.order;
 
@@ -151,22 +196,27 @@ export const getTour = (slug: string, locale: Locale) => getTours(locale).find((
 
 /* ---------- FAQ ---------- */
 const FaqSchema = z.array(z.object({ q: LText, a: LText, confirmed: z.boolean(), todo: z.string().optional() }));
-const faq = FaqSchema.parse(readJson("faq.json"));
+const faq = FaqSchema.parse(clean(readJson("faq.json")) ?? []);
 /** Unconfirmed answers are never shown publicly; in preview they appear as TODO items. */
 export const getFaq = (locale: Locale) => faq.filter((f) => (f.confirmed || IS_PREVIEW) && t(f.q, locale));
 
 /* ---------- articles ---------- */
-const Source = z.object({ title: z.string(), url: z.string().url().nullable(), checked: z.string().nullable() });
+const Source = z.object({ title: z.string(), url: z.string().url().nullable().default(null), checked: z.preprocess((v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v), z.string().nullable().default(null)) });
+/** YAML turns an unquoted 2026-11-04 into a Date; keep dates as "YYYY-MM-DD" strings either way. */
+const IsoDate = z.preprocess((v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v), z.string().regex(/^\d{4}-\d{2}-\d{2}/));
 const ArticleMeta = z.object({
   title: z.string(),
   description: z.string(),
   translationKey: z.string(),
   category: z.string(),
-  status: z.enum(["draft", "published"]),
-  author: z.string().nullable(),
-  reviewer: z.string().nullable(),
-  published: z.string(),
-  updated: z.string(),
+  /** draft: preview only · published · trash: "deleted" in the admin panel, never rendered, restorable. */
+  status: z.enum(["draft", "published", "trash"]),
+  /** Optional <title> override; the page heading stays `title`. */
+  seoTitle: z.string().optional(),
+  author: z.string().nullable().default(null),
+  reviewer: z.string().nullable().default(null),
+  published: IsoDate,
+  updated: IsoDate,
   cover: z.string(),
   answer: z.string(),
   relatedServices: z.array(z.string()).default([]),
@@ -185,7 +235,7 @@ function loadArticles(locale: Locale): Article[] {
     .filter((f) => f.endsWith(".md"))
     .map((f) => {
       const { data, content } = matter(fs.readFileSync(path.join(dir, f), "utf8"));
-      const parsed = ArticleMeta.safeParse(data);
+      const parsed = ArticleMeta.safeParse(clean(data) ?? {});
       if (!parsed.success) throw new Error(`content/articles/${locale}/${f}: ${parsed.error.message}`);
       return { ...parsed.data, slug: f.replace(/\.md$/, ""), locale, body: content };
     });
@@ -193,7 +243,7 @@ function loadArticles(locale: Locale): Article[] {
 
 export function getArticles(locale: Locale): Article[] {
   return loadArticles(locale)
-    .filter((a) => a.status === "published" || IS_PREVIEW)
+    .filter((a) => a.status === "published" || (a.status === "draft" && IS_PREVIEW))
     .sort((a, b) => b.published.localeCompare(a.published));
 }
 export const getArticle = (slug: string, locale: Locale) => getArticles(locale).find((a) => a.slug === slug);

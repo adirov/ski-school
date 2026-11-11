@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: P) {
   return buildMetadata({
     locale,
     path: `/guides/${slug}/`,
-    title: a.title,
+    title: a.seoTitle || a.title,
     description: a.description,
     available: availableLocales(`/guides/${slug}/`),
     image: a.cover,
@@ -115,7 +115,7 @@ export default async function ArticlePage({ params }: P) {
           {a.todo.length > 0 && <Todo>{a.todo.join(" ")}</Todo>}
         </header>
 
-        <Pic id={a.cover} locale={locale} sizes="(max-width: 900px) 100vw, 900px" priority className="article__cover" />
+        <Pic id={a.cover} locale={locale} sizes="(max-width: 900px) 100vw, 900px" priority className="article__cover" alt={a.title} />
 
         <div className="article__grid">
           {toc.length > 2 && (

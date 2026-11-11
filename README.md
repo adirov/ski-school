@@ -36,6 +36,7 @@ NEXT_PUBLIC_BASE_PATH=/almaty-snowboard NEXT_PUBLIC_SITE_URL=https://<user>.gith
 ## Документация
 
 - [docs/REPORT.md](docs/REPORT.md) — что сделано, что проверено, что нужно до запуска.
+- [docs/CMS.md](docs/CMS.md) — админка `/admin/`: как войти и что в ней можно менять.
 - [docs/EDITING.md](docs/EDITING.md) — как добавлять туры, менять цены, публиковать статьи.
 - [docs/OWNER-DATA.md](docs/OWNER-DATA.md) — что получить у владельца.
 - [docs/LAUNCH.md](docs/LAUNCH.md) — домен, хостинг, Search Console, аналитика, Google Business Profile.

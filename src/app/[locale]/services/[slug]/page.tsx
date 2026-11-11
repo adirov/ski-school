@@ -24,7 +24,15 @@ export async function generateMetadata({ params }: P) {
   const locale = _l as Locale;
   const s = getService(slug, locale);
   if (!s) return {};
-  return buildMetadata({ locale, path: `/services/${slug}/`, title: `${t(s.title, locale)} ${locale === "ru" ? "в Алматы" : "in Almaty"}`, description: `${t(s.summary, locale)} ${getDict(locale).seo.serviceSuffix}`, available: availableLocales(`/services/${slug}/`), image: s.image, noindex: s.status !== "confirmed" });
+  return buildMetadata({
+    locale,
+    path: `/services/${slug}/`,
+    title: t(s.seo?.title, locale) || `${t(s.title, locale)} ${locale === "ru" ? "в Алматы" : "in Almaty"}`,
+    description: t(s.seo?.description, locale) || `${t(s.summary, locale)} ${getDict(locale).seo.serviceSuffix}`,
+    available: availableLocales(`/services/${slug}/`),
+    image: s.image,
+    noindex: s.status !== "confirmed",
+  });
 }
 
 export default async function ServicePage({ params }: P) {
@@ -104,7 +112,7 @@ export default async function ServicePage({ params }: P) {
             </Link>
           </div>
         </div>
-        <Pic id={s.image} locale={locale} sizes="(max-width: 900px) 100vw, 45vw" priority className="split__img" />
+        <Pic id={s.image} locale={locale} sizes="(max-width: 900px) 100vw, 45vw" priority className="split__img" alt={title} />
       </div>
 
       {(tours.length > 0 || articles.length > 0) && (

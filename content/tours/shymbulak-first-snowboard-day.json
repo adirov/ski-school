@@ -21,8 +21,8 @@
     ]
   },
   "images": [
-    "shymbulak-beginner-slope",
-    "shymbulak-slopes-blue-sky"
+    "/images/shymbulak-beginner-slope.jpg",
+    "/images/shymbulak-slopes-blue-sky.jpg"
   ],
   "location": {
     "ru": "Шымбулак, Алматы",

@@ -11,7 +11,7 @@ type Props = {
   summary: string;
   image: string;
   levels: string[];
-  status: "demo" | "confirmed" | "hidden";
+  status: "demo" | "confirmed" | "hidden" | "trash";
   kicker?: string;
   priority?: boolean;
 };

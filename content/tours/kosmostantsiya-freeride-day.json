@@ -21,8 +21,8 @@
     ]
   },
   "images": [
-    "kosmostantsiya-freeride-slopes",
-    "freeride-tracks-from-above"
+    "/images/kosmostantsiya-freeride-slopes.jpg",
+    "/images/freeride-tracks-from-above.jpg"
   ],
   "location": {
     "ru": "Космостанция, над Большим Алматинским озером",

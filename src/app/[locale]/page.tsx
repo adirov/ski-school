@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: P) {
   return buildMetadata({
     locale,
     path: "/",
-    title: locale === "ru" ? "Школа сноуборда в Алматы: уроки и фрирайд — Almaty Snowboard School" : "Snowboard school in Almaty: lessons & off-piste — Almaty Snowboard School",
+    title: locale === "ru" ? "Школа сноуборда в Алматы — Almaty Snowboard School" : "Snowboard school in Almaty — Almaty Snowboard School",
     description: d.home.lead,
     available: availableLocales("/"),
     image: "snowboarder-powder-spray",

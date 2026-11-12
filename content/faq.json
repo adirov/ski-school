@@ -46,6 +46,28 @@
   {
     "confirmed": true,
     "q": {
+      "ru": "Что выбрать: индивидуальный урок или групповой курс?",
+      "en": "Private lesson or group course: which should I choose?"
+    },
+    "a": {
+      "ru": "Индивидуальный урок — занятие один на один с инструктором на 2 часа: подходит, если хотите прогрессировать быстрее или волнуетесь на склоне. Групповой курс — 5 занятий по 2 часа в группе, удобно учиться вместе с друзьями. Сравнение всех форматов есть на странице «Занятия».",
+      "en": "A private lesson is a 2-hour one-to-one session with an instructor: good if you want to progress faster or feel nervous on the slope. A group course is 5 sessions of 2 hours in a group, handy if you are learning with friends. All formats are compared on the Lessons page."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Можно ли поехать на фрирайд без опыта?",
+      "en": "Can I go freeriding without experience?"
+    },
+    "a": {
+      "ru": "Нет. Внетрассовое катание с гидом рассчитано на опытных райдеров, которые уверенно спускаются по красным и чёрным трассам. Для выезда нужны лавинный датчик, лопата и щуп и умение ими пользоваться, а окончательное решение о маршруте принимает гид. Если вы пока катаетесь только по трассам, начните с индивидуального урока.",
+      "en": "No. Guided off-piste riding is for experienced riders who are confident on red and black runs. You need an avalanche transceiver, shovel and probe and the skills to use them, and the guide makes the final call on the route. If you only ride groomed runs so far, start with a private lesson."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
       "ru": "Нужно ли покупать снаряжение?",
       "en": "Do I need to buy equipment?"
     },

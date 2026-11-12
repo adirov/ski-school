@@ -109,7 +109,7 @@ export default async function TourPage({ params }: P) {
         label="Breadcrumbs"
         items={[
           { name: d.breadcrumbs.home, href: `/${locale}/` },
-          { name: d.tours.h1, href: `/${locale}/tours/` },
+          { name: d.tours.crumb, href: `/${locale}/tours/` },
           { name: title, href: `/${locale}/tours/${x.slug}/` },
         ]}
       />

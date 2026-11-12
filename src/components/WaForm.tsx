@@ -4,14 +4,14 @@ import type { Dict } from "@/i18n/dictionaries";
 import { track } from "@/lib/track";
 
 type Option = { value: string; label: string };
-type Props = { d: Pick<Dict, "form" | "levels">; offers: Option[]; preselect?: string; id?: string; wa: string; phone?: { value: string; display: string } | null };
+type Props = { d: Pick<Dict, "form" | "levels">; offers: Option[]; preselect?: string; id?: string; wa: string; phone?: { value: string; display: string } | null; privacyHref?: string };
 
 /**
  * Booking form for hosting without a server: nothing is sent from the site.
  * On submit it opens WhatsApp with a prefilled message; the visitor sends it themselves.
  * Nothing from the fields goes to analytics.
  */
-export function WaForm({ d, offers, preselect, id = "booking", wa, phone }: Props) {
+export function WaForm({ d, offers, preselect, id = "booking", wa, phone, privacyHref }: Props) {
   const f = d.form;
   const [bad, setBad] = useState(false);
   const errRef = useRef<HTMLParagraphElement>(null);
@@ -43,7 +43,15 @@ export function WaForm({ d, offers, preselect, id = "booking", wa, phone }: Prop
 
   return (
     <form className="form" id={id} onSubmit={onSubmit} noValidate>
-      <p className="form__row form__row--full form__hint">{f.waIntro}</p>
+      <p className="form__row form__row--full form__hint">
+        {f.waIntro}
+        {privacyHref && (
+          <>
+            {" "}
+            <a href={privacyHref}>{f.privacy}</a>
+          </>
+        )}
+      </p>
       <div className="form__row form__row--full">
         <label htmlFor={`${id}-name`}>
           {f.name} <span aria-hidden="true">*</span>

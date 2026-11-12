@@ -509,3 +509,16 @@ h1, h2, h3, .h3, .tile__h { -webkit-hyphens: auto; hyphens: auto; }
   .prog__txt h2 { font-size: 24px; overflow-wrap: anywhere; }
   .prog__grid > * { min-width: 0; }
 }
+
+/* format comparison on /tours/: stacked rows on phones instead of a sideways-scrolling table */
+@media (max-width: 640px) {
+  .cmp { overflow: visible; }
+  .cmp table { min-width: 0; }
+  .cmp thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .cmp tr, .cmp th, .cmp td { display: block; }
+  .cmp tbody tr { border-bottom: 1px solid var(--line); padding: 6px 0; }
+  .cmp tbody th { border: 0; background: none; padding-bottom: 4px; }
+  .cmp td { border: 0; padding: 2px 14px; display: flex; gap: 12px; justify-content: space-between; text-align: right; }
+  .cmp td::before { content: attr(data-label); color: var(--muted); font-size: 13px; }
+  .cmp td:last-child { padding-bottom: 10px; }
+}

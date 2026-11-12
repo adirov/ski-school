@@ -2,7 +2,7 @@ import type { Locale } from "./config";
 
 const ru = {
   skip: "Перейти к содержанию",
-  nav: { tours: "Туры и занятия", guides: "Статьи и гиды", about: "О нас", team: "Команда", faq: "Вопросы", contact: "Контакты" },
+  nav: { tours: "Занятия", guides: "Статьи и гиды", about: "О нас", team: "Команда", faq: "Вопросы", contact: "Контакты" },
   menu: "Меню",
   close: "Закрыть",
   langSwitch: "Язык сайта",
@@ -57,8 +57,18 @@ const ru = {
   } as Record<string, { name: string; hint: string }>,
   format: { private: "Индивидуально", group: "В группе", both: "Индивидуально или в группе" } as Record<string, string>,
   tours: {
-    h1: "Туры и занятия",
-    lead: "Направления Almaty Snowboard School: индивидуальные уроки, групповые курсы, детские тренировки и внетрассовое катание с гидом. Выберите свой уровень, чтобы увидеть подходящие варианты. Стоимость и даты сообщаем в ответ на заявку.",
+    h1: "Занятия сноубордом в Алматы: как выбрать формат",
+    crumb: "Занятия",
+    lead: "Индивидуальные уроки, групповые курсы, детские тренировки и фрирайд с гидом. Сравните форматы и выберите свой по уровню. Цену и даты сообщаем по заявке.",
+    compareTitle: "Сравнение форматов",
+    compareCols: ["Формат", "Уровень", "Как проходит", "Длительность", "Возраст"],
+    chooseTitle: "Как выбрать",
+    priceNote: "Стоимость и свободные даты сообщаем в ответ на заявку.",
+    choose: [
+      "Никогда не стояли на доске: начните с индивидуального урока, если хотите быстрее и спокойнее, или с группового курса, если учитесь с друзьями.",
+      "Ребёнку от 5 лет: детские тренировки с инструктором.",
+      "Уверенно катаетесь по трассам и хотите в целину: внетрассовое катание с гидом.",
+    ],
     services: "Направления",
     tours: "Программы",
     filterLevel: "Уровень",
@@ -173,7 +183,7 @@ export type Dict = typeof ru;
 
 const en: Dict = {
   skip: "Skip to content",
-  nav: { tours: "Tours & lessons", guides: "Guides", about: "About", team: "Team", faq: "FAQ", contact: "Contact" },
+  nav: { tours: "Lessons", guides: "Guides", about: "About", team: "Team", faq: "FAQ", contact: "Contact" },
   menu: "Menu",
   close: "Close",
   langSwitch: "Site language",
@@ -228,8 +238,18 @@ const en: Dict = {
   },
   format: { private: "Private", group: "Group", both: "Private or group" },
   tours: {
-    h1: "Tours & lessons",
-    lead: "Almaty Snowboard School directions: private lessons, group courses, kids training and guided off-piste riding. Pick your level to see what fits. We share prices and dates in reply to your request.",
+    h1: "Snowboard lessons in Almaty: choose a format",
+    crumb: "Lessons",
+    lead: "Private lessons, group courses, kids training and guided freeride. Compare the formats and pick one for your level. Price and dates on request.",
+    compareTitle: "Formats compared",
+    compareCols: ["Format", "Level", "How it works", "Duration", "Age"],
+    chooseTitle: "How to choose",
+    priceNote: "We share the price and available dates in reply to your request.",
+    choose: [
+      "Never stood on a board: start with a private lesson if you want to progress faster and calmer, or a group course if you are learning with friends.",
+      "For a child aged 5 or older: kids training with an instructor.",
+      "Confident on groomed runs and want powder: guided off-piste riding.",
+    ],
     services: "What we offer",
     tours: "Programs",
     filterLevel: "Level",

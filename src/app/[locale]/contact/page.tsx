@@ -1,7 +1,8 @@
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
 import { factVisible, site } from "@/lib/content";
-import { buildMetadata } from "@/lib/seo";
+import { abs, buildMetadata, organizationLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { availableLocales } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LeadBlock } from "@/components/LeadBlock";
@@ -25,6 +26,7 @@ export default async function ContactPage({ params }: P) {
   const anyDirect = [c.phone, c.whatsapp, c.email].some(factVisible);
   return (
     <div className="wrap page">
+      <JsonLd data={[{ "@context": "https://schema.org", "@type": "ContactPage", url: abs(`/${locale}/contact/`), name: d.contact.h1, about: { "@id": abs("/#organization") } }, organizationLd(locale)]} />
       <Breadcrumbs label="Breadcrumbs" items={[{ name: d.breadcrumbs.home, href: `/${locale}/` }, { name: d.contact.h1, href: `/${locale}/contact/` }]} />
       <header className="page__head">
         <h1>{d.contact.h1}</h1>

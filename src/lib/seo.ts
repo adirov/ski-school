@@ -64,7 +64,9 @@ export function organizationLd(locale: Locale) {
     "@id": `${SITE_URL}/#organization`,
     name: site.brand.name,
     url: `${SITE_URL}/${locale}/`,
-    logo: abs(site.brand.logo),
+    // Google wants a raster logo (min 112 px): PNG render of brand/logo.svg.
+    logo: abs("/brand/logo-512.png"),
+    image: abs("/brand/logo-512.png"),
     description: site.brand.shortDescription[locale] ?? site.brand.shortDescription.ru,
     alternateName: ["Almaty Snowboard", locale === "ru" ? "Школа сноуборда Алматы" : "Almaty snowboard school"],
     knowsAbout: locale === "ru" ? ["сноуборд", "обучение сноуборду", "фрирайд", "Заилийский Алатау"] : ["snowboarding", "snowboard lessons", "freeride", "Trans-Ili Alatau"],
@@ -77,7 +79,12 @@ export function organizationLd(locale: Locale) {
     },
   };
   if (sameAs.length) ld.sameAs = sameAs;
-  if (c.phone.confirmed && c.phone.value) ld.contactPoint = { "@type": "ContactPoint", telephone: c.phone.value, contactType: "customer service" };
+  if (c.phone.confirmed && c.phone.value) {
+    ld.telephone = c.phone.value;
+    ld.contactPoint = { "@type": "ContactPoint", telephone: c.phone.value, contactType: "customer service", availableLanguage: ["ru", "en"] };
+  }
+  // City only: the school works in Almaty and its mountains, there is no published office address.
+  ld.address = { "@type": "PostalAddress", addressLocality: locale === "ru" ? "Алматы" : "Almaty", addressCountry: "KZ" };
   if (c.email.confirmed && c.email.value) ld.email = c.email.value;
   if (site.serviceArea.confirmed && site.serviceArea.value) ld.areaServed = (site.serviceArea.value[locale] ?? []).map((n: string) => ({ "@type": "Place", name: n }));
   return ld;

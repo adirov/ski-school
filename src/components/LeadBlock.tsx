@@ -21,7 +21,7 @@ export function LeadBlock({ locale, preselect, id }: { locale: Locale; preselect
   const person = site.contacts.person;
   const wa = site.contacts.whatsapp;
   if (factVisible(wa) && wa.value)
-    return <WaForm d={{ form: d.form, levels: d.levels }} offers={offerOptions(locale)} preselect={preselect} id={id} wa={String(wa.value).replace(/\D/g, "")} phone={factVisible(phone) ? { value: String(phone.value), display: String(phone.display) } : null} />;
+    return <WaForm d={{ form: d.form, levels: d.levels }} offers={offerOptions(locale)} preselect={preselect} id={id} privacyHref={`/${locale}/privacy/`} wa={String(wa.value).replace(/\D/g, "")} phone={factVisible(phone) ? { value: String(phone.value), display: String(phone.display) } : null} />;
   const name = factVisible(person) ? (person.value as Record<string, string>)[locale] ?? (person.value as Record<string, string>).ru : null;
   return (
     <div className="offline" id={id}>

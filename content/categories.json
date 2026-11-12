@@ -1,5 +1,32 @@
 {
-  "beginners": { "ru": { "name": "Новичкам", "description": "С чего начать сноуборд в Алматы, первые занятия и типичные ошибки." }, "en": { "name": "Beginners", "description": "How to start snowboarding in Almaty, first lessons and common mistakes." } },
-  "preparation": { "ru": { "name": "Подготовка и снаряжение", "description": "Что взять с собой, как одеться и как выбрать снаряжение." }, "en": { "name": "Preparation & gear", "description": "What to bring, how to dress and how to choose equipment." } },
-  "travel": { "ru": { "name": "Поездки и курорты", "description": "Как добраться до курортов и спланировать зимнюю поездку в Алматы." }, "en": { "name": "Trips & resorts", "description": "Getting to the resorts and planning a winter trip to Almaty." } }
+  "beginners": {
+    "ru": {
+      "name": "Новичкам",
+      "description": "С чего начать сноуборд в Алматы: как выбрать формат обучения, как подготовиться к первому занятию и каких ошибок избежать новичку."
+    },
+    "en": {
+      "name": "Beginners",
+      "description": "How to start snowboarding in Almaty: choosing how to learn, preparing for your first lesson and avoiding common beginner mistakes."
+    }
+  },
+  "preparation": {
+    "ru": {
+      "name": "Подготовка и снаряжение",
+      "description": "Что взять с собой в горы Алматы, как одеться по слоям, какая защита нужна новичку и что понадобится для катания вне трасс."
+    },
+    "en": {
+      "name": "Preparation & gear",
+      "description": "What to bring to the mountains of Almaty, how to dress in layers, what protection beginners need and what off-piste days require."
+    }
+  },
+  "travel": {
+    "ru": {
+      "name": "Поездки и курорты",
+      "description": "Как добраться до курортов под Алматы и спланировать зимнюю поездку: дорога, погода и что проверить перед выездом."
+    },
+    "en": {
+      "name": "Trips & resorts",
+      "description": "Getting to the resorts near Almaty and planning a winter trip: the journey, the weather and what to check before you go."
+    }
+  }
 }

@@ -4,7 +4,7 @@ import { LOCALES, publishedLocales, type Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
 import { categories, getArticle, getArticles, getService, getTour, img, site, t } from "@/lib/content";
 import { renderMarkdown } from "@/lib/markdown";
-import { abs, buildMetadata } from "@/lib/seo";
+import { abs, buildMetadata, orgRef } from "@/lib/seo";
 import { availableLocales, nonEmptyParams } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Pic } from "@/components/Pic";
@@ -66,8 +66,8 @@ export default async function ArticlePage({ params }: P) {
     dateModified: a.updated,
     inLanguage: LOCALES[locale].htmlLang,
     mainEntityOfPage: url,
-    author: a.author ? { "@type": "Organization", name: site.brand.name } : undefined,
-    publisher: { "@id": abs("/#organization") },
+    author: orgRef(locale),
+    publisher: orgRef(locale),
   };
   return (
     <div className="wrap page">

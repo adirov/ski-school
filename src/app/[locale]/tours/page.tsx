@@ -25,7 +25,7 @@ export default async function ToursPage({ params }: P) {
   const levels = (["beginner", "intermediate", "advanced"] as const).map((k) => ({ key: k, name: d.levels[k].name }));
   return (
     <div className="wrap page">
-      <Breadcrumbs label="Breadcrumbs" items={[{ name: d.breadcrumbs.home, href: `/${locale}/` }, { name: d.tours.h1, href: `/${locale}/tours/` }]} />
+      <Breadcrumbs label="Breadcrumbs" items={[{ name: d.breadcrumbs.home, href: `/${locale}/` }, { name: d.tours.crumb, href: `/${locale}/tours/` }]} />
       <header className="page__head">
         <h1>{d.tours.h1}</h1>
         <p className="lead">{d.tours.lead}</p>
@@ -57,6 +57,46 @@ export default async function ToursPage({ params }: P) {
             </section>
           )}
         </LevelFilter>
+      )}
+      {services.length > 1 && (
+        <section aria-labelledby="cmp-h" className="section section--tight prose">
+          <h2 id="cmp-h">{d.tours.compareTitle}</h2>
+          <div className="table-wrap cmp">
+            <table>
+              <thead>
+                <tr>
+                  {d.tours.compareCols.map((c) => (
+                    <th key={c} scope="col">
+                      {c}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {services.map((s) => (
+                  <tr key={s.slug}>
+                    <th scope="row">
+                      <Link href={`/${locale}/services/${s.slug}/`}>{t(s.shortTitle, locale) ?? t(s.title, locale)}</Link>
+                    </th>
+                    <td data-label={d.tours.compareCols[1]}>{s.levels.map((l) => d.levels[l].name).join(", ")}</td>
+                    <td data-label={d.tours.compareCols[2]}>{d.format[s.format]}</td>
+                    <td data-label={d.tours.compareCols[3]}>{t(s.duration, locale) ?? "—"}</td>
+                    <td data-label={d.tours.compareCols[4]}>{t(s.age, locale) ?? "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <h2>{d.tours.chooseTitle}</h2>
+          <ul>
+            {d.tours.choose.map((x) => (
+              <li key={x}>{x}</li>
+            ))}
+          </ul>
+          <p>
+            {d.tours.priceNote} <Link href={`/${locale}/contact/`}>{d.cta.ask}</Link>
+          </p>
+        </section>
       )}
     </div>
   );

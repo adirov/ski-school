@@ -43,5 +43,15 @@
     "Снаряжение и прокат",
     "Возраст",
     "Условия отмены"
-  ]
+  ],
+  "seo": {
+    "title": {
+      "ru": "Инструктор по сноуборду в Алматы: индивидуальные уроки",
+      "en": "Private snowboard lessons in Almaty with an instructor"
+    },
+    "description": {
+      "ru": "Индивидуальные уроки сноуборда с инструктором в Алматы: с нуля или для работы над техникой, занятие 2 часа. Цену и дату подтверждаем в WhatsApp.",
+      "en": "One-to-one snowboard lessons with an instructor in Almaty: your first day on a board or technique work, 2-hour session. Price and date via WhatsApp."
+    }
+  }
 }

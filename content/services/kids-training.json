@@ -43,5 +43,15 @@
     "Индивидуально или группы",
     "Шлем и защита",
     "Фото с детских занятий (с согласием родителей)"
-  ]
+  ],
+  "seo": {
+    "title": {
+      "ru": "Сноуборд для детей в Алматы: тренировки с 5 лет",
+      "en": "Kids' snowboard lessons in Almaty from age 5"
+    },
+    "description": {
+      "ru": "Детские тренировки по сноуборду в Алматы с инструктором: для детей от 5 лет, занятие 1,5 часа, индивидуально или в группе. Цена по заявке.",
+      "en": "Snowboard training for children in Almaty with an instructor: ages 5 and up, 1.5-hour sessions, one-to-one or in a group. Price on request."
+    }
+  }
 }

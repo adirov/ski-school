@@ -34,8 +34,12 @@ export function buildMetadata(m: MetaInput): Metadata {
   }
   const image = img(m.image ?? "trans-ili-alatau-panorama");
   const noindex = !INDEXABLE || m.noindex;
+  // The layout template appends " | <brand>". Long titles get cut in search results,
+  // so keep the brand only when the whole title still fits about 60 characters.
+  const withBrand = `${m.title} | ${site.brand.name}`;
+  const title = m.title.includes(site.brand.name) || withBrand.length > 60 ? { absolute: m.title } : m.title;
   return {
-    title: m.title,
+    title,
     description: m.description,
     alternates: { canonical: url, languages: Object.keys(languages).length ? languages : undefined },
     robots: noindex ? { index: false, follow: true } : { index: true, follow: true, "max-image-preview": "large" },
@@ -88,6 +92,19 @@ export function organizationLd(locale: Locale) {
   if (c.email.confirmed && c.email.value) ld.email = c.email.value;
   if (site.serviceArea.confirmed && site.serviceArea.value) ld.areaServed = (site.serviceArea.value[locale] ?? []).map((n: string) => ({ "@type": "Place", name: n }));
   return ld;
+}
+
+/** Compact Organization node for provider/publisher/author: readable on its own, linked to the full node by @id. */
+export function orgRef(locale: Locale) {
+  const c = site.contacts;
+  return {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: site.brand.name,
+    url: `${SITE_URL}/${locale}/`,
+    logo: { "@type": "ImageObject", url: abs("/brand/logo-512.png"), width: 512, height: 512 },
+    ...(c.phone.confirmed && c.phone.value ? { telephone: c.phone.value } : {}),
+  };
 }
 
 export function websiteLd(locale: Locale) {

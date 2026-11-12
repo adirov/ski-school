@@ -41,5 +41,15 @@
     "Цена",
     "Страховка",
     "Отмена из-за погоды и лавинной опасности"
-  ]
+  ],
+  "seo": {
+    "title": {
+      "ru": "Фрирайд в Алматы с гидом: катание вне трасс",
+      "en": "Freeride in Almaty with a guide: off-piste riding"
+    },
+    "description": {
+      "ru": "Внетрассовое катание на сноуборде с гидом в горах Алматы для опытных райдеров: выезд на полный день. Условия и цену обсуждаем по заявке.",
+      "en": "Guided off-piste snowboarding in the mountains near Almaty for experienced riders, full-day outing. Terms and price are agreed on request."
+    }
+  }
 }

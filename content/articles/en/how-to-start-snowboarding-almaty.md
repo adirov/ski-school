@@ -1,25 +1,25 @@
 ---
 title: "How to start snowboarding in Almaty"
-description: "A step-by-step plan for beginners: where to learn in Almaty, whether you need an instructor, what a first lesson covers and what to check before heading to the mountains."
+description: "A beginner plan for snowboarding in Almaty: how to learn, whether you need an instructor, what a first lesson covers and what to check before you go."
 translationKey: how-to-start
 category: beginners
 status: published
 author: "Almaty Snowboard School editorial team"
 reviewer: null
 published: "2026-11-04"
-updated: "2026-11-04"
+updated: "2026-11-12"
 cover: "/images/snowboarder-carving-blue-jacket.jpg"
 answer: "To start snowboarding in Almaty you need warm waterproof clothing, a helmet and one or two lessons with an instructor on a gentle learning slope. Beginners are better off renting a board and boots. The closest large resort to the city is Shymbulak, above Medeu. Check opening hours, prices and slope conditions on the resort's official website on the day you go."
 relatedServices: [private-lessons, group-courses]
 relatedTours: [shymbulak-first-snowboard-day]
-relatedArticles: []
+relatedArticles: [first-snowboard-lesson-preparation, what-to-bring-to-the-mountains-almaty]
 sources:
   - title: "Shymbulak resort official website (hours, lift passes, slope conditions)"
     url: "https://shymbulak.com/"
-    checked: null
+    checked: "2026-11-12"
   - title: "Kazhydromet weather forecast"
-    url: "https://www.kazhydromet.kz/"
-    checked: null
+    url: "https://www.kazhydromet.kz/en/"
+    checked: "2026-11-12"
 todo:
   - "Expert reviewer: name and qualification of the instructor who checks this article."
   - "Confirm on the Shymbulak website how the lift from Medeu currently works."
@@ -27,7 +27,7 @@ todo:
 
 ## In short
 
-You can learn to snowboard at any age if you start with the right basics. On day one a beginner learns to stand on the board, stop, and slide down sideways (the "falling leaf"). Linked turns come later, at a different pace for everyone. It is best to learn with an instructor: self-taught attempts often end in falls onto the back and wrists.
+Start with the basics rather than trying to turn straight away. On day one a beginner learns to stand on the board, stop, and slide down sideways (the "falling leaf"). Linked turns come later, at a different pace for everyone. Learning with an instructor is easier: they correct your stance right away and show you how to fall safely.
 
 ## Step 1. Choose how to learn
 
@@ -73,7 +73,7 @@ If you can stop confidently on both edges by the end of the day, that is a good 
 - Looking at your feet instead of where you are going.
 - Leaning back away from the slope, which shoots the board forward.
 - Putting your hands out when you fall. It is safer to land on your forearms or bottom with your chin tucked.
-- Riding until you are exhausted. Most injuries happen at the end of the day.
+- Riding until you are exhausted. Tired legs make more mistakes, so it is better to stop early.
 
 ## What next
 

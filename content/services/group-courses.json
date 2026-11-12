@@ -40,5 +40,15 @@
     "Цена",
     "Расписание",
     "Как формируются группы"
-  ]
+  ],
+  "seo": {
+    "title": {
+      "ru": "Групповые курсы сноуборда в Алматы с инструктором",
+      "en": "Group snowboard courses in Almaty with an instructor"
+    },
+    "description": {
+      "ru": "Курс сноуборда в группе с инструктором в Алматы: 5 занятий по 2 часа для новичков и продолжающих. Даты набора и цену сообщаем по заявке.",
+      "en": "A group snowboard course with an instructor in Almaty: 5 sessions of 2 hours for beginners and improvers. Start dates and price on request."
+    }
+  }
 }

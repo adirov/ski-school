@@ -2,8 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { publishedLocales, type Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { getArticles, getService, getServices, getTours, t } from "@/lib/content";
-import { abs, buildMetadata } from "@/lib/seo";
+import { getArticles, getService, getServices, getTours, img, t } from "@/lib/content";
+import { abs, buildMetadata, orgRef } from "@/lib/seo";
 import { availableLocales, nonEmptyParams } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Pic } from "@/components/Pic";
@@ -47,13 +47,13 @@ export default async function ServicePage({ params }: P) {
   return (
     <div className="wrap page">
       {s.status === "confirmed" && (
-        <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: title, description: t(s.summary, locale), url: abs(`/${locale}/services/${s.slug}/`), provider: { "@id": abs("/#organization") }, serviceType: title, areaServed: { "@type": "City", name: locale === "ru" ? "Алматы" : "Almaty" }, audience: { "@type": "Audience", audienceType: s.levels.map((l) => d.levels[l].name).join(", ") }, offers: { "@type": "Offer", url: abs(`/${locale}/services/${s.slug}/`), availability: "https://schema.org/InStock" } }} />
+        <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: title, description: t(s.summary, locale), url: abs(`/${locale}/services/${s.slug}/`), image: abs(img(s.image).src), provider: orgRef(locale), serviceType: title, areaServed: { "@type": "City", name: locale === "ru" ? "Алматы" : "Almaty" }, audience: { "@type": "Audience", audienceType: s.levels.map((l) => d.levels[l].name).join(", ") } }} />
       )}
       <Breadcrumbs
         label="Breadcrumbs"
         items={[
           { name: d.breadcrumbs.home, href: `/${locale}/` },
-          { name: d.tours.h1, href: `/${locale}/tours/` },
+          { name: d.tours.crumb, href: `/${locale}/tours/` },
           { name: title, href: `/${locale}/services/${s.slug}/` },
         ]}
       />

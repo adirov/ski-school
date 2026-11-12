@@ -1,0 +1,1154 @@
+# Admin panel (Sveltia CMS) settings. Docs: docs/CMS.md. Field labels are what the owner sees.
+backend:
+  name: github
+  repo: adirov/ski-school
+  branch: main
+  commit_messages:
+    create: 'CMS: создано «{{slug}}» ({{collection}})'
+    update: 'CMS: изменено «{{slug}}» ({{collection}})'
+    delete: 'CMS: удалено «{{slug}}» ({{collection}})'
+    uploadMedia: 'CMS: загружено фото {{path}}'
+    deleteMedia: 'CMS: удалено фото {{path}}'
+app_title: Almaty Snowboard — админка
+site_url: https://snow-school.kz/ru/
+media_folder: public/images
+public_folder: /images
+media_libraries:
+  default:
+    config:
+      max_file_size: 15000000
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 2560
+          height: 2560
+i18n:
+  structure: multiple_folders
+  locales:
+  - ru
+  - en
+  default_locale: ru
+slug:
+  encoding: ascii
+  clean_accents: true
+output:
+  omit_empty_optional_fields: true
+collections:
+- name: articles
+  label: Статьи
+  label_singular: Статья
+  folder: content/articles
+  extension: md
+  format: yaml-frontmatter
+  create: true
+  delete: false
+  i18n:
+    structure: multiple_folders
+    locales:
+    - ru
+    - en
+    default_locale: ru
+    initial_locales:
+    - ru
+  slug:
+    editable: true
+    i18n: duplicate
+  summary: '{{fields.title}} · {{fields.status}}'
+  sortable_fields:
+  - published
+  - updated
+  - title
+  view_groups:
+    groups:
+    - name: status
+      label: Статус
+      field: status
+    default: status
+  description: 'Русская и английская версии — отдельные вкладки в редакторе. Удаление отключено: чтобы убрать статью, поставьте статус «В корзине».'
+  fields:
+  - name: title
+    label: Заголовок
+    widget: string
+    i18n: true
+  - name: status
+    label: Статус
+    widget: select
+    i18n: true
+    default: draft
+    options:
+    - label: Черновик
+      value: draft
+    - label: Опубликовано
+      value: published
+    - label: В корзине
+      value: trash
+    hint: Черновик и корзина на сайте не видны. Восстановить — вернуть «Опубликовано» или «Черновик».
+  - name: seoTitle
+    label: 'SEO: заголовок страницы (title)'
+    widget: string
+    required: false
+    i18n: true
+    hint: Необязательно. Если пусто, берётся заголовок статьи.
+  - name: description
+    label: 'SEO: описание для поисковиков (description)'
+    widget: text
+    i18n: true
+    hint: До ~160 символов. Показывается в Google и Яндексе.
+  - name: category
+    label: Рубрика
+    widget: select
+    i18n: duplicate
+    options:
+    - label: Новичкам
+      value: beginners
+    - label: Подготовка и снаряжение
+      value: preparation
+    - label: Поездки и курорты
+      value: travel
+  - name: cover
+    label: Обложка
+    widget: image
+    i18n: duplicate
+    choose_url: false
+  - name: answer
+    label: Короткий ответ (2–4 предложения в начале статьи)
+    widget: text
+    i18n: true
+  - name: body
+    label: Текст статьи
+    widget: richtext
+    i18n: true
+    hint: Заголовки «Заголовок 2» и «Заголовок 3» попадут в оглавление. Фото можно вставлять прямо в текст.
+  - name: published
+    label: Дата публикации
+    widget: datetime
+    i18n: duplicate
+    time_format: false
+    format: YYYY-MM-DD
+    default: '{{now}}'
+  - name: updated
+    label: Дата обновления
+    widget: datetime
+    i18n: true
+    time_format: false
+    format: YYYY-MM-DD
+    default: '{{now}}'
+  - name: author
+    label: Автор
+    widget: string
+    required: false
+    i18n: true
+    default: Редакция Almaty Snowboard
+  - name: reviewer
+    label: Эксперт-проверяющий
+    widget: string
+    required: false
+    i18n: true
+  - name: translationKey
+    label: Ключ перевода (служебное)
+    widget: string
+    i18n: duplicate
+    hint: Латиницей, одинаковый у русской и английской версии.
+  - name: relatedServices
+    label: Связанные занятия
+    widget: relation
+    required: false
+    i18n: duplicate
+    collection: services
+    value_field: '{{slug}}'
+    search_fields:
+    - title.ru
+    display_fields:
+    - '{{title.ru}}'
+    multiple: true
+  - name: relatedTours
+    label: Связанные туры
+    widget: relation
+    required: false
+    i18n: duplicate
+    collection: tours
+    value_field: '{{slug}}'
+    search_fields:
+    - title.ru
+    display_fields:
+    - '{{title.ru}}'
+    multiple: true
+  - name: relatedArticles
+    label: Связанные статьи
+    widget: relation
+    required: false
+    i18n: duplicate
+    collection: articles
+    value_field: '{{slug}}'
+    search_fields:
+    - title
+    display_fields:
+    - '{{title}}'
+    multiple: true
+  - name: sources
+    label: Источники
+    widget: list
+    required: false
+    i18n: true
+    collapsed: true
+    summary: '{{fields.title}}'
+    fields:
+    - name: title
+      label: Название
+      widget: string
+    - name: url
+      label: Ссылка
+      widget: string
+      required: false
+    - name: checked
+      label: Дата проверки
+      widget: datetime
+      required: false
+      time_format: false
+      format: YYYY-MM-DD
+  - name: todo
+    label: Что доработать (заметки, на сайте не видны)
+    widget: list
+    required: false
+    i18n: true
+    field:
+      name: item
+      label: Пункт
+      widget: string
+      required: false
+- name: tours
+  label: Туры
+  label_singular: Тур
+  folder: content/tours
+  extension: json
+  format: json
+  create: true
+  delete: false
+  identifier_field: slug
+  slug:
+    template: '{{fields.slug}}'
+    editable: false
+  summary: '{{fields.title.ru}} · {{fields.status}}'
+  sortable_fields:
+  - order
+  - title.ru
+  view_groups:
+    groups:
+    - name: status
+      label: Статус
+      field: status
+    default: status
+  description: 'Программы на день и больше. Удаление отключено: чтобы убрать тур, поставьте статус «В корзине».'
+  fields:
+  - name: title
+    label: Название
+    widget: object
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: string
+    - name: en
+      label: English
+      widget: string
+      required: false
+  - name: slug
+    label: Адрес страницы (URL)
+    widget: string
+    pattern:
+    - ^[a-z0-9-]+$
+    - Только латиница в нижнем регистре, цифры и дефисы
+    hint: Часть адреса после /tours/ или /services/. Если меняете адрес опубликованной страницы, добавьте переадресацию в разделе «Переадресации».
+  - name: status
+    label: Статус публикации
+    widget: select
+    default: demo
+    options:
+    - label: Опубликовано
+      value: confirmed
+    - label: Пример (виден только на превью)
+      value: demo
+    - label: Снято с публикации
+      value: hidden
+    - label: В корзине
+      value: trash
+    hint: «Снято с публикации» и «В корзине» убирают страницу с сайта. Чтобы восстановить, верните статус «Опубликовано».
+  - name: order
+    label: Порядок на сайте
+    widget: number
+    required: false
+    value_type: int
+    default: 100
+    hint: Меньше — выше.
+  - name: summary
+    label: Краткое описание
+    widget: object
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: text
+    - name: en
+      label: English
+      widget: text
+      required: false
+  - name: description
+    label: Описание (абзацы)
+    widget: object
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: list
+      field:
+        name: item
+        label: Абзац
+        widget: text
+    - name: en
+      label: English
+      widget: list
+      required: false
+      field:
+        name: item
+        label: Абзац
+        widget: text
+  - name: images
+    label: Фото
+    widget: list
+    min: 1
+    field:
+      name: image
+      label: Фото
+      widget: image
+      choose_url: false
+    hint: Первое фото — главное.
+  - name: location
+    label: Место
+    widget: object
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: string
+    - name: en
+      label: English
+      widget: string
+      required: false
+  - name: price
+    label: Цена
+    widget: object
+    collapsed: false
+    fields:
+    - name: amount
+      label: Сумма
+      widget: number
+      required: false
+      value_type: int
+      hint: Пусто — на сайте «по запросу».
+    - name: currency
+      label: Валюта
+      widget: select
+      required: false
+      default: KZT
+      options:
+      - KZT
+      - USD
+      - EUR
+      - RUB
+    - name: unit
+      label: За кого
+      widget: select
+      required: false
+      options:
+      - label: За человека
+        value: person
+      - label: За группу
+        value: group
+    - name: todo
+      label: Что уточнить
+      widget: string
+      required: false
+  - name: duration
+    label: Длительность
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Значение
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: string
+        required: false
+      - name: en
+        label: English
+        widget: string
+        required: false
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: route
+    label: Маршрут и программа
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Значение
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: text
+        required: false
+      - name: en
+        label: English
+        widget: text
+        required: false
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: levels
+    label: Уровни
+    widget: select
+    multiple: true
+    options:
+    - label: Новичок
+      value: beginner
+    - label: Средний
+      value: intermediate
+    - label: Продвинутый
+      value: advanced
+  - name: format
+    label: Формат
+    widget: select
+    options:
+    - label: Индивидуально
+      value: private
+    - label: Группа
+      value: group
+    - label: Индивидуально и группа
+      value: both
+  - name: groupSize
+    label: Размер группы
+    widget: object
+    collapsed: true
+    fields:
+    - name: min
+      label: Минимум
+      widget: number
+      required: false
+      value_type: int
+    - name: max
+      label: Максимум
+      widget: number
+      required: false
+      value_type: int
+    - name: todo
+      label: Что уточнить
+      widget: string
+      required: false
+  - name: languages
+    label: Языки
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Языки
+      widget: list
+      required: false
+      field:
+        name: item
+        label: Язык
+        widget: string
+        required: false
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: season
+    label: Сезон и расписание
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Значение
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: string
+        required: false
+      - name: en
+        label: English
+        widget: string
+        required: false
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: included
+    label: Что включено
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Список
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Пункт
+          widget: text
+      - name: en
+        label: English
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Пункт
+          widget: text
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: notIncluded
+    label: Что не включено
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Список
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Пункт
+          widget: text
+      - name: en
+        label: English
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Пункт
+          widget: text
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: meetingPoint
+    label: Место встречи
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Значение
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: text
+        required: false
+      - name: en
+        label: English
+        widget: text
+        required: false
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: equipment
+    label: Снаряжение
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Список
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Пункт
+          widget: text
+      - name: en
+        label: English
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Пункт
+          widget: text
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: restrictions
+    label: Ограничения
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Список
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Пункт
+          widget: text
+      - name: en
+        label: English
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Пункт
+          widget: text
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: weatherPolicy
+    label: Если непогода
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Значение
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: text
+        required: false
+      - name: en
+        label: English
+        widget: text
+        required: false
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: bookingTerms
+    label: Условия бронирования и отмены
+    widget: object
+    collapsed: true
+    fields:
+    - name: value
+      label: Значение
+      widget: object
+      required: false
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: text
+        required: false
+      - name: en
+        label: English
+        widget: text
+        required: false
+    - name: todo
+      label: Что уточнить (заметка, на сайте не видна)
+      widget: string
+      required: false
+    summary: '{{fields.todo}}'
+    hint: 'Оставьте пустым, если пока неизвестно: на сайте будет «уточняйте по запросу».'
+  - name: faq
+    label: Вопросы и ответы
+    widget: list
+    required: false
+    collapsed: true
+    summary: '{{fields.q.ru}}'
+    fields:
+    - name: q
+      label: Вопрос
+      widget: object
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: string
+      - name: en
+        label: English
+        widget: string
+        required: false
+    - name: a
+      label: Ответ
+      widget: object
+      collapsed: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: text
+      - name: en
+        label: English
+        widget: text
+        required: false
+  - name: availability
+    label: Наличие мест
+    widget: select
+    required: false
+    default: request
+    options:
+    - label: По запросу
+      value: request
+    hint: Пока нет системы бронирования, всегда «по запросу».
+  - name: relatedServices
+    label: Связанные занятия
+    widget: relation
+    required: false
+    collection: services
+    value_field: '{{slug}}'
+    search_fields:
+    - title.ru
+    display_fields:
+    - '{{title.ru}}'
+    multiple: true
+  - name: relatedArticles
+    label: Связанные статьи
+    widget: relation
+    required: false
+    collection: articles
+    value_field: '{{slug}}'
+    search_fields:
+    - title
+    display_fields:
+    - '{{title}}'
+    multiple: true
+  - name: getYourGuideUrl
+    label: Ссылка на GetYourGuide
+    widget: string
+    required: false
+  - name: seo
+    label: SEO
+    widget: object
+    required: false
+    collapsed: true
+    hint: Необязательно. Если пусто, берутся название и краткое описание.
+    fields:
+    - name: title
+      label: Заголовок страницы (title)
+      widget: object
+      required: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: string
+        required: false
+      - name: en
+        label: English
+        widget: string
+        required: false
+    - name: description
+      label: Описание для поисковиков (description)
+      widget: object
+      required: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: text
+        required: false
+      - name: en
+        label: English
+        widget: text
+        required: false
+      hint: До ~160 символов.
+- name: services
+  label: Занятия
+  label_singular: Занятие
+  folder: content/services
+  extension: json
+  format: json
+  create: true
+  delete: false
+  identifier_field: slug
+  slug:
+    template: '{{fields.slug}}'
+    editable: false
+  summary: '{{fields.title.ru}} · {{fields.status}}'
+  sortable_fields:
+  - order
+  - title.ru
+  view_groups:
+    groups:
+    - name: status
+      label: Статус
+      field: status
+    default: status
+  description: 'Индивидуальные уроки, группы, дети, фрирайд. Удаление отключено: чтобы убрать занятие, поставьте статус «В корзине».'
+  fields:
+  - name: title
+    label: Название
+    widget: object
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: string
+    - name: en
+      label: English
+      widget: string
+      required: false
+  - name: shortTitle
+    label: Короткое название
+    widget: object
+    required: false
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: string
+      required: false
+    - name: en
+      label: English
+      widget: string
+      required: false
+    hint: Для узких мест, например списка в форме заявки на телефоне.
+  - name: slug
+    label: Адрес страницы (URL)
+    widget: string
+    pattern:
+    - ^[a-z0-9-]+$
+    - Только латиница в нижнем регистре, цифры и дефисы
+    hint: Часть адреса после /tours/ или /services/. Если меняете адрес опубликованной страницы, добавьте переадресацию в разделе «Переадресации».
+  - name: status
+    label: Статус публикации
+    widget: select
+    default: confirmed
+    options:
+    - label: Опубликовано
+      value: confirmed
+    - label: Пример (виден только на превью)
+      value: demo
+    - label: Снято с публикации
+      value: hidden
+    - label: В корзине
+      value: trash
+    hint: «Снято с публикации» и «В корзине» убирают страницу с сайта. Чтобы восстановить, верните статус «Опубликовано».
+  - name: order
+    label: Порядок на сайте
+    widget: number
+    required: false
+    value_type: int
+    default: 100
+    hint: Меньше — выше.
+  - name: summary
+    label: Краткое описание
+    widget: object
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: text
+    - name: en
+      label: English
+      widget: text
+      required: false
+  - name: body
+    label: Описание (абзацы)
+    widget: object
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: list
+      field:
+        name: item
+        label: Абзац
+        widget: text
+    - name: en
+      label: English
+      widget: list
+      required: false
+      field:
+        name: item
+        label: Абзац
+        widget: text
+  - name: duration
+    label: Длительность
+    widget: object
+    required: false
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: string
+      required: false
+    - name: en
+      label: English
+      widget: string
+      required: false
+  - name: age
+    label: Возраст
+    widget: object
+    required: false
+    collapsed: false
+    fields:
+    - name: ru
+      label: Русский
+      widget: string
+      required: false
+    - name: en
+      label: English
+      widget: string
+      required: false
+  - name: levels
+    label: Уровни
+    widget: select
+    multiple: true
+    options:
+    - label: Новичок
+      value: beginner
+    - label: Средний
+      value: intermediate
+    - label: Продвинутый
+      value: advanced
+  - name: format
+    label: Формат
+    widget: select
+    options:
+    - label: Индивидуально
+      value: private
+    - label: Группа
+      value: group
+    - label: Индивидуально и группа
+      value: both
+  - name: image
+    label: Фото
+    widget: image
+    choose_url: false
+  - name: todo
+    label: Что уточнить у владельца
+    widget: list
+    required: false
+    field:
+      name: item
+      label: Пункт
+      widget: string
+      required: false
+  - name: source
+    label: Источник данных (служебное)
+    widget: text
+    required: false
+  - name: seo
+    label: SEO
+    widget: object
+    required: false
+    collapsed: true
+    hint: Необязательно. Если пусто, берутся название и краткое описание.
+    fields:
+    - name: title
+      label: Заголовок страницы (title)
+      widget: object
+      required: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: string
+        required: false
+      - name: en
+        label: English
+        widget: string
+        required: false
+    - name: description
+      label: Описание для поисковиков (description)
+      widget: object
+      required: false
+      fields:
+      - name: ru
+        label: Русский
+        widget: text
+        required: false
+      - name: en
+        label: English
+        widget: text
+        required: false
+      hint: До ~160 символов.
+- name: pages
+  label: Страницы
+  description: «О нас», условия бронирования, политика конфиденциальности.
+  format: yaml-frontmatter
+  i18n: true
+  files:
+  - name: about
+    label: О нас
+    file: content/pages/{{locale}}/about.md
+    i18n: true
+    fields:
+    - name: title
+      label: Заголовок
+      widget: string
+      i18n: true
+    - name: description
+      label: 'SEO: описание для поисковиков'
+      widget: text
+      i18n: true
+    - name: body
+      label: Текст
+      widget: richtext
+      i18n: true
+  - name: booking-terms
+    label: Условия бронирования
+    file: content/pages/{{locale}}/booking-terms.md
+    i18n: true
+    fields:
+    - name: title
+      label: Заголовок
+      widget: string
+      i18n: true
+    - name: description
+      label: 'SEO: описание для поисковиков'
+      widget: text
+      i18n: true
+    - name: body
+      label: Текст
+      widget: richtext
+      i18n: true
+  - name: privacy
+    label: Политика конфиденциальности
+    file: content/pages/{{locale}}/privacy.md
+    i18n: true
+    fields:
+    - name: title
+      label: Заголовок
+      widget: string
+      i18n: true
+    - name: description
+      label: 'SEO: описание для поисковиков'
+      widget: text
+      i18n: true
+    - name: body
+      label: Текст
+      widget: richtext
+      i18n: true
+- name: other
+  label: Прочее
+  files:
+  - name: faq
+    label: Частые вопросы
+    file: content/faq.json
+    format: json
+    fields:
+    - name: items
+      label: Вопросы
+      widget: list
+      root: true
+      summary: '{{fields.q.ru}}'
+      fields:
+      - name: q
+        label: Вопрос
+        widget: object
+        collapsed: false
+        fields:
+        - name: ru
+          label: Русский
+          widget: string
+        - name: en
+          label: English
+          widget: string
+          required: false
+      - name: a
+        label: Ответ
+        widget: object
+        collapsed: false
+        fields:
+        - name: ru
+          label: Русский
+          widget: text
+        - name: en
+          label: English
+          widget: text
+          required: false
+      - name: confirmed
+        label: Подтверждено владельцем (показывать на сайте)
+        widget: boolean
+        default: false
+      - name: todo
+        label: Что уточнить
+        widget: string
+        required: false
+  - name: redirects
+    label: Переадресации
+    file: content/redirects.json
+    format: json
+    fields:
+    - name: items
+      label: Переадресации
+      widget: list
+      required: false
+      root: true
+      hint: 'Если поменяли адрес страницы, добавьте строку: старый адрес → новый. Тогда старые ссылки и закладки продолжат работать.'
+      summary: '{{fields.source}} → {{fields.destination}}'
+      fields:
+      - name: source
+        label: Старый адрес
+        widget: string
+        pattern:
+        - ^/(ru|en)/.*/$
+        - Например /ru/tours/old-name/
+      - name: destination
+        label: Новый адрес
+        widget: string
+        pattern:
+        - ^/(ru|en)/.*/$
+        - Например /ru/tours/new-name/
+

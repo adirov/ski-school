@@ -1,0 +1,76 @@
+# Two copies (see docs/HOSTING.md) of the site are built from main:
+#  1. snow-school.kz (hoster.kz, Plesk). The static build is pushed to the `hoster` branch;
+#     Plesk "Git" pulls that branch into httpdocs on every push (webhook). No passwords in GitHub.
+#  2. GitHub Pages: preview copy, always noindex, canonical points to the domain.
+# Admin panel (/admin) edits content/ in main, so every CMS save rebuilds and redeploys both.
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+jobs:
+  domain:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build:pages
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://snow-school.kz' }}
+          NEXT_PUBLIC_ALLOW_INDEXING: ${{ vars.ALLOW_INDEXING || '1' }}
+          NEXT_PUBLIC_GA4_ID: ${{ vars.GA4_ID }}
+          NEXT_PUBLIC_YANDEX_METRIKA_ID: ${{ vars.YANDEX_METRIKA_ID }}
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: hoster
+          publish_dir: ./out
+          force_orphan: true
+          enable_jekyll: true
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_message: "Build for snow-school.kz"
+
+  pages-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - id: pages
+        uses: actions/configure-pages@v5
+      - run: npm ci
+      - run: npm run build:pages
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # Preview copy: canonical and sitemap point to the real domain, indexing off.
+          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://snow-school.kz' }}
+          NEXT_PUBLIC_ALLOW_INDEXING: "0"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+  pages:
+    needs: pages-build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

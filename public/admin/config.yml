@@ -10,7 +10,7 @@ backend:
     uploadMedia: 'CMS: загружено фото {{path}}'
     deleteMedia: 'CMS: удалено фото {{path}}'
 app_title: Almaty Snowboard — админка
-site_url: https://adirov.github.io/ski-school/ru/
+site_url: https://snow-school.kz/ru/
 media_folder: public/images
 public_folder: /images
 media_libraries:

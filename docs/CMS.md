@@ -1,10 +1,10 @@
 # Админка (CMS)
 
-Адрес: **https://adirov.github.io/ski-school/admin/** (после подключения своего домена: `https://<домен>/admin/`).
+Адрес: **https://snow-school.kz/admin/** (копия для проверки: https://adirov.github.io/ski-school/admin/).
 
-Админка — [Sveltia CMS](https://github.com/sveltia/sveltia-cms). Сервер и база данных не нужны: админка открывается в браузере, правит файлы в `content/` прямо в репозитории GitHub, а GitHub Actions пересобирает сайт. Изменения появляются на сайте примерно через 2–3 минуты после «Сохранить».
+Админка — [Sveltia CMS](https://github.com/sveltia/sveltia-cms). Сервер и база данных не нужны: админка открывается в браузере, правит файлы в `content/` прямо в репозитории GitHub, а GitHub Actions пересобирает сайт и выкладывает его на snow-school.kz (hoster.kz) и на GitHub Pages. Изменения появляются на сайте примерно через 2–3 минуты после «Сохранить».
 
-Почему Sveltia, а не Decap/Tina: сайт лежит на GitHub Pages, а там нет сервера. Sveltia и Decap работают без сервера, но у Sveltia есть русский интерфейс, нормальная работа с двумя языками, сжатие фото при загрузке и вход по токену без дополнительных сервисов. TinaCMS требует облачный аккаунт Tina или свой сервер.
+Почему Sveltia, а не Decap/Tina: сайт статический (hoster.kz без Node.js, GitHub Pages), сервера нет. Sveltia и Decap работают без сервера, но у Sveltia есть русский интерфейс, нормальная работа с двумя языками, сжатие фото при загрузке и вход по токену без дополнительных сервисов. TinaCMS требует облачный аккаунт Tina или свой сервер.
 
 Настройки полей: `public/admin/config.yml`.
 
@@ -60,9 +60,9 @@
 
 1. Развернуть [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth) кнопкой «Deploy to Cloudflare Workers» из README. Получится адрес вида `https://sveltia-cms-auth.<имя>.workers.dev`.
 2. GitHub → Settings → Developer settings → OAuth Apps → New OAuth App:
-   - Homepage URL: `https://adirov.github.io/ski-school/`
+   - Homepage URL: `https://snow-school.kz/`
    - Authorization callback URL: `https://sveltia-cms-auth.<имя>.workers.dev/callback`
-3. В Cloudflare у воркера добавить переменные `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (из OAuth App) и `ALLOWED_DOMAINS` = `adirov.github.io` (плюс свой домен, когда будет).
+3. В Cloudflare у воркера добавить переменные `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (из OAuth App) и `ALLOWED_DOMAINS` = `snow-school.kz,adirov.github.io`.
 4. В `public/admin/config.yml` в блок `backend` добавить строку `base_url: https://sveltia-cms-auth.<имя>.workers.dev` и закоммитить.
 
 ## Для разработчика

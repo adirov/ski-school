@@ -502,3 +502,10 @@ h1, h2, h3, .h3, .tile__h { -webkit-hyphens: auto; hyphens: auto; }
 @media (max-width: 820px) { .partner__in { grid-template-columns: 1fr; } }
 .partner__txt h2 { font-size: clamp(24px, 3.2vw, 40px); -webkit-hyphens: manual; hyphens: manual; }
 .partner--compact .partner__txt h2 { font-size: clamp(21px, 2.4vw, 28px); }
+
+/* Narrow phones (320–360 px) where the browser has no Russian hyphenation dictionary (e.g. desktop Chrome on Windows):
+   long single words like «Индивидуальные» must still fit the column. */
+@media (max-width: 360px) {
+  .prog__txt h2 { font-size: 24px; overflow-wrap: anywhere; }
+  .prog__grid > * { min-width: 0; }
+}

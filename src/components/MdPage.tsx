@@ -4,7 +4,8 @@ import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
 import { getPage, site } from "@/lib/content";
 import { renderMarkdown } from "@/lib/markdown";
-import { buildMetadata } from "@/lib/seo";
+import { abs, buildMetadata, organizationLd } from "@/lib/seo";
+import { JsonLd } from "./JsonLd";
 import { availableLocales } from "@/lib/routes";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { Prose } from "./Prose";
@@ -26,6 +27,7 @@ export function MdPage({ name, locale, legal }: { name: string; locale: Locale; 
   const { html } = renderMarkdown(p.body);
   return (
     <div className="wrap page wrap--narrow">
+      {name === "about" && <JsonLd data={[{ "@context": "https://schema.org", "@type": "AboutPage", url: abs(`/${locale}/about/`), name: p.title, about: { "@id": abs("/#organization") } }, organizationLd(locale)]} />}
       <Breadcrumbs label="Breadcrumbs" items={[{ name: d.breadcrumbs.home, href: `/${locale}/` }, { name: p.title, href: `/${locale}/${name}/` }]} />
       <h1>{p.title}</h1>
       {legal && !site.legal.approved && IS_PREVIEW && <p className="alert alert--warn">{d.legalDraft}</p>}

@@ -7,7 +7,7 @@
 
 1. Любой коммит в `main` (в том числе сохранение в админке `/admin`) запускает `.github/workflows/deploy.yml`.
 2. Workflow собирает сайт (`npm run build:pages`, корень домена, `NEXT_PUBLIC_SITE_URL=https://snow-school.kz`, индексация включена) и кладёт готовую папку `out/` в ветку `hoster` (только сборка, без исходников).
-3. В Plesk → «Git» подключён публичный репозиторий `https://github.com/adirov/ski-school.git`, ветка `hoster`, автоматическое развёртывание в `httpdocs`. GitHub сообщает Plesk о новом коммите через webhook (Settings → Webhooks репозитория), Plesk забирает ветку за несколько секунд.
+3. В Plesk → «Git» подключён публичный репозиторий `https://github.com/adirov/ski-school.git`, ветка `hoster`, автоматическое развёртывание в `httpdocs`. Последний шаг workflow вызывает webhook Plesk, Plesk забирает ветку за несколько секунд. Адрес webhook (Plesk → Git → настройки репозитория) хранится в секрете GitHub `PLESK_WEBHOOK_URL` (Settings → Secrets and variables → Actions).
 
 Паролей от хостинга в GitHub нет. Если webhook сломался: Plesk → Git → «Получить» (Pull) и «Развернуть».
 

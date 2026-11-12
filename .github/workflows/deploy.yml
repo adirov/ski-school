@@ -1,6 +1,6 @@
 # Two copies (see docs/HOSTING.md) of the site are built from main:
 #  1. snow-school.kz (hoster.kz, Plesk). The static build is pushed to the `hoster` branch;
-#     Plesk "Git" pulls that branch into httpdocs on every push (webhook). No passwords in GitHub.
+#     Plesk "Git" pulls that branch into httpdocs when the last step calls its webhook. No hosting passwords in GitHub.
 #  2. GitHub Pages: preview copy, always noindex, canonical points to the domain.
 # Admin panel (/admin) edits content/ in main, so every CMS save rebuilds and redeploys both.
 name: Deploy
@@ -39,6 +39,14 @@ jobs:
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
           commit_message: "Build for snow-school.kz"
+      # Tell Plesk (hoster.kz → Git) to pull the hoster branch into httpdocs.
+      # The webhook URL (Plesk → Git → repository settings) is kept in the PLESK_WEBHOOK_URL secret.
+      - name: Deploy on hoster.kz
+        env:
+          HOOK: ${{ secrets.PLESK_WEBHOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "::warning::PLESK_WEBHOOK_URL secret is not set: run Plesk → Git → Pull/Deploy by hand"; exit 0; fi
+          curl -fsS -m 60 --retry 3 -X POST -H 'Content-Type: application/json' -d '{}' "$HOOK"
 
   pages-build:
     runs-on: ubuntu-latest

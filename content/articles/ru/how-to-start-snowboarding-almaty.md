@@ -8,7 +8,7 @@ author: "Редакция Almaty Snowboard School"
 reviewer: null
 published: "2026-11-04"
 updated: "2026-11-04"
-cover: snowboarder-carving-blue-jacket
+cover: "/images/snowboarder-carving-blue-jacket.jpg"
 answer: "Чтобы начать кататься на сноуборде в Алматы, достаточно тёплой непромокаемой одежды, шлема и одного-двух занятий с инструктором на пологом учебном склоне. Доску и ботинки новичку удобнее взять в прокат. Ближайший к городу крупный курорт — Шымбулак над Медеу. Расписание, цены и состояние трасс проверяйте на официальном сайте курорта в день поездки."
 relatedServices: [private-lessons, group-courses]
 relatedTours: [shymbulak-first-snowboard-day]

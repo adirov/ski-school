@@ -44,7 +44,8 @@ export function renderMarkdown(md: string): { html: string; toc: TocItem[] } {
     },
   });
   // Site-absolute links in content ("/ru/contact/") must carry the deploy sub-path (GitHub Pages).
-  const html = (marked.parse(md, { async: false }) as string).replace(/href="\/(?!\/)/g, `href="${BASE_PATH}/`);
+  // Same for images uploaded in the admin panel ("/images/x.jpg").
+  const html = (marked.parse(md, { async: false }) as string).replace(/(href|src)="\/(?!\/)/g, `$1="${BASE_PATH}/`);
   return { html, toc };
 }
 

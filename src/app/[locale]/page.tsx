@@ -113,7 +113,7 @@ export default async function Home({ params }: P) {
         <section key={s.slug} id={`svc-${s.slug}`} className={`prog${i % 2 ? " prog--flip" : ""}`} aria-labelledby={`svc-${s.slug}-h`}>
           <div className="wrap prog__grid">
             <div className="prog__media">
-              <Pic id={s.image} locale={locale} sizes="(max-width: 820px) 100vw, 55vw" />
+              <Pic id={s.image} locale={locale} sizes="(max-width: 820px) 100vw, 55vw" alt={t(s.title, locale)} />
             </div>
             <div className="prog__txt">
               {s.status === "demo" && <Badge kind="demo">{d.badge.demo}</Badge>}
@@ -185,7 +185,7 @@ export default async function Home({ params }: P) {
             <div className="places__grid">
               {places.map((pl) => (
                 <article key={pl.image} className="place">
-                  <Pic id={pl.image} locale={locale} sizes="(max-width: 820px) 100vw, 400px" />
+                  <Pic id={pl.image} locale={locale} sizes="(max-width: 820px) 100vw, 400px" alt={t(pl.name, locale)} />
                   <h3>{t(pl.name, locale)}</h3>
                   <p>{t(pl.text, locale)}</p>
                 </article>

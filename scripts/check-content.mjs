@@ -17,6 +17,7 @@ for (const f of ["site.json", "faq.json"]) walk(JSON.parse(fs.readFileSync(path.
 for (const dir of ["services", "tours"]) {
   for (const f of fs.readdirSync(path.join(root, dir))) {
     const j = JSON.parse(fs.readFileSync(path.join(root, dir, f), "utf8"));
+    if (j.status === "trash") continue;
     if (j.status === "demo") out.push(`${dir}/${f}: статус demo, нужно подтверждение владельцем`);
     for (const t of j.todo ?? []) out.push(`${dir}/${f}: ${t}`);
     walk({ ...j, todo: undefined }, `${dir}/${f}`);
@@ -25,7 +26,8 @@ for (const dir of ["services", "tours"]) {
 for (const l of fs.readdirSync(path.join(root, "articles"))) {
   for (const f of fs.readdirSync(path.join(root, "articles", l))) {
     const s = fs.readFileSync(path.join(root, "articles", l, f), "utf8");
-    if (/^status:\s*draft/m.test(s)) out.push(`articles/${l}/${f}: черновик`);
+    if (/^status:\s*["']?trash/m.test(s)) continue;
+    if (/^status:\s*["']?draft/m.test(s)) out.push(`articles/${l}/${f}: черновик`);
     for (const m of s.matchAll(/^\s+- "(.+)"$/gm)) if (s.indexOf("todo:") < m.index) out.push(`articles/${l}/${f}: ${m[1]}`);
   }
 }

@@ -1,5 +1,6 @@
 ---
 title: "Что взять с собой в горы Алматы зимой: список для сноубордиста"
+seoTitle: "Что взять в горы Алматы: список сноубордиста"
 description: "Чек-лист одежды, защиты, документов и мелочей для дня на склоне под Алматы, плюс отдельный список для выездов вне трасс."
 translationKey: packing-list
 category: preparation
@@ -8,7 +9,7 @@ author: "Редакция Almaty Snowboard School"
 reviewer: null
 published: "2026-11-04"
 updated: "2026-11-04"
-cover: trans-ili-alatau-panorama
+cover: "/images/trans-ili-alatau-panorama.jpg"
 answer: "На день катания в горах Алматы берите многослойную одежду (термобельё, флис, непромокаемую мембрану), шлем, маску, две пары перчаток, солнцезащитный крем, воду, перекус и заряженный телефон. Для выездов вне трасс дополнительно нужны лавинный датчик, лопата и щуп, умение ими пользоваться и сопровождение гида."
 relatedServices: [off-piste-guiding, private-lessons]
 relatedTours: [kosmostantsiya-freeride-day]

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: P) {
   const locale = _l as Locale;
   const x = getTour(slug, locale);
   if (!x) return {};
-  return buildMetadata({ locale, path: `/tours/${slug}/`, title: t(x.title, locale)!, description: t(x.summary, locale)!, available: availableLocales(`/tours/${slug}/`), image: x.images[0], noindex: x.status !== "confirmed" });
+  return buildMetadata({ locale, path: `/tours/${slug}/`, title: t(x.seo?.title, locale) || t(x.title, locale)!, description: t(x.seo?.description, locale) || t(x.summary, locale)!, available: availableLocales(`/tours/${slug}/`), image: x.images[0], noindex: x.status !== "confirmed" });
 }
 
 function Val({ v, todo, tbd }: { v: React.ReactNode | null | undefined; todo?: string | null; tbd: string }) {
@@ -122,7 +122,7 @@ export default async function TourPage({ params }: P) {
 
       <div className="gallery">
         {x.images.map((id, i) => (
-          <Pic key={id} id={id} locale={locale} sizes={i === 0 ? "(max-width: 900px) 100vw, 66vw" : "(max-width: 900px) 100vw, 33vw"} priority={i === 0} />
+          <Pic key={id} id={id} locale={locale} sizes={i === 0 ? "(max-width: 900px) 100vw, 66vw" : "(max-width: 900px) 100vw, 33vw"} priority={i === 0} alt={title} />
         ))}
       </div>
 

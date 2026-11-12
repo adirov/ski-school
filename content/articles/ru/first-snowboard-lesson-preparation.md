@@ -8,7 +8,7 @@ author: "Редакция Almaty Snowboard School"
 reviewer: null
 published: "2026-11-04"
 updated: "2026-11-04"
-cover: shymbulak-beginner-slope
+cover: "/images/shymbulak-beginner-slope.jpg"
 answer: "К первому занятию по сноуборду готовьтесь заранее: за неделю сделайте простые упражнения на ноги и баланс, накануне соберите тёплую непромокаемую одежду и выспитесь, утром плотно позавтракайте и приезжайте с запасом времени на прокат. Инструктору расскажите о своём опыте, травмах и страхах."
 relatedServices: [private-lessons, kids-training]
 relatedTours: [shymbulak-first-snowboard-day]

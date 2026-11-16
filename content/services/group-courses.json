@@ -2,27 +2,27 @@
   "slug": "group-courses",
   "status": "confirmed",
   "order": 2,
-  "source": "Макет визитки и WhatsApp 03.11.2026: «Групповые курсы по сноуборду». Направление подтверждено владельцем; длительность, цены и расписание сообщаются по заявке.",
+  "source": "Направление: макет визитки и WhatsApp 03.11.2026. Формат и цена: прайс владельца 16.11.2026 — групповой урок 2 часа, группы от 2 до 5 человек (content/prices.json).",
   "title": {
-    "ru": "Групповые курсы сноуборда",
-    "en": "Group snowboard courses"
+    "ru": "Групповые уроки сноуборда",
+    "en": "Group snowboard lessons"
   },
   "shortTitle": {
-    "ru": "Групповые курсы",
-    "en": "Group courses"
+    "ru": "Групповые уроки",
+    "en": "Group lessons"
   },
   "summary": {
-    "ru": "Курс из нескольких занятий в группе с инструктором.",
-    "en": "A course of several sessions in a group with an instructor."
+    "ru": "Урок с инструктором в группе от 2 до 5 человек, 2 часа.",
+    "en": "A 2-hour lesson with an instructor in a group of 2 to 5 people."
   },
   "body": {
     "ru": [
       "Групповой формат подходит тем, кто хочет учиться вместе с друзьями или в компании людей своего уровня: инструктор ведёт группу, а упражнения подбираются под общий уровень.",
-      "Курс состоит из пяти занятий по два часа. Размер группы и ближайшие даты сообщаем в ответ на заявку."
+      "В группе от 2 до 5 человек, урок длится 2 часа. Цена — с каждого участника; ски-пасс покупается отдельно. Ближайшие даты сообщаем в ответ на заявку."
     ],
     "en": [
       "The group format suits people who want to learn with friends or with others at the same level: the instructor leads the group and picks drills for its level.",
-      "The course has five two-hour sessions. We share group size and upcoming dates in reply to your request."
+      "Groups are 2 to 5 people and a lesson lasts 2 hours. The price is per person; the ski pass is bought separately. We share upcoming dates in reply to your request."
     ]
   },
   "levels": [
@@ -31,24 +31,22 @@
   ],
   "format": "group",
   "duration": {
-    "ru": "5 занятий по 2 часа",
-    "en": "5 sessions, 2 hours each"
+    "ru": "2 часа",
+    "en": "2 hours"
   },
   "image": "/images/snowboard-group-summit.jpg",
   "todo": [
-    "Мин./макс. размер группы",
-    "Цена",
     "Расписание",
     "Как формируются группы"
   ],
   "seo": {
     "title": {
-      "ru": "Групповые курсы сноуборда в Алматы с инструктором",
-      "en": "Group snowboard courses in Almaty with an instructor"
+      "ru": "Групповые уроки сноуборда в Алматы — 25 000 ₸ с человека",
+      "en": "Group snowboard lessons in Almaty — 25,000 KZT per person"
     },
     "description": {
-      "ru": "Курс сноуборда в группе с инструктором в Алматы: 5 занятий по 2 часа для новичков и продолжающих. Даты набора и цену сообщаем по заявке.",
-      "en": "A group snowboard course with an instructor in Almaty: 5 sessions of 2 hours for beginners and improvers. Start dates and price on request."
+      "ru": "Групповой урок сноуборда с инструктором в Алматы: группы от 2 до 5 человек, 2 часа, 25 000 ₸ с человека. Для новичков и продолжающих. Ски-пасс не входит.",
+      "en": "Group snowboard lesson with an instructor in Almaty: groups of 2 to 5, 2 hours, 25,000 KZT per person. For beginners and improvers. Ski pass not included."
     }
   }
 }

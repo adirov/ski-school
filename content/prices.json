@@ -1,0 +1,33 @@
+{
+  "_readme": "Цены школы. Источник: прайс владельца (постер «Lesson prices» и сообщение в WhatsApp, переслано Эмилем 16.11.2026). Цены в тенге. Меняйте здесь: страница /prices/, блоки на главной и страницах услуг, JSON-LD и llms.txt обновятся сами.",
+  "updated": "2026-11-16",
+  "currency": "KZT",
+  "groups": [
+    {
+      "key": "private",
+      "service": "private-lessons",
+      "title": { "ru": "Индивидуальные уроки", "en": "Private lessons" },
+      "note": { "ru": "Инструктор занимается только с вами.", "en": "The instructor works with you alone." },
+      "items": [
+        { "key": "private-2h", "name": { "ru": "Индивидуальный урок", "en": "Private lesson" }, "days": "any", "hours": 2, "price": 50000, "unit": "lesson" },
+        { "key": "weekday-half", "name": { "ru": "Полдня", "en": "Half day" }, "days": "weekday", "hours": 3, "price": 65000, "unit": "lesson" },
+        { "key": "weekday-full", "name": { "ru": "Весь день", "en": "Full day" }, "days": "weekday", "hours": 6, "price": 130000, "unit": "lesson" },
+        { "key": "weekend-half", "name": { "ru": "Полдня", "en": "Half day" }, "days": "weekend", "hours": 3, "price": 75000, "unit": "lesson" },
+        { "key": "weekend-full", "name": { "ru": "Весь день", "en": "Full day" }, "days": "weekend", "hours": 6, "price": 130000, "unit": "lesson" }
+      ]
+    },
+    {
+      "key": "group",
+      "service": "group-courses",
+      "title": { "ru": "Групповые уроки", "en": "Group lessons" },
+      "note": { "ru": "Группы от 2 до 5 человек.", "en": "Groups of 2 to 5 people." },
+      "items": [
+        { "key": "group-2h", "name": { "ru": "Групповой урок", "en": "Group lesson" }, "days": "any", "hours": 2, "price": 25000, "unit": "person" }
+      ]
+    }
+  ],
+  "notIncluded": {
+    "ru": "Ски-пасс (подъёмники) в стоимость урока не входит: его покупает сам гость в кассе курорта.",
+    "en": "The ski pass (lift ticket) is not included in the lesson price: guests buy it themselves at the resort ticket office."
+  }
+}

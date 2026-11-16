@@ -8,8 +8,8 @@
       "todo": "Юридическое лицо или ИП, БИН/ИИН: нужно для политики конфиденциальности и условий бронирования."
     },
     "shortDescription": {
-      "ru": "Almaty Snowboard School — школа сноуборда в Алматы: индивидуальные уроки, групповые курсы, детские тренировки и внетрассовое катание с гидом в горах Заилийского Алатау.",
-      "en": "Almaty Snowboard School is a snowboard school in Almaty: private lessons, group courses, kids training and guided off-piste riding in the Trans-Ili Alatau mountains."
+      "ru": "Almaty Snowboard School — школа сноуборда в Алматы: индивидуальные уроки, групповые уроки, детские тренировки и внетрассовое катание с гидом в горах Заилийского Алатау.",
+      "en": "Almaty Snowboard School is a snowboard school in Almaty: private lessons, group lessons, kids training and guided off-piste riding in the Trans-Ili Alatau mountains."
     },
     "logo": "/brand/logo.svg",
     "foundedNote": {
@@ -17,16 +17,16 @@
         "ru": "Обучаем с 2005 года",
         "en": "Teaching since 2005"
       },
-      "confirmed": false,
-      "todo": "Фраза взята с макета визитки. Подтвердить год и кого он касается (школа, тренер)."
+      "confirmed": true,
+      "todo": "Подтверждено владельцем 14.11.2026 и прайсом 16.11.2026 («since 2005»)."
     },
     "credentialsNote": {
       "value": {
-        "ru": "Дипломированные тренеры",
-        "en": "Certified coaches"
+        "ru": "Сертифицированные инструкторы",
+        "en": "Certified instructors"
       },
-      "confirmed": false,
-      "todo": "С макета визитки. Нужны реальные документы: какой диплом или сертификат, у кого из тренеров."
+      "confirmed": true,
+      "todo": "Формулировка с прайса владельца 16.11.2026 («Certified instructors since 2005»). Документы для раздела «Команда» всё ещё нужны."
     }
   },
   "contacts": {

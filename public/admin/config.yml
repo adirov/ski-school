@@ -1083,6 +1083,78 @@ collections:
 - name: other
   label: Прочее
   files:
+  - name: prices
+    label: Цены на уроки
+    file: content/prices.json
+    format: json
+    fields:
+    - name: _readme
+      label: Подсказка
+      widget: hidden
+      required: false
+    - name: updated
+      label: Цены актуальны на (дата)
+      widget: datetime
+      time_format: false
+      format: YYYY-MM-DD
+    - name: currency
+      label: Валюта
+      widget: hidden
+      default: KZT
+    - name: groups
+      label: Группы цен
+      widget: list
+      allow_add: false
+      summary: '{{fields.title.ru}}'
+      fields:
+      - {name: key, label: Ключ, widget: hidden}
+      - {name: service, label: Услуга, widget: hidden, required: false}
+      - name: title
+        label: Название
+        widget: object
+        fields:
+        - {name: ru, label: Русский, widget: string}
+        - {name: en, label: English, widget: string, required: false}
+      - name: note
+        label: Примечание
+        widget: object
+        required: false
+        fields:
+        - {name: ru, label: Русский, widget: string}
+        - {name: en, label: English, widget: string, required: false}
+      - name: items
+        label: Строки
+        widget: list
+        summary: '{{fields.name.ru}} · {{fields.hours}} ч · {{fields.price}} ₸'
+        fields:
+        - {name: key, label: 'Ключ (латиницей, без пробелов)', widget: string, pattern: ['^[a-z0-9-]+$', 'Только a-z, 0-9 и дефис']}
+        - name: name
+          label: Название
+          widget: object
+          fields:
+          - {name: ru, label: Русский, widget: string}
+          - {name: en, label: English, widget: string, required: false}
+        - name: days
+          label: Дни
+          widget: select
+          options:
+          - {label: Любой день, value: any}
+          - {label: Будни (пн–пт), value: weekday}
+          - {label: Выходные (сб–вс), value: weekend}
+        - {name: hours, label: Часов, widget: number, value_type: float, min: 0.5}
+        - {name: price, label: Цена в тенге, widget: number, value_type: int, min: 0}
+        - name: unit
+          label: За что
+          widget: select
+          options:
+          - {label: За урок, value: lesson}
+          - {label: С человека, value: person}
+    - name: notIncluded
+      label: Что не входит в стоимость
+      widget: object
+      fields:
+      - {name: ru, label: Русский, widget: text}
+      - {name: en, label: English, widget: text, required: false}
   - name: faq
     label: Частые вопросы
     file: content/faq.json

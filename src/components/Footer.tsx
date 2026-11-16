@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IS_PREVIEW } from "@/lib/env";
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { site, factVisible, getArticles, t } from "@/lib/content";
+import { site, factVisible, getArticles, getPriceGroups, t } from "@/lib/content";
 import { Todo } from "./Badge";
 
 export function Footer({ locale }: { locale: Locale }) {
@@ -20,6 +20,7 @@ export function Footer({ locale }: { locale: Locale }) {
         <nav aria-label={d.nav.contact}>
           <ul>
             <li><Link href={`/${locale}/tours/`}>{d.nav.tours}</Link></li>
+            {getPriceGroups(locale).length > 0 && <li><Link href={`/${locale}/prices/`}>{d.prices.nav}</Link></li>}
             {getArticles(locale).length > 0 && <li><Link href={`/${locale}/guides/`}>{d.nav.guides}</Link></li>}
             <li><Link href={`/${locale}/about/`}>{d.nav.about}</Link></li>
             <li><Link href={`/${locale}/faq/`}>{d.nav.faq}</Link></li>

@@ -2,7 +2,7 @@
   "slug": "private-lessons",
   "status": "confirmed",
   "order": 1,
-  "source": "Макет визитки и сообщение владельца в WhatsApp 03.11.2026: «Индивидуальные уроки по сноуборду». Направление подтверждено владельцем; длительность, цены и расписание сообщаются по заявке.",
+  "source": "Направление: макет визитки и WhatsApp 03.11.2026. Цены: прайс владельца 16.11.2026 (content/prices.json).",
   "title": {
     "ru": "Индивидуальные уроки сноуборда",
     "en": "Private snowboard lessons"
@@ -18,11 +18,13 @@
   "body": {
     "ru": [
       "Инструктор работает только с вами, поэтому темп и упражнения подстраиваются под ваш уровень и цель.",
-      "С новичком обычно начинают со стойки, торможения и первых поворотов на пологом склоне. Если вы уже катаетесь, занятие можно посвятить конкретной задаче: связанным поворотам, скорости или уверенности на более крутых трассах."
+      "С новичком обычно начинают со стойки, торможения и первых поворотов на пологом склоне. Если вы уже катаетесь, занятие можно посвятить конкретной задаче: связанным поворотам, скорости или уверенности на более крутых трассах.",
+      "Можно взять урок на 2 часа, на полдня (3 часа) или на весь день (6 часов). Цены — в таблице ниже и на странице «Цены»; ски-пасс покупается отдельно."
     ],
     "en": [
       "The instructor works only with you, so pace and drills follow your level and goal.",
-      "Beginners usually start with stance, stopping and first turns on a gentle slope. If you already ride, the lesson can focus on one goal: linked turns, speed or confidence on steeper runs."
+      "Beginners usually start with stance, stopping and first turns on a gentle slope. If you already ride, the lesson can focus on one goal: linked turns, speed or confidence on steeper runs.",
+      "Book a 2-hour lesson, a half day (3 hours) or a full day (6 hours). Prices are in the table below and on the Prices page; the ski pass is bought separately."
     ]
   },
   "levels": [
@@ -32,12 +34,11 @@
   ],
   "format": "private",
   "duration": {
-    "ru": "2 часа",
-    "en": "2 hours"
+    "ru": "2 часа, полдня (3 часа) или день (6 часов)",
+    "en": "2 hours, half day (3 hours) or full day (6 hours)"
   },
   "image": "/images/snowboarder-carving-blue-jacket.jpg",
   "todo": [
-    "Цена и единица расчёта",
     "Где проходят занятия",
     "Языки",
     "Снаряжение и прокат",
@@ -50,8 +51,8 @@
       "en": "Private snowboard lessons in Almaty with an instructor"
     },
     "description": {
-      "ru": "Индивидуальные уроки сноуборда с инструктором в Алматы: с нуля или для работы над техникой, занятие 2 часа. Цену и дату подтверждаем в WhatsApp.",
-      "en": "One-to-one snowboard lessons with an instructor in Almaty: your first day on a board or technique work, 2-hour session. Price and date via WhatsApp."
+      "ru": "Индивидуальные уроки сноуборда с инструктором в Алматы: 2 часа — 50 000 ₸, полдня — от 65 000 ₸, день — 130 000 ₸. С нуля или для работы над техникой.",
+      "en": "Private snowboard lessons with an instructor in Almaty: 2 hours 50,000 KZT, half day from 65,000 KZT, full day 130,000 KZT. First day on a board or technique work."
     }
   }
 }

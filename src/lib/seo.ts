@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LOCALES, X_DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 import { INDEXABLE, SITE_URL } from "./env";
-import { site, img, getServices, t } from "./content";
+import { site, img, getServices, t, prices, type PriceGroup } from "./content";
 
 export const abs = (p: string) => (p.startsWith("http") ? p : `${SITE_URL}${p}`);
 
@@ -83,6 +83,7 @@ export function organizationLd(locale: Locale) {
     },
   };
   if (sameAs.length) ld.sameAs = sameAs;
+  if (site.brand.foundedNote.confirmed) ld.foundingDate = "2005";
   if (c.phone.confirmed && c.phone.value) {
     ld.telephone = c.phone.value;
     ld.contactPoint = { "@type": "ContactPoint", telephone: c.phone.value, contactType: "customer service", availableLanguage: ["ru", "en"] };
@@ -125,4 +126,31 @@ export function breadcrumbLd(items: { name: string; href: string }[]) {
     "@type": "BreadcrumbList",
     itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: abs(it.href) })),
   };
+}
+
+/** schema.org Offers for one price group: price + UnitPriceSpecification (per lesson of N hours / per person). */
+export function priceOffersLd(group: PriceGroup, locale: Locale) {
+  const P = { ru: { weekday: "будни", weekend: "выходные", person: "с человека", lesson: "за урок" }, en: { weekday: "weekdays", weekend: "weekends", person: "per person", lesson: "per lesson" } }[locale === "ru" ? "ru" : "en"];
+  const url = abs(`/${locale}/prices/`);
+  return group.items.map((it) => {
+    const name = [t(it.name, locale), it.days !== "any" ? P[it.days] : "", `${it.hours} h`].filter(Boolean).join(", ");
+    const offer: Record<string, unknown> = {
+      "@type": "Offer",
+      name,
+      price: it.price,
+      priceCurrency: prices.currency,
+      url,
+      availability: "https://schema.org/InStock",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: it.price,
+        priceCurrency: prices.currency,
+        unitText: P[it.unit],
+        ...(it.unit === "person" ? { referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: P.person } } : {}),
+        validFrom: prices.updated,
+      },
+      eligibleDuration: { "@type": "QuantitativeValue", value: it.hours, unitCode: "HUR" },
+    };
+    return offer;
+  });
 }

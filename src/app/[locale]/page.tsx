@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { getArticles, getFaq, getServices, getTours, site, factVisible, places, t } from "@/lib/content";
+import { getArticles, getFaq, getServices, getTours, site, factVisible, places, t, priceGroupFor, fmtPrice, minPrice } from "@/lib/content";
 import { buildMetadata, organizationLd, websiteLd } from "@/lib/seo";
 import { availableLocales } from "@/lib/routes";
 import { IS_PREVIEW } from "@/lib/env";
@@ -140,7 +140,13 @@ export default async function Home({ params }: P) {
                 </li>
                 <li>
                   <span>{T.price}</span>
-                  <span className="tbd">{T.priceOnRequest}</span>
+                  {priceGroupFor(s.slug) ? (
+                    <Link href={`/${locale}/prices/`}>
+                      {d.prices.from} {fmtPrice(minPrice(priceGroupFor(s.slug)!), locale)}
+                    </Link>
+                  ) : (
+                    <span className="tbd">{T.priceOnRequest}</span>
+                  )}
                 </li>
               </ul>
               <div className="btns">

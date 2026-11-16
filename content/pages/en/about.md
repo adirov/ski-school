@@ -1,6 +1,6 @@
 ---
 title: "About us"
-description: "Almaty Snowboard School is a snowboard school in Almaty: private lessons, group courses, kids training and guided off-piste riding. How we work."
+description: "Almaty Snowboard School is a snowboard school in Almaty: private lessons, group lessons, kids training and guided off-piste riding. How we work."
 ---
 
 ## In short
@@ -10,7 +10,7 @@ Almaty Snowboard School is a snowboard school in Almaty, Kazakhstan. We ride in 
 ## What we offer
 
 - **Private lessons**: the instructor works only with you, at your pace and level.
-- **Group courses**: several sessions in a group of riders at the same level.
+- **Group lessons**: several sessions in a group of riders at the same level.
 - **Kids training**: a calm pace and attention to safety.
 - **Guided off-piste riding**: for experienced riders, with the route chosen by snow and weather.
 

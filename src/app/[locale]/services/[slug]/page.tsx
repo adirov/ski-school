@@ -2,8 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { publishedLocales, type Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { getArticles, getService, getServices, getTours, img, t } from "@/lib/content";
-import { abs, buildMetadata, orgRef } from "@/lib/seo";
+import { getArticles, getService, getServices, getTours, img, t, priceGroupFor, fmtPrice, minPrice, prices } from "@/lib/content";
+import { PriceTable } from "@/components/PriceTable";
+import { abs, buildMetadata, orgRef, priceOffersLd } from "@/lib/seo";
 import { availableLocales, nonEmptyParams } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Pic } from "@/components/Pic";
@@ -42,12 +43,13 @@ export default async function ServicePage({ params }: P) {
   if (!s) notFound();
   const d = getDict(locale);
   const title = t(s.title, locale)!;
+  const pg = priceGroupFor(s.slug);
   const tours = getTours(locale).filter((x) => x.relatedServices.includes(s.slug));
   const articles = getArticles(locale).filter((a) => a.relatedServices.includes(s.slug));
   return (
     <div className="wrap page">
       {s.status === "confirmed" && (
-        <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: title, description: t(s.summary, locale), url: abs(`/${locale}/services/${s.slug}/`), image: abs(img(s.image).src), provider: orgRef(locale), serviceType: title, areaServed: { "@type": "City", name: locale === "ru" ? "Алматы" : "Almaty" }, audience: { "@type": "Audience", audienceType: s.levels.map((l) => d.levels[l].name).join(", ") } }} />
+        <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: title, description: t(s.summary, locale), url: abs(`/${locale}/services/${s.slug}/`), image: abs(img(s.image).src), provider: orgRef(locale), serviceType: title, areaServed: { "@type": "City", name: locale === "ru" ? "Алматы" : "Almaty" }, audience: { "@type": "Audience", audienceType: s.levels.map((l) => d.levels[l].name).join(", ") }, ...(pg ? { offers: priceOffersLd(pg, locale) } : {}) }} />
       )}
       <Breadcrumbs
         label="Breadcrumbs"
@@ -88,9 +90,15 @@ export default async function ServicePage({ params }: P) {
             )}
             <div>
               <dt>{d.tour.price}</dt>
-              <dd>{d.tour.priceOnRequest}</dd>
+              <dd>{pg ? <Link href={`/${locale}/prices/`}>{d.prices.from} {fmtPrice(minPrice(pg), locale)}</Link> : d.tour.priceOnRequest}</dd>
             </div>
           </dl>
+          {pg && (
+            <>
+              <PriceTable group={pg} locale={locale} headingLevel={3} />
+              <p className="small">{t(prices.notIncluded, locale)}</p>
+            </>
+          )}
           {s.todo.length > 0 && (
             <p>
               <Todo>{s.todo.join("; ")}</Todo>

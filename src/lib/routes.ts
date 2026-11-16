@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import { publishedLocales } from "@/i18n/config";
-import { getArticles, getCategories, getPage, getServices, getTours, site } from "./content";
+import { getArticles, getCategories, getPage, getPriceGroups, getServices, getTours, site } from "./content";
 
 export type RouteEntry = { path: string; lastModified?: string; indexable: boolean };
 
@@ -11,6 +11,7 @@ export function routesFor(locale: Locale): RouteEntry[] {
     // An empty catalog stays reachable (it explains how to ask) but is not indexed.
     { path: "/tours/", indexable: getTours(locale).length + getServices(locale).length > 0 },
     { path: "/faq/", indexable: true },
+    ...(getPriceGroups(locale).length ? [{ path: "/prices/", indexable: true }] : []),
     { path: "/contact/", indexable: true },
     { path: "/thank-you/", indexable: false },
   ];

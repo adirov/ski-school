@@ -94,7 +94,7 @@ export default async function ToursPage({ params }: P) {
             ))}
           </ul>
           <p>
-            {d.tours.priceNote} <Link href={`/${locale}/contact/`}>{d.cta.ask}</Link>
+            {d.tours.priceNote} <Link href={`/${locale}/prices/`}>{d.prices.all}</Link>
           </p>
         </section>
       )}

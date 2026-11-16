@@ -1,5 +1,5 @@
 import { publishedLocales } from "@/i18n/config";
-import { getArticles, getFaq, getServices, site, t, factVisible } from "@/lib/content";
+import { getArticles, getFaq, getServices, site, t, factVisible, prices } from "@/lib/content";
 import { SITE_URL } from "@/lib/env";
 
 export const dynamic = "force-static";
@@ -16,8 +16,15 @@ export async function GET() {
   if (factVisible(c.phone) && c.phone.confirmed) contact.push(`- Phone: ${c.phone.display}`);
   if (factVisible(c.whatsapp) && c.whatsapp.confirmed) contact.push(`- WhatsApp: https://wa.me/${String(c.whatsapp.value).replace(/\D/g, "")}`);
   if (site.serviceArea.confirmed && site.serviceArea.value) contact.push(`- Area: ${site.serviceArea.value.en.join(", ")}`);
-  contact.push("- Prices and dates: on request (the site does not publish prices).");
+  if (site.brand.foundedNote.confirmed) contact.push(`- Since: 2005`);
+  contact.push(`- Prices: ${SITE_URL}/en/prices/ (RU: ${SITE_URL}/ru/prices/). Dates: on request.`);
   lines.push("## Contacts", ...contact, "");
+  lines.push(`## Prices (KZT, updated ${prices.updated})`);
+  for (const g of prices.groups) {
+    lines.push(`### ${g.title.en}${g.note?.en ? ` (${g.note.en})` : ""}`);
+    for (const it of g.items) lines.push(`- ${it.name.en}${it.days === "weekday" ? ", weekdays Mon-Fri" : it.days === "weekend" ? ", weekends Sat-Sun" : ""}, ${it.hours} h: ${it.price} KZT ${it.unit === "person" ? "per person" : "per lesson"}`);
+  }
+  lines.push(`- ${prices.notIncluded.en}`, "");
   for (const locale of publishedLocales) {
     const label = locale === "ru" ? "Русский" : "English";
     lines.push(`## Services (${label})`);

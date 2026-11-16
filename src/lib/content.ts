@@ -266,3 +266,32 @@ export function getPage(name: string, locale: Locale) {
 /** Resorts shown in "Where we ride". Visible in production only once site.serviceArea is confirmed. */
 const PlacesSchema = z.array(z.object({ name: LText, text: LText, image: z.string() }));
 export const places = PlacesSchema.parse(readJson("places.json"));
+
+/* ---------- prices ---------- */
+const PriceItem = z.object({
+  key: z.string(),
+  name: LText,
+  /** any: every day · weekday: Mon–Fri · weekend: Sat–Sun */
+  days: z.enum(["any", "weekday", "weekend"]),
+  hours: z.number(),
+  price: z.number(),
+  /** lesson: price for the lesson · person: price per person */
+  unit: z.enum(["lesson", "person"]),
+});
+const PricesSchema = z.object({
+  updated: z.string(),
+  currency: z.string(),
+  groups: z.array(z.object({ key: z.string(), service: z.string().optional(), title: LText, note: LText.optional(), items: z.array(PriceItem) })),
+  notIncluded: LText,
+});
+export type PriceItem = z.infer<typeof PriceItem>;
+export type PriceGroup = z.infer<typeof PricesSchema>["groups"][number];
+export const prices = PricesSchema.parse(clean(readJson("prices.json")));
+/** Price groups whose service is visible (or that have no service). */
+export const getPriceGroups = (locale: Locale) => prices.groups.filter((g) => !g.service || getService(g.service, locale));
+export const priceGroupFor = (service: string) => prices.groups.find((g) => g.service === service);
+/** "65 000 ₸" (ru) / "65,000 KZT" (en), with non-breaking spaces so a price never wraps. */
+export const fmtPrice = (n: number, locale: Locale) =>
+  locale === "ru" ? `${new Intl.NumberFormat("ru-RU").format(n).replace(/[\u00a0\u202f ]/g, "\u00a0")}\u00a0₸` : `${new Intl.NumberFormat("en-US").format(n)}\u00a0KZT`;
+/** Lowest price in a group, for "from …" labels. */
+export const minPrice = (g: PriceGroup) => Math.min(...g.items.map((i) => i.price));

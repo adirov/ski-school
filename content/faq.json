@@ -6,8 +6,8 @@
       "en": "What is Almaty Snowboard School?"
     },
     "a": {
-      "ru": "Almaty Snowboard School — школа сноуборда в Алматы. Мы проводим индивидуальные уроки, групповые курсы, детские тренировки и выезды вне трасс с гидом в горах Заилийского Алатау.",
-      "en": "Almaty Snowboard School is a snowboard school in Almaty. We run private lessons, group courses, kids training and guided off-piste trips in the Trans-Ili Alatau mountains."
+      "ru": "Almaty Snowboard School — школа сноуборда в Алматы. Мы проводим индивидуальные уроки, групповые уроки, детские тренировки и выезды вне трасс с гидом в горах Заилийского Алатау.",
+      "en": "Almaty Snowboard School is a snowboard school in Almaty. We run private lessons, group lessons, kids training and guided off-piste trips in the Trans-Ili Alatau mountains."
     }
   },
   {
@@ -24,12 +24,23 @@
   {
     "confirmed": true,
     "q": {
-      "ru": "Как узнать цену?",
-      "en": "How do I find out the price?"
+      "ru": "Сколько стоит урок сноуборда?",
+      "en": "How much does a snowboard lesson cost?"
     },
     "a": {
-      "ru": "Стоимость зависит от формата, длительности, дат и количества участников. Позвоните или оставьте заявку, и мы назовём цену до записи.",
-      "en": "The price depends on the format, length, dates and group size. Call us or send a request and we will quote a price before you book."
+      "ru": "Индивидуальный урок на 2 часа — 50 000 ₸. Полдня (3 часа): 65 000 ₸ в будни и 75 000 ₸ в выходные. Весь день (6 часов) — 130 000 ₸. Групповой урок на 2 часа в группе от 2 до 5 человек — 25 000 ₸ с человека. Ски-пасс в цену не входит. Все цены — на странице «Цены».",
+      "en": "A 2-hour private lesson is 50,000 KZT. A half day (3 hours) is 65,000 KZT on weekdays and 75,000 KZT at weekends. A full day (6 hours) is 130,000 KZT. A 2-hour group lesson for 2 to 5 people is 25,000 KZT per person. The ski pass is not included. See the Prices page for the full list."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Входит ли ски-пасс в стоимость урока?",
+      "en": "Is the ski pass included in the lesson price?"
+    },
+    "a": {
+      "ru": "Нет. Ски-пасс (абонемент на подъёмники) гость покупает сам в кассе курорта. В стоимость урока входит работа инструктора.",
+      "en": "No. Guests buy the ski pass (lift ticket) themselves at the resort ticket office. The lesson price covers the instructor."
     }
   },
   {
@@ -46,12 +57,12 @@
   {
     "confirmed": true,
     "q": {
-      "ru": "Что выбрать: индивидуальный урок или групповой курс?",
-      "en": "Private lesson or group course: which should I choose?"
+      "ru": "Что выбрать: индивидуальный или групповой урок?",
+      "en": "Private or group lesson: which should I choose?"
     },
     "a": {
-      "ru": "Индивидуальный урок — занятие один на один с инструктором на 2 часа: подходит, если хотите прогрессировать быстрее или волнуетесь на склоне. Групповой курс — 5 занятий по 2 часа в группе, удобно учиться вместе с друзьями. Сравнение всех форматов есть на странице «Занятия».",
-      "en": "A private lesson is a 2-hour one-to-one session with an instructor: good if you want to progress faster or feel nervous on the slope. A group course is 5 sessions of 2 hours in a group, handy if you are learning with friends. All formats are compared on the Lessons page."
+      "ru": "Индивидуальный урок — занятие один на один с инструктором: подходит, если хотите прогрессировать быстрее или волнуетесь на склоне. Групповой урок — 2 часа в группе от 2 до 5 человек, удобно учиться вместе с друзьями и дешевле. Сравнение всех форматов есть на странице «Занятия».",
+      "en": "A private lesson is one-to-one with an instructor: good if you want to progress faster or feel nervous on the slope. A group lesson is 2 hours in a group of 2 to 5 people: handy if you are learning with friends, and cheaper. All formats are compared on the Lessons page."
     }
   },
   {

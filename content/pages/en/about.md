@@ -1,6 +1,6 @@
 ---
 title: "About Almaty Snowboard School"
-description: "Almaty Snowboard School has taught snowboarding in Almaty since 2005: certified instructors with 10–40 years of experience at Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka."
+description: "Almaty Snowboard School has taught snowboarding in Almaty since 2005: certified instructors with 10–40 years of experience at four resorts near Almaty."
 ---
 
 ## In short

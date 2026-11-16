@@ -38,11 +38,8 @@ export function PriceTable({ group, locale, headingLevel = 2, title }: { group: 
                       {P.days[it.days]}
                     </span>
                   )}
-                  {/* Duration repeated for narrow screens, where the duration column is hidden. */}
-                  <span className="price__dur-m">
-                    <Sep />
-                    {hoursLabel(it.hours, locale)}
-                  </span>
+                  {/* Narrow screens hide the duration column and show it here via CSS (attr), so the text holds it only once. */}
+                  <span className="price__dur-m" data-dur={hoursLabel(it.hours, locale)} aria-hidden="true" />
                 </th>
                 <td className="price__dur">{hoursLabel(it.hours, locale)}</td>
                 <td className="price__sum">

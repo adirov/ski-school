@@ -77,7 +77,8 @@ function priceRange(locale: Locale) {
 export function areaServedLd(locale: Locale) {
   const city = { "@type": "City", name: locale === "ru" ? "Алматы" : "Almaty", containedInPlace: { "@type": "Country", name: locale === "ru" ? "Казахстан" : "Kazakhstan" } };
   if (!site.placesConfirmed) return [city];
-  return [city, ...places.map((p) => ({ "@type": "SkiResort", name: t(p.name, locale), containedInPlace: { "@type": "City", name: city.name } }))];
+  // No containedInPlace on resorts: most of them lie outside the city limits (Almaty region).
+  return [city, ...places.map((p) => ({ "@type": "SkiResort", name: t(p.name, locale) }))];
 }
 
 export function organizationLd(locale: Locale) {

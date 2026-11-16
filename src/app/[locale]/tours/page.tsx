@@ -83,7 +83,7 @@ export default async function ToursPage({ params }: P) {
                     <td data-label={d.tours.compareCols[3]}>{t(s.duration, locale) ?? "—"}</td>
                     <td data-label={d.tours.compareCols[4]}>{t(s.age, locale) ?? "—"}</td>
                     <td data-label={d.tours.compareCols[5]}>
-                      {priceGroupFor(s.slug) ? <Link href={`/${locale}/prices/`}>{priceLabel(priceGroupFor(s.slug)!, locale)}</Link> : d.tour.priceOnRequest}
+                      {priceGroupFor(s.slug) ? <Link href={`/${locale}/prices/`}>{priceLabel(priceGroupFor(s.slug)!, locale)}</Link> : d.tour.onRequest}
                     </td>
                   </tr>
                 ))}

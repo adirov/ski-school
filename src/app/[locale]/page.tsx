@@ -143,7 +143,7 @@ export default async function Home({ params }: P) {
                   {priceGroupFor(s.slug) ? (
                     <Link href={`/${locale}/prices/`}>{priceLabel(priceGroupFor(s.slug)!, locale)}</Link>
                   ) : (
-                    <span className="tbd">{T.priceOnRequest}</span>
+                    <span className="tbd">{T.onRequest}</span>
                   )}
                 </li>
               </ul>
@@ -186,20 +186,29 @@ export default async function Home({ params }: P) {
           <div className="wrap">
             <h2 id="places-h">{H.placesTitle}</h2>
             {!site.placesConfirmed && <Todo>{site.serviceArea.todo}</Todo>}
+            {/* Resorts with a photo get a photo card; the rest share one text card, so no empty image boxes. */}
             <div className="places__grid">
-              {places.map((pl) => (
-                <article key={pl.name.ru} className="place">
-                  {pl.image ? (
-                    <Pic id={pl.image} locale={locale} sizes="(max-width: 820px) 50vw, 300px" alt={t(pl.name, locale)} />
-                  ) : (
-                    <div className="place__ph" aria-hidden="true">
-                      <svg viewBox="0 0 64 40" width="64" height="40"><path fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" d="M2 38 22 8l10 14 8-10 22 26z" /></svg>
-                    </div>
-                  )}
-                  <h3>{t(pl.name, locale)}</h3>
-                  <p>{t(pl.text, locale)}</p>
-                </article>
-              ))}
+              {places
+                .filter((pl) => pl.image)
+                .map((pl) => (
+                  <article key={pl.name.ru} className="place">
+                    <Pic id={pl.image!} locale={locale} sizes="(max-width: 640px) 100vw, (max-width: 820px) 50vw, 300px" alt={t(pl.name, locale)} />
+                    <h3>{t(pl.name, locale)}</h3>
+                    <p>{t(pl.text, locale)}</p>
+                  </article>
+                ))}
+              {places.some((pl) => !pl.image) && (
+                <div className="places__more">
+                  {places
+                    .filter((pl) => !pl.image)
+                    .map((pl) => (
+                      <article key={pl.name.ru} className="place place--text">
+                        <h3>{t(pl.name, locale)}</h3>
+                        <p>{t(pl.text, locale)}</p>
+                      </article>
+                    ))}
+                </div>
+              )}
             </div>
           </div>
         </section>

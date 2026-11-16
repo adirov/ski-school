@@ -94,6 +94,8 @@ const ru = {
     availabilityRequest: "По запросу. Онлайн-календаря нет: мы проверяем даты вручную.",
     price: "Стоимость",
     priceOnRequest: "Цена по запросу",
+    /** Value after a "Стоимость" label, so it does not read "Стоимость: Цена по запросу". */
+    onRequest: "по запросу",
     perPerson: "за человека",
     perGroup: "за группу",
     included: "Включено",
@@ -168,7 +170,7 @@ const ru = {
   contact: {
     h1: "Контакты",
     seoTitle: "Контакты: запись на уроки сноуборда в Алматы",
-    seoDescription: "Запись на уроки сноуборда в Алматы: +7 700 525 98 85 (телефон и WhatsApp), Артур Ковалевский. Индивидуальный урок — от 50 000 ₸, групповой — 25 000 ₸ с человека.",
+    seoDescription: "Запись на уроки сноуборда в Алматы: +7 700 525 98 85 (телефон, WhatsApp), Артур Ковалевский. Индивидуально от 50 000 ₸, в группе 25 000 ₸ с человека.",
     lead: "Позвоните или напишите в WhatsApp: подскажем формат и свободные даты. Цены — на странице «Цены»: групповой урок 25 000 ₸ с человека, индивидуальный — от 50 000 ₸.",
     pricesLink: "Все цены",
     direct: "Связаться напрямую",
@@ -311,6 +313,7 @@ const en: Dict = {
     availabilityRequest: "On request. There is no live calendar; we check dates manually.",
     price: "Price",
     priceOnRequest: "Price on request",
+    onRequest: "on request",
     perPerson: "per person",
     perGroup: "per group",
     included: "Included",
@@ -357,7 +360,7 @@ const en: Dict = {
     h1: "Snowboard lesson prices in Almaty",
     lead: "Private and group lessons with an instructor. Prices in Kazakhstani tenge (KZT), per lesson or per person.",
     seoTitle: "Snowboard lesson prices in Almaty — from 25,000 KZT",
-    seoDescription: "Private snowboard lesson, 2 hours: 50,000 KZT; half day from 65,000 KZT; full day 130,000 KZT. Group lesson, 2 hours: 25,000 KZT per person. Ski pass not included.",
+    seoDescription: "Private snowboard lesson, 2 h: 50,000 KZT; half day from 65,000 KZT; full day 130,000 KZT. Group lesson, 2 h: 25,000 KZT per person. Ski pass extra.",
     summary: "A private snowboard lesson with an instructor in Almaty costs 50,000 KZT for 2 hours. A half day (3 hours) is 65,000 KZT on weekdays and 75,000 KZT at weekends, and a full day (6 hours) is 130,000 KZT on any day. A 2-hour group lesson for 2 to 5 people is 25,000 KZT per person. The ski pass and rental gear are paid separately. Lessons take place at Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka.",
     otherTitle: "Kids' sessions and freeride",
     otherLead: "These formats have no fixed price on the price list: we give you the price by phone or WhatsApp.",
@@ -385,7 +388,7 @@ const en: Dict = {
   contact: {
     h1: "Contact",
     seoTitle: "Contact: book snowboard lessons in Almaty",
-    seoDescription: "Book snowboard lessons in Almaty: +7 700 525 98 85 (phone and WhatsApp), Artur Kovalevskiy. Private lessons from 50,000 KZT, group lessons 25,000 KZT per person.",
+    seoDescription: "Book snowboard lessons in Almaty: +7 700 525 98 85 (phone, WhatsApp), Artur Kovalevskiy. Private from 50,000 KZT, group 25,000 KZT per person.",
     lead: "Call or message us on WhatsApp: we will suggest a format and available dates. Prices are on the Prices page: a group lesson is 25,000 KZT per person, a private lesson from 50,000 KZT.",
     pricesLink: "All prices",
     direct: "Contact us directly",

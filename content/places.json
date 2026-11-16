@@ -1,6 +1,9 @@
 [
   {
-    "name": { "ru": "Шымбулак", "en": "Shymbulak" },
+    "name": {
+      "ru": "Шымбулак",
+      "en": "Shymbulak"
+    },
     "text": {
       "ru": "Главный горнолыжный курорт Алматы над Медеу. Подходит и для первых занятий, и для катания на длинных трассах.",
       "en": "Almaty's main ski resort above Medeu. Good both for first lessons and for long runs."
@@ -8,7 +11,10 @@
     "image": "/images/shymbulak-slopes-blue-sky.jpg"
   },
   {
-    "name": { "ru": "Ак-Булак", "en": "Ak-Bulak" },
+    "name": {
+      "ru": "Ак-Булак",
+      "en": "Ak-Bulak"
+    },
     "text": {
       "ru": "Курорт в Талгарском ущелье. Спокойная атмосфера для обучения и семейного отдыха.",
       "en": "A resort in the Talgar gorge. A calm setting for learning and family trips."
@@ -16,17 +22,23 @@
     "image": "/images/ak-bulak-resort-winter.jpg"
   },
   {
-    "name": { "ru": "Ой-Карагай", "en": "Oi-Karagai" },
+    "name": {
+      "ru": "Ой-Карагай",
+      "en": "Oi-Karagai"
+    },
     "text": {
-      "ru": "Горнолыжный курорт под Алматы, где тоже проходят уроки школы. Место встречи подтверждаем при записи.",
-      "en": "A ski resort near Almaty where the school also teaches. We confirm the meeting point when you book."
+      "ru": "Горнолыжный курорт Ой-Карагай под Алматы — одна из четырёх площадок школы.",
+      "en": "Oi-Karagai ski resort near Almaty, one of the school's four teaching venues."
     }
   },
   {
-    "name": { "ru": "Лесная сказка", "en": "Lesnaya Skazka" },
+    "name": {
+      "ru": "Лесная сказка",
+      "en": "Lesnaya Skazka"
+    },
     "text": {
-      "ru": "Горнолыжный курорт под Алматы, где тоже проходят уроки школы. Место встречи подтверждаем при записи.",
-      "en": "A ski resort near Almaty where the school also teaches. We confirm the meeting point when you book."
+      "ru": "Курорт Лесная сказка в горах под Алматы: здесь тоже можно взять урок с инструктором школы.",
+      "en": "Lesnaya Skazka resort in the mountains near Almaty: you can book a lesson with a school instructor here too."
     }
   }
 ]

@@ -214,8 +214,9 @@ p { margin: 0 0 1em; }
 .place > * { margin: 0; }
 .place img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .place p { color: #c9cfd1; font-size: 15.5px; }
-/* Resort without a photo yet: a neutral placeholder of the same size, so the grid stays even. */
-.place__ph { aspect-ratio: 3 / 2; display: grid; place-items: center; background: var(--field); border-top: 3px solid var(--accent); color: var(--accent); }
+/* Resorts without a photo: text cards grouped in the remaining columns. */
+.places__more { grid-column: span 2; display: grid; gap: 24px; align-content: start; }
+.place--text { border-left: 3px solid var(--accent); padding: 4px 0 4px 18px; gap: 8px; }
 
 /* reviews placeholder */
 .rev { padding-block: 0 clamp(64px, 9vw, 112px); }
@@ -439,6 +440,7 @@ p { margin: 0 0 1em; }
   .creds li + li::before { content: none; }
   .ftr__grid { grid-template-columns: 1fr; }
   .places__grid { grid-template-columns: 1fr; }
+  .places__more { grid-column: auto; }
 }
 
 /* contact fallback when the request form is not connected */
@@ -573,6 +575,7 @@ html, body, h1, h2, h3, h4, .h3, .tile__h, .prog__txt h2, .lf__opts button { -we
 @media (max-width: 600px) {
   .price__dur { display: none; }
   .price__dur-m { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
+  .price__dur-m::before { content: attr(data-dur); }
   .price__table td.price__sum { text-align: right; }
 }
 @media (max-width: 480px) {

@@ -1,6 +1,6 @@
 ---
 title: "How to prepare for your first snowboard lesson"
-description: "What to do a week before, the evening before and on the morning of your first snowboard lesson: fitness, clothing, rental, food and what to tell your instructor."
+description: "What to do a week before, the night before and the morning of your first snowboard lesson: fitness, clothes, rental, food and what to tell your instructor."
 translationKey: first-lesson
 category: beginners
 status: published

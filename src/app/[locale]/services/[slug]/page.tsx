@@ -104,7 +104,7 @@ export default async function ServicePage({ params }: P) {
             )}
             <div>
               <dt>{d.tour.price}</dt>
-              <dd>{pg ? <Link href={`/${locale}/prices/`}>{priceLabel(pg, locale)}</Link> : d.tour.priceOnRequest}</dd>
+              <dd>{pg ? <Link href={`/${locale}/prices/`}>{priceLabel(pg, locale)}</Link> : d.tour.onRequest}</dd>
             </div>
           </dl>
           {t(s.bodyTitle, locale) && <h2>{t(s.bodyTitle, locale)}</h2>}

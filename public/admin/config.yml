@@ -951,6 +951,90 @@ collections:
       label: English
       widget: string
       required: false
+  - name: minAge
+    label: Минимальный возраст (число, для разметки)
+    widget: number
+    value_type: int
+    required: false
+    min: 0
+  - name: h1
+    label: Заголовок страницы (H1)
+    widget: object
+    required: false
+    collapsed: true
+    hint: Необязательно. Если пусто, берётся название. Название остаётся на карточках и в форме заявки.
+    fields:
+    - {name: ru, label: Русский, widget: string, required: false}
+    - {name: en, label: English, widget: string, required: false}
+  - name: bodyTitle
+    label: Подзаголовок над описанием (H2)
+    widget: object
+    required: false
+    collapsed: true
+    hint: Например «Как проходит урок».
+    fields:
+    - {name: ru, label: Русский, widget: string, required: false}
+    - {name: en, label: English, widget: string, required: false}
+  - name: priceTitle
+    label: Подзаголовок над таблицей цен (H2)
+    widget: object
+    required: false
+    collapsed: true
+    hint: Например «Стоимость индивидуального урока сноуборда».
+    fields:
+    - {name: ru, label: Русский, widget: string, required: false}
+    - {name: en, label: English, widget: string, required: false}
+  - name: showPlaces
+    label: Показывать блок «Где проходят уроки» (курорты)
+    widget: boolean
+    required: false
+    default: false
+  - name: sections
+    label: Разделы страницы
+    widget: list
+    required: false
+    summary: '{{fields.title.ru}}'
+    hint: Каждый раздел — подзаголовок (H2), абзацы и/или список.
+    fields:
+    - name: title
+      label: Подзаголовок
+      widget: object
+      fields:
+      - {name: ru, label: Русский, widget: string}
+      - {name: en, label: English, widget: string, required: false}
+    - name: body
+      label: Абзацы
+      widget: object
+      required: false
+      fields:
+      - {name: ru, label: Русский, widget: list, required: false, field: {name: item, label: Абзац, widget: text}}
+      - {name: en, label: English, widget: list, required: false, field: {name: item, label: Абзац, widget: text}}
+    - name: list
+      label: Список
+      widget: object
+      required: false
+      fields:
+      - {name: ru, label: Русский, widget: list, required: false, field: {name: item, label: Пункт, widget: text}}
+      - {name: en, label: English, widget: list, required: false, field: {name: item, label: Пункт, widget: text}}
+  - name: faq
+    label: Вопросы и ответы на странице
+    widget: list
+    required: false
+    summary: '{{fields.q.ru}}'
+    hint: 'Попадают в разметку FAQPage. Ответ — 40–80 слов, понятный без контекста: с цифрами и названием школы.'
+    fields:
+    - name: q
+      label: Вопрос
+      widget: object
+      fields:
+      - {name: ru, label: Русский, widget: string}
+      - {name: en, label: English, widget: string, required: false}
+    - name: a
+      label: Ответ
+      widget: object
+      fields:
+      - {name: ru, label: Русский, widget: text}
+      - {name: en, label: English, widget: text, required: false}
   - name: levels
     label: Уровни
     widget: select

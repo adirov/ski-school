@@ -1,6 +1,9 @@
 import type { Locale } from "@/i18n/config";
 import { publishedLocales } from "@/i18n/config";
-import { getArticles, getCategories, getPage, getPriceGroups, getServices, getTours, site } from "./content";
+import { getArticles, getCategories, getPage, getPriceGroups, getServices, getTours, prices, priceGroupFor, site } from "./content";
+
+/** Category pages with fewer articles are thin: reachable, but noindex and out of the sitemap. */
+export const MIN_CATEGORY_ARTICLES = 3;
 
 export type RouteEntry = { path: string; lastModified?: string; indexable: boolean };
 
@@ -11,7 +14,7 @@ export function routesFor(locale: Locale): RouteEntry[] {
     // An empty catalog stays reachable (it explains how to ask) but is not indexed.
     { path: "/tours/", indexable: getTours(locale).length + getServices(locale).length > 0 },
     { path: "/faq/", indexable: true },
-    ...(getPriceGroups(locale).length ? [{ path: "/prices/", indexable: true }] : []),
+    ...(getPriceGroups(locale).length ? [{ path: "/prices/", lastModified: prices.updated, indexable: true }] : []),
     { path: "/contact/", indexable: true },
     { path: "/thank-you/", indexable: false },
   ];
@@ -21,9 +24,10 @@ export function routesFor(locale: Locale): RouteEntry[] {
   for (const p of ["booking-terms", "privacy"]) if (getPage(p, locale)) r.push({ path: `/${p}/`, indexable: site.legal.approved });
   if (site.team.length) r.push({ path: "/team/", indexable: true });
   for (const t of getTours(locale)) r.push({ path: `/tours/${t.slug}/`, indexable: t.status === "confirmed" });
-  for (const s of getServices(locale)) r.push({ path: `/services/${s.slug}/`, indexable: s.status === "confirmed" });
+  // Pages with a price table change when prices.json does.
+  for (const s of getServices(locale)) r.push({ path: `/services/${s.slug}/`, lastModified: priceGroupFor(s.slug) ? prices.updated : undefined, indexable: s.status === "confirmed" });
   for (const a of getArticles(locale)) r.push({ path: `/guides/${a.slug}/`, lastModified: a.updated, indexable: a.status === "published" });
-  for (const c of getCategories(locale)) r.push({ path: `/guides/category/${c.key}/`, indexable: true });
+  for (const c of getCategories(locale)) r.push({ path: `/guides/category/${c.key}/`, indexable: getArticles(locale).filter((a) => a.category === c.key).length >= MIN_CATEGORY_ARTICLES });
   return r;
 }
 

@@ -8,7 +8,11 @@ import { INDEXABLE, SITE_URL } from "@/lib/env";
  */
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/"] }],
+    rules: [
+      { userAgent: "*", allow: "/", disallow: ["/api/", "/admin/"] },
+      // AI crawlers are welcome (GEO): stated explicitly so no default policy of theirs reads the site as off-limits.
+      { userAgent: ["GPTBot", "OAI-SearchBot", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended"], allow: "/", disallow: ["/api/", "/admin/"] },
+    ],
     sitemap: !INDEXABLE ? undefined : `${SITE_URL}/sitemap.xml`,
   };
 }

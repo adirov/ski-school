@@ -17,12 +17,12 @@
   },
   "body": {
     "ru": [
-      "Групповой формат подходит тем, кто хочет учиться вместе с друзьями или в компании людей своего уровня: инструктор ведёт группу, а упражнения подбираются под общий уровень.",
-      "В группе от 2 до 5 человек, урок длится 2 часа. Цена — с каждого участника; ски-пасс покупается отдельно. Ближайшие даты сообщаем в ответ на заявку."
+      "Групповой формат подходит тем, кто хочет учиться вместе с друзьями или семьёй: инструктор ведёт группу и подбирает упражнения под её общий уровень.",
+      "В группе от 2 до 5 человек, урок длится 2 часа и стоит 25 000 ₸ с каждого участника. Ски-пасс покупается отдельно. Свободные даты подтверждаем в ответ на заявку."
     ],
     "en": [
-      "The group format suits people who want to learn with friends or with others at the same level: the instructor leads the group and picks drills for its level.",
-      "Groups are 2 to 5 people and a lesson lasts 2 hours. The price is per person; the ski pass is bought separately. We share upcoming dates in reply to your request."
+      "The group format suits people who want to learn with friends or family: the instructor leads the group and picks drills for its overall level.",
+      "Groups are 2 to 5 people, a lesson lasts 2 hours and costs 25,000 KZT per participant. The ski pass is bought separately. We confirm available dates in reply to your request."
     ]
   },
   "levels": [
@@ -34,6 +34,107 @@
     "ru": "2 часа",
     "en": "2 hours"
   },
+  "h1": {
+    "ru": "Групповые уроки сноуборда в Алматы",
+    "en": "Group snowboard lessons in Almaty"
+  },
+  "bodyTitle": {
+    "ru": "Как проходит групповой урок",
+    "en": "How a group lesson goes"
+  },
+  "priceTitle": {
+    "ru": "Стоимость группового урока сноуборда",
+    "en": "Group snowboard lesson price"
+  },
+  "showPlaces": true,
+  "sections": [
+    {
+      "title": {
+        "ru": "Что входит в стоимость",
+        "en": "What the price includes"
+      },
+      "list": {
+        "ru": [
+          "2 часа занятия с сертифицированным инструктором в группе от 2 до 5 человек.",
+          "Упражнения под уровень группы: для новичков и для тех, кто уже спускается по зелёным и синим трассам.",
+          "Помощь в выборе снаряжения в прокате, если своего нет."
+        ],
+        "en": [
+          "A 2-hour lesson with a certified instructor in a group of 2 to 5 people.",
+          "Drills for the group's level: for beginners and for those who already ride green and blue runs.",
+          "Help choosing rental gear if you do not have your own."
+        ]
+      }
+    },
+    {
+      "title": {
+        "ru": "Что оплачивается отдельно",
+        "en": "What you pay for separately"
+      },
+      "list": {
+        "ru": [
+          "Ски-пасс на полдня или на день: каждый участник покупает его сам в кассе курорта.",
+          "Прокат доски, ботинок и шлема, если у вас нет своего снаряжения.",
+          "Дорога до курорта. Трансфер может организовать партнёрское агентство almaty-travel.kz."
+        ],
+        "en": [
+          "A half-day or full-day ski pass: each participant buys it at the resort ticket office.",
+          "Board, boot and helmet rental if you do not have your own gear.",
+          "Getting to the resort. Our partner agency almaty-travel.kz can arrange a transfer."
+        ]
+      }
+    },
+    {
+      "title": {
+        "ru": "Как проходит первый урок в группе",
+        "en": "How your first group lesson goes"
+      },
+      "body": {
+        "ru": [
+          "Группа встречается с инструктором на курорте в месте, которое подтверждаем при записи. Инструктор помогает подобрать снаряжение в прокате тем, у кого его нет.",
+          "Новички начинают на пологом учебном склоне: стойка, торможение кантом, спуск «листиком» боком к склону и первые повороты. Если группа уже катается, урок посвящают связанным поворотам и уверенности на трассе.",
+          "Если хотите больше внимания инструктора или у участников разный уровень, выберите индивидуальный урок: 2 часа стоят 50 000 ₸."
+        ],
+        "en": [
+          "The group meets the instructor at the resort, at the point we confirm when you book. The instructor helps anyone without gear choose it at the rental shop.",
+          "Beginners start on a gentle learning slope: stance, stopping on an edge, the \"falling leaf\" slide and first turns. If the group already rides, the lesson focuses on linked turns and confidence on the run.",
+          "If you want more of the instructor's attention, or the participants ride at different levels, choose a private lesson: 2 hours cost 50,000 KZT."
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "ru": "Сколько стоит групповой урок сноуборда в Алматы?",
+        "en": "How much is a group snowboard lesson in Almaty?"
+      },
+      "a": {
+        "ru": "Групповой урок сноуборда в Almaty Snowboard School длится 2 часа и стоит 25 000 ₸ с каждого участника. В группе от 2 до 5 человек, поэтому урок для троих обойдётся в 75 000 ₸. Ски-пасс каждый покупает сам в кассе курорта, прокат снаряжения тоже оплачивается отдельно. Запись: +7 700 525 98 85.",
+        "en": "A group snowboard lesson at Almaty Snowboard School lasts 2 hours and costs 25,000 KZT per participant. Groups are 2 to 5 people, so a lesson for three comes to 75,000 KZT. Everyone buys their own ski pass at the resort ticket office, and rental gear is paid separately too. Booking: +7 700 525 98 85."
+      }
+    },
+    {
+      "q": {
+        "ru": "Сколько человек в группе и для кого групповые уроки?",
+        "en": "How big are the groups and who are they for?"
+      },
+      "a": {
+        "ru": "В группе Almaty Snowboard School от 2 до 5 человек. Групповые уроки рассчитаны на новичков и на тех, кто уже спускается по зелёным и синим трассам. Урок длится 2 часа, инструктор подбирает упражнения под общий уровень группы. Удобнее всего учиться так с друзьями или семьёй.",
+        "en": "Almaty Snowboard School groups have 2 to 5 people. Group lessons are for beginners and for riders who already handle green and blue runs. A lesson lasts 2 hours, and the instructor picks drills for the group's overall level. It works best when you learn with friends or family."
+      }
+    },
+    {
+      "q": {
+        "ru": "Где проходят групповые уроки?",
+        "en": "Where do group lessons take place?"
+      },
+      "a": {
+        "ru": "Групповые уроки Almaty Snowboard School проходят на курортах под Алматы: Шымбулак, Ак-Булак, Ой-Карагай и Лесная сказка. Курорт, время и место встречи с инструктором согласуем при записи по телефону или в WhatsApp +7 700 525 98 85. Ски-пасс на полдня или на день каждый участник покупает в кассе курорта.",
+        "en": "Almaty Snowboard School group lessons take place at resorts near Almaty: Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka. We agree the resort, time and meeting point with the instructor when you book by phone or WhatsApp on +7 700 525 98 85. Each participant buys a half-day or full-day ski pass at the resort ticket office."
+      }
+    }
+  ],
   "image": "/images/snowboard-group-summit.jpg",
   "todo": [
     "Расписание",

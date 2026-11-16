@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { getArticles, getFaq, getServices, getTours, site, factVisible, places, t, priceGroupFor, fmtPrice, minPrice } from "@/lib/content";
+import { getArticles, getFaq, getServices, getTours, site, factVisible, places, t, priceGroupFor, priceLabel } from "@/lib/content";
 import { buildMetadata, organizationLd, websiteLd } from "@/lib/seo";
 import { availableLocales } from "@/lib/routes";
 import { IS_PREVIEW } from "@/lib/env";
@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: P) {
   return buildMetadata({
     locale,
     path: "/",
-    title: locale === "ru" ? "Школа сноуборда в Алматы — Almaty Snowboard School" : "Snowboard school in Almaty — Almaty Snowboard School",
-    description: d.home.lead,
+    title: d.home.seoTitle,
+    description: d.home.seoDescription,
     available: availableLocales("/"),
     image: "snowboarder-powder-spray",
   });
@@ -79,7 +79,7 @@ export default async function Home({ params }: P) {
           <div className="hero__meta">
             <div className="wrap">
               {places.map((pl) => (
-                <span key={pl.image}>{t(pl.name, locale)}</span>
+                <span key={pl.name.ru}>{t(pl.name, locale)}</span>
               ))}
               {!site.placesConfirmed && <Todo>{site.serviceArea.todo}</Todo>}
             </div>
@@ -141,9 +141,7 @@ export default async function Home({ params }: P) {
                 <li>
                   <span>{T.price}</span>
                   {priceGroupFor(s.slug) ? (
-                    <Link href={`/${locale}/prices/`}>
-                      {d.prices.from} {fmtPrice(minPrice(priceGroupFor(s.slug)!), locale)}
-                    </Link>
+                    <Link href={`/${locale}/prices/`}>{priceLabel(priceGroupFor(s.slug)!, locale)}</Link>
                   ) : (
                     <span className="tbd">{T.priceOnRequest}</span>
                   )}
@@ -190,8 +188,14 @@ export default async function Home({ params }: P) {
             {!site.placesConfirmed && <Todo>{site.serviceArea.todo}</Todo>}
             <div className="places__grid">
               {places.map((pl) => (
-                <article key={pl.image} className="place">
-                  <Pic id={pl.image} locale={locale} sizes="(max-width: 820px) 100vw, 400px" alt={t(pl.name, locale)} />
+                <article key={pl.name.ru} className="place">
+                  {pl.image ? (
+                    <Pic id={pl.image} locale={locale} sizes="(max-width: 820px) 50vw, 300px" alt={t(pl.name, locale)} />
+                  ) : (
+                    <div className="place__ph" aria-hidden="true">
+                      <svg viewBox="0 0 64 40" width="64" height="40"><path fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" d="M2 38 22 8l10 14 8-10 22 26z" /></svg>
+                    </div>
+                  )}
                   <h3>{t(pl.name, locale)}</h3>
                   <p>{t(pl.text, locale)}</p>
                 </article>

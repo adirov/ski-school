@@ -11,9 +11,8 @@
       "items": [
         { "key": "private-2h", "name": { "ru": "Индивидуальный урок", "en": "Private lesson" }, "days": "any", "hours": 2, "price": 50000, "unit": "lesson" },
         { "key": "weekday-half", "name": { "ru": "Полдня", "en": "Half day" }, "days": "weekday", "hours": 3, "price": 65000, "unit": "lesson" },
-        { "key": "weekday-full", "name": { "ru": "Весь день", "en": "Full day" }, "days": "weekday", "hours": 6, "price": 130000, "unit": "lesson" },
         { "key": "weekend-half", "name": { "ru": "Полдня", "en": "Half day" }, "days": "weekend", "hours": 3, "price": 75000, "unit": "lesson" },
-        { "key": "weekend-full", "name": { "ru": "Весь день", "en": "Full day" }, "days": "weekend", "hours": 6, "price": 130000, "unit": "lesson" }
+        { "key": "full-day", "name": { "ru": "Весь день, любой день", "en": "Full day, any day" }, "days": "any", "hours": 6, "price": 130000, "unit": "lesson" }
       ]
     },
     {
@@ -27,7 +26,7 @@
     }
   ],
   "notIncluded": {
-    "ru": "Ски-пасс (подъёмники) в стоимость урока не входит: его покупает сам гость в кассе курорта.",
-    "en": "The ski pass (lift ticket) is not included in the lesson price: guests buy it themselves at the resort ticket office."
+    "ru": "Ски-пасс (подъёмники) в стоимость урока не входит: ски-пасс на полдня или на день гость покупает сам в кассе курорта. Прокат снаряжения тоже оплачивается отдельно, подобрать доску и ботинки поможет инструктор.",
+    "en": "The ski pass (lift ticket) is not included in the lesson price: guests buy a half-day or full-day pass themselves at the resort ticket office. Rental gear is paid separately too, and the instructor helps you choose a board and boots."
   }
 }

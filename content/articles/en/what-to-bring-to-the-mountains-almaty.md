@@ -1,5 +1,5 @@
 ---
-title: "What to bring to the mountains of Almaty in winter: a snowboarder's checklist"
+title: "What to bring to the Almaty mountains: a snowboard checklist"
 seoTitle: "What to bring to the Almaty mountains: snowboard checklist"
 description: "A checklist of clothing, protection, documents and small items for a day on the slopes near Almaty, plus a separate list for off-piste days."
 translationKey: packing-list

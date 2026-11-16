@@ -15,7 +15,7 @@ In accordance with Article 395 of the Civil Code of the Republic of Kazakhstan, 
 
 ## 2. Booking and payment
 
-2.1. A request by phone, WhatsApp or through the website is an enquiry. The date, time, resort, meeting point, format and price are agreed with the Customer before confirmation.
+2.1. A request by phone, WhatsApp or through the website is an enquiry. Lesson prices are listed on the Prices page (/en/prices/) and depend on the format, length and day of the week; the ski pass is not included. The date, time, resort, meeting point and format are agreed with the Customer before confirmation.
 
 2.2. After agreement, the Provider generates a personal payment link (electronic invoice) via the TipTop Pay payment system and sends it to the Customer.
 

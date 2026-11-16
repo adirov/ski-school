@@ -4,7 +4,7 @@ import { publishedLocales, type Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
 import { getArticles, getCategories } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
-import { availableLocales, nonEmptyParams } from "@/lib/routes";
+import { availableLocales, nonEmptyParams, MIN_CATEGORY_ARTICLES } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PostList } from "@/components/PostList";
 
@@ -21,7 +21,10 @@ export async function generateMetadata({ params }: P) {
   const c = getCategories(locale).find((x) => x.key === category);
   if (!c) return {};
   const path = `/guides/category/${category}/`;
-  return buildMetadata({ locale, path, title: c.name, description: c.description, available: availableLocales(path) });
+  const count = getArticles(locale).filter((x) => x.category === category).length;
+  const title = locale === "ru" ? `${c.name} — сноуборд в Алматы: статьи` : `${c.name}: snowboarding in Almaty guides`;
+  // A category with fewer than MIN_CATEGORY_ARTICLES articles is thin: keep it for navigation, out of the index.
+  return buildMetadata({ locale, path, title, description: c.description, available: availableLocales(path), noindex: count < MIN_CATEGORY_ARTICLES });
 }
 
 export default async function CategoryPage({ params }: P) {

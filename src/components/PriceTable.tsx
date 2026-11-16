@@ -1,23 +1,21 @@
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { fmtPrice, t, type PriceGroup } from "@/lib/content";
+import { fmtPrice, hoursLabel, t, type PriceGroup } from "@/lib/content";
 
-export const hoursLabel = (h: number, locale: Locale) => {
-  if (locale !== "ru") return `${h} ${h === 1 ? "hour" : "hours"}`;
-  const n = h % 100;
-  const w = n % 10 === 1 && n !== 11 ? "час" : n % 10 >= 2 && n % 10 <= 4 && (n < 12 || n > 14) ? "часа" : "часов";
-  return `${h} ${w}`;
-};
+export { hoursLabel };
+
+/** Visually hidden " · " between parts of a row label, so copied or extracted text reads "Half day · weekdays · 3 hours". */
+const Sep = () => <span className="sr-only"> · </span>;
 
 /** One price group (private / group) as an accessible table. The same numbers go to JSON-LD (lib/seo.ts priceOffersLd). */
-export function PriceTable({ group, locale, headingLevel = 2 }: { group: PriceGroup; locale: Locale; headingLevel?: 2 | 3 }) {
+export function PriceTable({ group, locale, headingLevel = 2, title }: { group: PriceGroup; locale: Locale; headingLevel?: 2 | 3; title?: string }) {
   const P = getDict(locale).prices;
   const H = headingLevel === 2 ? "h2" : "h3";
   const id = `price-${group.key}`;
   return (
     <section className="price" aria-labelledby={id}>
       <H id={id} className={headingLevel === 2 ? "h3" : undefined}>
-        {t(group.title, locale)}
+        {title ?? t(group.title, locale)}
       </H>
       {group.note && <p className="price__note">{t(group.note, locale)}</p>}
       <div className="table-wrap">
@@ -34,8 +32,17 @@ export function PriceTable({ group, locale, headingLevel = 2 }: { group: PriceGr
               <tr key={it.key}>
                 <th scope="row">
                   {t(it.name, locale)}
-                  {it.days !== "any" && <span className="price__days">{P.days[it.days]}</span>}
-                  <span className="price__dur-m">{hoursLabel(it.hours, locale)}</span>
+                  {it.days !== "any" && (
+                    <span className="price__days">
+                      <Sep />
+                      {P.days[it.days]}
+                    </span>
+                  )}
+                  {/* Duration repeated for narrow screens, where the duration column is hidden. */}
+                  <span className="price__dur-m">
+                    <Sep />
+                    {hoursLabel(it.hours, locale)}
+                  </span>
                 </th>
                 <td className="price__dur">{hoursLabel(it.hours, locale)}</td>
                 <td className="price__sum">

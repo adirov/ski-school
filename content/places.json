@@ -16,11 +16,17 @@
     "image": "/images/ak-bulak-resort-winter.jpg"
   },
   {
-    "name": { "ru": "Космостанция", "en": "Kosmostantsiya" },
+    "name": { "ru": "Ой-Карагай", "en": "Oi-Karagai" },
     "text": {
-      "ru": "Высокогорье над Большим Алматинским озером. Направление для внетрассового катания с гидом.",
-      "en": "High mountains above Big Almaty Lake. A destination for guided off-piste riding."
-    },
-    "image": "/images/kosmostantsiya-freeride-slopes.jpg"
+      "ru": "Горнолыжный курорт под Алматы, где тоже проходят уроки школы. Место встречи подтверждаем при записи.",
+      "en": "A ski resort near Almaty where the school also teaches. We confirm the meeting point when you book."
+    }
+  },
+  {
+    "name": { "ru": "Лесная сказка", "en": "Lesnaya Skazka" },
+    "text": {
+      "ru": "Горнолыжный курорт под Алматы, где тоже проходят уроки школы. Место встречи подтверждаем при записи.",
+      "en": "A ski resort near Almaty where the school also teaches. We confirm the meeting point when you book."
+    }
   }
 ]

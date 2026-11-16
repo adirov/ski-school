@@ -10,8 +10,8 @@ export const LOCALES = {
 
 export type Locale = keyof typeof LOCALES;
 export const DEFAULT_LOCALE: Locale = "ru";
-/** Language shown to visitors whose language is not covered (hreflang x-default). */
-export const X_DEFAULT_LOCALE: Locale = "en";
+/** Language shown to visitors whose language is not covered (hreflang x-default). Russian: the main market, and the site root redirects to /ru/. */
+export const X_DEFAULT_LOCALE: Locale = "ru";
 
 export const publishedLocales = (Object.keys(LOCALES) as Locale[]).filter((l) => LOCALES[l].published);
 

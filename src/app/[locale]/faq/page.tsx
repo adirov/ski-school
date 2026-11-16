@@ -12,7 +12,7 @@ type P = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: P) {
   const locale = (await params).locale as Locale;
   const d = getDict(locale);
-  return buildMetadata({ locale, path: "/faq/", title: d.faqPage.h1, description: d.faqPage.lead, available: availableLocales("/faq/") });
+  return buildMetadata({ locale, path: "/faq/", title: d.faqPage.seoTitle, description: d.faqPage.lead, available: availableLocales("/faq/") });
 }
 
 /** Visible Q&A. FAQPage markup repeats only confirmed answers: AI search and assistants read it as clean question/answer pairs. */

@@ -414,7 +414,6 @@ p { margin: 0 0 1em; }
   .tiles { gap: 8px; }
   .tile { aspect-ratio: 4 / 5; }
   .tile__txt { left: 12px; right: 12px; bottom: 12px; }
-  .tile__h { font-size: 17px; overflow-wrap: anywhere; hyphens: auto; }
   .tile__txt .label { font-size: 10px; letter-spacing: 0.1em; }
   .tile .badge { left: 8px; top: 8px; font-size: 9px; padding: 5px 6px; }
   .form { grid-template-columns: 1fr; }
@@ -439,7 +438,7 @@ p { margin: 0 0 1em; }
 .link-arrow { display: inline-flex; align-items: center; min-height: 44px; }
 .form__check input { width: 24px; height: 24px; }
 .prose, .page__head, .article__head { overflow-wrap: break-word; }
-.prog__txt h2 { font-size: clamp(28px, 3.3vw, 46px); overflow-wrap: break-word; hyphens: auto; max-width: 100%; }
+.prog__txt h2 { font-size: clamp(28px, 3.3vw, 46px); max-width: 100%; }
 h1, h2 { overflow-wrap: break-word; }
 @media (max-width: 640px) {
   .hero::after { background: linear-gradient(0deg, rgba(11,11,12,.92) 0%, rgba(11,11,12,.78) 55%, rgba(11,11,12,.55) 100%); }
@@ -452,8 +451,6 @@ h1, h2 { overflow-wrap: break-word; }
 /* Buttons: wrapped labels stay centred, keep breathing room when they take two lines. */
 .btn { text-align: center; padding-block: 10px; }
 .nowrap { white-space: nowrap; }
-/* Long Russian words in headings: real hyphenation instead of a bare mid-word break. */
-h1, h2, h3, .h3, .tile__h { -webkit-hyphens: auto; hyphens: auto; }
 /* Long option labels in selects: ellipsis instead of a cut glyph under the arrow. */
 .form select { text-overflow: ellipsis; padding-right: 36px; }
 /* Form actions: one column of equal full-width buttons. */
@@ -465,7 +462,7 @@ h1, h2, h3, .h3, .tile__h { -webkit-hyphens: auto; hyphens: auto; }
   .article__head h1 { font-size: clamp(26px, 8vw, 36px); }
   .btn { letter-spacing: 0.02em; padding-inline: 16px; }
   .lf--chips .lf__opts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .lf--chips .lf__opts button { text-align: center; padding-inline: 4px; font-size: 11.5px; letter-spacing: 0.02em; -webkit-hyphens: auto; hyphens: auto; }
+  .lf--chips .lf__opts button { text-align: center; padding-inline: 4px; font-size: 11.5px; letter-spacing: 0.02em; }
   .cats ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cats li { display: flex; }
   .cats a, .cats span { display: flex; align-items: center; justify-content: center; width: 100%; text-align: center; font-size: 11.5px; letter-spacing: 0.04em; line-height: 1.25; padding-inline: 8px; }
@@ -506,7 +503,7 @@ h1, h2, h3, .h3, .tile__h { -webkit-hyphens: auto; hyphens: auto; }
 /* Narrow phones (320–360 px) where the browser has no Russian hyphenation dictionary (e.g. desktop Chrome on Windows):
    long single words like «Индивидуальные» must still fit the column. */
 @media (max-width: 360px) {
-  .prog__txt h2 { font-size: 24px; overflow-wrap: anywhere; }
+  .prog__txt h2 { font-size: 24px; }
   .prog__grid > * { min-width: 0; }
 }
 
@@ -521,4 +518,17 @@ h1, h2, h3, .h3, .tile__h { -webkit-hyphens: auto; hyphens: auto; }
   .cmp td { border: 0; padding: 2px 14px; display: flex; gap: 12px; justify-content: space-between; text-align: right; }
   .cmp td::before { content: attr(data-label); color: var(--muted); font-size: 13px; }
   .cmp td:last-child { padding-bottom: 10px; }
+}
+
+/* Whole words only (owner request 2026-11-16): no syllable hyphenation anywhere.
+   Tile titles scale with the tile width so the longest word ("Индивидуальные", "Внетрассовое") fits on one line. */
+html, body, h1, h2, h3, h4, .h3, .tile__h, .prog__txt h2, .lf__opts button { -webkit-hyphens: manual; hyphens: manual; }
+.tile { container-type: inline-size; }
+.tile__h { font-size: clamp(13px, 9cqi, 25px); overflow-wrap: normal; word-break: normal; }
+/* 320–360 px: the longest single word in a page title must fit the line. */
+@media (max-width: 360px) { h1, .article__head h1 { font-size: clamp(22px, 7vw, 36px); } }
+/* Service pages: the title sits in a half-width column, so its size follows the column, not the window. */
+@media (min-width: 821px) {
+  .split > div:has(> h1) { container-type: inline-size; }
+  .split > div > h1 { font-size: min(clamp(36px, 5.6vw, 72px), 8cqi); }
 }

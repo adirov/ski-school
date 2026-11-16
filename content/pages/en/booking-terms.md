@@ -1,40 +1,53 @@
 ---
-title: "Booking and cancellation terms"
-description: "How to book a lesson or trip with Almaty Snowboard School: requests, confirmation, prices, weather changes and safety."
+title: "Public offer: booking and cancellation terms"
+description: "Public offer of Almaty Snowboard School: how to book and pay for a snowboard lesson (30% prepayment), cancellation and refunds, weather and safety, provider details."
 ---
 
-## 1. Requests and confirmation
+This document is an official proposal (public offer) from IE "KAZAKHSTAN TRAVEL AGENCY", under which Almaty Snowboard School operates (hereinafter — the "Provider"), to any individual or legal entity (hereinafter — the "Customer") that accepts this offer under the conditions below.
 
-1.1. A request by phone, messenger or through the site is an enquiry. It does not guarantee a place.
+In accordance with Article 395 of the Civil Code of the Republic of Kazakhstan, acceptance of this offer is the Customer making a partial or full prepayment via an individual link (invoice) that the Provider sends to the Customer by e-mail or messenger.
 
-1.2. A booking is confirmed once we have told you the date, format, meeting point and price, and you have agreed.
+## 1. Subject of the agreement
 
-## 2. Price and payment
+1.1. At the Customer's request, the Provider runs private and group snowboard lessons, kids training and guided off-piste riding at ski resorts near Almaty, and the Customer pays for these services under the terms of this Agreement.
 
-2.1. The price depends on the format, length, dates and group size. We quote it before the booking is confirmed.
+1.2. Lesson prices are published on the [Prices](/en/prices/) page. The ski pass (lift ticket) and equipment rental are not included in the lesson price unless agreed otherwise.
 
-2.2. Whether a prepayment is needed, how to pay it and when it is refunded is explained together with the price, before you confirm.
+## 2. Booking and payment
 
-## 3. Rescheduling and cancellation
+2.1. A request by phone, WhatsApp or through the website is an enquiry. The date, time, resort, meeting point, format and price are agreed with the Customer before confirmation.
 
-3.1. If your plans change, tell us as early as possible so we can move the session.
+2.2. After agreement, the Provider generates a personal payment link (electronic invoice) via the TipTop Pay payment system and sends it to the Customer.
 
-3.2. We state the rescheduling and cancellation terms for your booking before confirming it.
+2.3. To confirm the booking and secure the instructor's time, the Customer makes a 30% prepayment via the link within 3 banking days of receiving it.
 
-## 4. Weather and safety
+2.4. The remaining 70% is paid in cash on the day of the lesson before it starts.
 
-4.1. Safety comes first. The instructor or guide may change the route, shorten or move a session in poor visibility, strong wind, lift closures or avalanche danger.
+2.5. Non-cash payments are accepted in tenge (KZT). International guests pay the invoice with Visa/Mastercard in their own currency, converted at their bank's rate.
 
-4.2. Off-piste riding goes ahead only in suitable conditions. The guide decides whether the trip runs.
+## 3. Rights and obligations of the parties
 
-## 5. Health and preparation
+3.1. The Provider shall: run the lesson at the agreed time and in the agreed format; provide a qualified instructor or guide; explain the safety rules on the slope.
 
-5.1. Before the session, tell the instructor about injuries, health conditions and your riding level.
+3.2. The Customer shall: give accurate contact details, the age and riding level of participants, and tell the instructor about injuries or health conditions; follow the instructor's directions and the resort rules; wear a helmet in lessons. Kids' lessons require a parent's consent.
 
-5.2. A helmet is required. Equipment requirements for off-piste trips are agreed in advance.
+## 4. Cancellation and refunds
 
-5.3. Children ride with their parents’ consent. Whether an adult needs to be present is agreed when booking.
+4.1. If the Customer cancels, the prepayment is refunded minus the Provider's actual expenses that cannot be cancelled.
 
-## 6. Questions
+4.2. If the Customer cancels less than 7 days before the lesson, the non-cash prepayment is retained by the Provider as a penalty for the instructor booking.
 
-For booking questions, call the number on the [Contact](/en/contact/) page.
+4.3. Prepayments are refunded only to the card used for the payment via TipTop Pay, within 5–10 banking days. No refund applies to the cash portion if it has not yet been paid.
+
+## 5. Weather, safety and force majeure
+
+5.1. Safety comes first. The instructor or guide may change, shorten or reschedule a lesson in poor visibility, strong wind, lift closures or avalanche danger. Off-piste riding runs only in suitable conditions; the guide decides.
+
+5.2. The parties are exempt from liability for non-performance caused by force majeure: natural disasters, avalanche danger, closure of the resort, runs or roads by the resort administration or government order.
+
+## Provider contacts and details
+
+- Name: IE "KAZAKHSTAN TRAVEL AGENCY"
+- IIN: 890211300427
+- Legal address: 28 Khodji Mukana St., office 26, Almaty, Republic of Kazakhstan, 050051
+- School: Almaty Snowboard School, phone and WhatsApp +7 700 525 98 85 ([Contact](/en/contact/))

@@ -11,7 +11,7 @@ updated: "2026-11-12"
 cover: "/images/shymbulak-beginner-slope.jpg"
 answer: "Prepare for your first snowboard lesson in advance: a week before, do simple leg and balance exercises; the evening before, pack warm waterproof clothing and get a good night's sleep; in the morning, eat a proper breakfast and arrive early enough for rental. Tell your instructor about your experience, injuries and fears."
 relatedServices: [private-lessons, kids-training]
-relatedTours: [shymbulak-first-snowboard-day]
+relatedTours: [shymbulak-snowboard-lessons]
 relatedArticles: [how-to-start-snowboarding-almaty, what-to-bring-to-the-mountains-almaty]
 sources: []
 todo:

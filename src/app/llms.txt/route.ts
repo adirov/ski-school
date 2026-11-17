@@ -29,7 +29,7 @@ export async function GET() {
     facts.push(`- ${t(s.title, "en")}: ${[t(s.age, "en"), t(s.duration, "en")].filter(Boolean).join(", ")}; price on request by phone/WhatsApp`);
   }
   facts.push("- Rental gear: instructors help you choose it at the resort rental shop; rental is paid separately");
-  facts.push(`- Ski pass: not included; guests buy a half-day or full-day pass at the resort ticket office`);
+  facts.push(`- Ski pass: not included; guests buy the pass at the resort ticket office`);
   lines.push("## Key facts", ...facts, "");
   const contact: string[] = [];
   if (factVisible(c.person) && c.person.confirmed) contact.push(`- Contact person: ${c.person.value.en} (${c.person.value.ru})`);

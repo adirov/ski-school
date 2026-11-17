@@ -58,6 +58,16 @@
         "ru": "В Almaty Snowboard School детей учат кататься на сноуборде с 5 лет. Занятие длится полтора часа. Формат — индивидуально или в детской группе — согласуем с родителями при записи. Цена детского занятия — по запросу по телефону или в WhatsApp +7 700 525 98 85. Занятия проходят на курортах под Алматы, ски-пасс покупается отдельно.",
         "en": "Almaty Snowboard School teaches children from age 5. A session lasts an hour and a half. We agree the format, one-to-one or in a kids' group, with parents when you book. The price of a kids' session is on request by phone or WhatsApp on +7 700 525 98 85. Lessons take place at resorts near Almaty, and the ski pass is bought separately."
       }
+    },
+    {
+      "q": {
+        "ru": "Нужен ли ребёнку свой сноуборд?",
+        "en": "Does my child need their own snowboard?"
+      },
+      "a": {
+        "ru": "Нет, на первые занятия свой сноуборд не нужен. Доску, ботинки и шлем по размеру ребёнка можно взять в прокате на курорте, оплачивается прокат отдельно. Инструктор Almaty Snowboard School поможет подобрать снаряжение перед занятием. От родителей нужна тёплая непромокаемая одежда для ребёнка, маска и запасные варежки. Ски-пасс гость покупает сам в кассе курорта.",
+        "en": "No, a child does not need their own snowboard for the first sessions. A board, boots and a helmet in your child's size can be rented at the resort; rental is paid separately. An Almaty Snowboard School instructor helps choose the gear before the session. Parents should bring warm waterproof clothes, goggles and spare mittens. Guests buy the ski pass themselves at the resort ticket office."
+      }
     }
   ],
   "image": "/images/shymbulak-beginner-slope.jpg",
@@ -76,5 +86,61 @@
       "ru": "Занятия сноубордом для детей от 5 лет в Алматы с сертифицированным инструктором: 1,5 часа, индивидуально или в группе. Цена по запросу: +7 700 525 98 85.",
       "en": "Snowboard lessons for kids aged 5+ in Almaty with a certified instructor: 1.5-hour sessions, one-to-one or in a group. Price on request: +7 700 525 98 85."
     }
-  }
+  },
+  "sections": [
+    {
+      "title": {
+        "ru": "Что взять ребёнку",
+        "en": "What to bring for your child"
+      },
+      "list": {
+        "ru": [
+          "Шлем: на занятиях он обязателен. Если своего нет, его можно взять в прокате на курорте.",
+          "Тёплую непромокаемую куртку и штаны, термобельё и флис.",
+          "Маску или очки от солнца и снега, шапку или балаклаву под шлем.",
+          "Запасные варежки и носки: дети быстро промокают.",
+          "Воду и небольшой перекус."
+        ],
+        "en": [
+          "A helmet: it is required in lessons. If you do not have one, rent it at the resort.",
+          "A warm waterproof jacket and pants, thermal underwear and a fleece.",
+          "Goggles, and a hat or balaclava that fits under the helmet.",
+          "Spare mittens and socks: children get wet quickly.",
+          "Water and a small snack."
+        ]
+      }
+    },
+    {
+      "title": {
+        "ru": "Что оплачивается отдельно",
+        "en": "What you pay for separately"
+      },
+      "list": {
+        "ru": [
+          "Ски-пасс: гость покупает его сам в кассе курорта.",
+          "Прокат доски, ботинок и шлема, если у ребёнка нет своего снаряжения.",
+          "Дорога до курорта."
+        ],
+        "en": [
+          "The ski pass: guests buy it themselves at the resort ticket office.",
+          "Board, boot and helmet rental if your child has no gear of their own.",
+          "Getting to the resort."
+        ]
+      }
+    },
+    {
+      "title": {
+        "ru": "Как записать ребёнка",
+        "en": "How to book a kids' session"
+      },
+      "body": {
+        "ru": [
+          "Напишите в WhatsApp или позвоните: +7 700 525 98 85. Укажите возраст ребёнка, катался ли он раньше и удобные даты. Мы предложим формат (индивидуально или в детской группе), курорт и время, назовём цену занятия."
+        ],
+        "en": [
+          "Message us on WhatsApp or call +7 700 525 98 85. Tell us your child's age, whether they have ridden before and the dates that suit you. We will suggest the format (one-to-one or a kids' group), the resort and time, and give you the price."
+        ]
+      }
+    }
+  ]
 }

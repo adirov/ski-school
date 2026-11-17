@@ -13,7 +13,7 @@ type P = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: P) {
   const locale = (await params).locale as Locale;
   const P = getDict(locale).prices;
-  return buildMetadata({ locale, path: "/prices/", title: P.seoTitle, description: P.seoDescription, available: availableLocales("/prices/"), image: "snowboarder-carving-blue-jacket" });
+  return buildMetadata({ locale, path: "/prices/", title: P.seoTitle, description: P.seoDescription, available: availableLocales("/prices/"), image: "snowboarders-gear-check" });
 }
 
 export default async function PricesPage({ params }: P) {

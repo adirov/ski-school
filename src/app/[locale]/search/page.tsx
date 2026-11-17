@@ -14,7 +14,7 @@ type P = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: P) {
   const locale = (await params).locale as Locale;
   const d = getDict(locale);
-  return buildMetadata({ locale, path: "/search/", title: d.guides.search, description: d.guides.lead, available: availableLocales("/search/"), noindex: true });
+  return buildMetadata({ locale, path: "/search/", title: d.guides.search, description: locale === "ru" ? "Поиск по статьям о сноуборде в Алматы: обучение, снаряжение, курорты." : "Search the guides to snowboarding in Almaty: lessons, gear and resorts.", available: availableLocales("/search/"), noindex: true });
 }
 
 export default async function SearchPage({ params }: P) {

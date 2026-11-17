@@ -1,0 +1,179 @@
+{
+  "slug": "shymbulak-snowboard-lessons",
+  "status": "confirmed",
+  "order": 1,
+  "title": {
+    "ru": "Уроки сноуборда на Шымбулаке",
+    "en": "Snowboard lessons at Shymbulak"
+  },
+  "summary": {
+    "ru": "Индивидуальные и групповые уроки сноуборда с сертифицированным инструктором на Шымбулаке — главном курорте Алматы над Медеу.",
+    "en": "Private and group snowboard lessons with a certified instructor at Shymbulak, Almaty's main ski resort above Medeu."
+  },
+  "description": {
+    "ru": [
+      "Шымбулак — ближайший к городу крупный горнолыжный курорт: он находится над Медеу, в горах Заилийского Алатау. Здесь есть пологие учебные склоны для первых занятий и длинные трассы для тех, кто уже катается.",
+      "Almaty Snowboard School проводит на Шымбулаке индивидуальные и групповые уроки. Инструктор подбирает программу под ваш уровень: от первой стойки на доске до уверенных поворотов и техники на крутых трассах.",
+      "Индивидуальный урок на 2 часа стоит 50 000 ₸, полдня (3 часа) — 65 000 ₸ в будни и 75 000 ₸ в выходные, весь день (6 часов) — 130 000 ₸. Групповой урок на 2 часа для 2–5 человек стоит 25 000 ₸ с человека. Ски-пасс гость покупает сам в кассе курорта."
+    ],
+    "en": [
+      "Shymbulak is the closest large ski resort to the city: it sits above Medeu in the Trans-Ili Alatau mountains. It has gentle learning slopes for first lessons and long runs for riders who already ride.",
+      "Almaty Snowboard School runs private and group lessons at Shymbulak. The instructor builds the lesson around your level, from your first stance on a board to confident turns and technique on steeper runs.",
+      "A 2-hour private lesson costs 50,000 KZT, a half day (3 hours) 65,000 KZT on weekdays and 75,000 KZT at weekends, and a full day (6 hours) 130,000 KZT. A 2-hour group lesson for 2–5 people costs 25,000 KZT per person. Guests buy the ski pass themselves at the resort ticket office."
+    ]
+  },
+  "images": [
+    "/images/shymbulak-slopes-blue-sky.jpg",
+    "/images/shymbulak-beginner-slope.jpg"
+  ],
+  "location": {
+    "ru": "Шымбулак, Алматы",
+    "en": "Shymbulak, Almaty"
+  },
+  "route": {
+    "value": {
+      "ru": "Учебный склон или трассы Шымбулака — по вашему уровню",
+      "en": "A learning slope or Shymbulak's runs, depending on your level"
+    }
+  },
+  "duration": {
+    "value": {
+      "ru": "2 часа, полдня (3 часа) или весь день (6 часов)",
+      "en": "2 hours, a half day (3 hours) or a full day (6 hours)"
+    }
+  },
+  "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+  ],
+  "languages": {
+    "value": null,
+    "todo": "Языки сопровождения"
+  },
+  "format": "both",
+  "groupSize": {
+    "min": 1,
+    "max": 5
+  },
+  "season": {
+    "value": null,
+    "todo": "Сезон и расписание"
+  },
+  "availability": "request",
+  "price": {
+    "amount": 25000,
+    "currency": "KZT",
+    "unit": "person"
+  },
+  "included": {
+    "value": {
+      "ru": [
+        "Работа сертифицированного инструктора всё оплаченное время.",
+        "Программа под ваш уровень и цель.",
+        "Помощь в выборе снаряжения в прокате, если своего нет."
+      ],
+      "en": [
+        "A certified instructor for the whole booked time.",
+        "A lesson plan built around your level and goal.",
+        "Help choosing rental gear if you do not have your own."
+      ]
+    }
+  },
+  "notIncluded": {
+    "value": {
+      "ru": [
+        "Ски-пасс: гость покупает его сам в кассе Шымбулака.",
+        "Прокат доски, ботинок и шлема.",
+        "Дорога до курорта."
+      ],
+      "en": [
+        "The ski pass: guests buy it themselves at the Shymbulak ticket office.",
+        "Board, boot and helmet rental.",
+        "Getting to the resort."
+      ]
+    }
+  },
+  "meetingPoint": {
+    "value": {
+      "ru": "Точное место встречи с инструктором на Шымбулаке согласуем при записи по телефону или в WhatsApp +7 700 525 98 85.",
+      "en": "We agree the exact meeting point with the instructor at Shymbulak when you book by phone or WhatsApp on +7 700 525 98 85."
+    }
+  },
+  "equipment": {
+    "value": {
+      "ru": [
+        "Тёплая непромокаемая одежда, термобельё и флис.",
+        "Шлем и маска: их можно взять в прокате.",
+        "Перчатки, солнцезащитный крем, вода."
+      ],
+      "en": [
+        "Warm waterproof clothing, thermal underwear and a fleece.",
+        "A helmet and goggles: both can be rented.",
+        "Gloves, sunscreen and water."
+      ]
+    }
+  },
+  "restrictions": {
+    "value": {
+      "ru": [
+        "Дети занимаются с 5 лет: для них есть отдельные детские тренировки."
+      ],
+      "en": [
+        "Children can ride from age 5: see our kids' training."
+      ]
+    }
+  },
+  "weatherPolicy": {
+    "value": null,
+    "todo": "Что происходит при непогоде или закрытии подъёмников"
+  },
+  "bookingTerms": {
+    "value": {
+      "ru": "Запись по телефону или в WhatsApp +7 700 525 98 85. Условия оплаты и отмены — в публичной оферте на странице «Условия бронирования».",
+      "en": "Book by phone or WhatsApp on +7 700 525 98 85. Payment and cancellation terms are in the public offer on the Booking terms page."
+    }
+  },
+  "faq": [
+    {
+      "q": {
+        "ru": "Подходит ли Шымбулак для первого урока сноуборда?",
+        "en": "Is Shymbulak good for a first snowboard lesson?"
+      },
+      "a": {
+        "ru": "Да. На Шымбулаке есть пологие учебные склоны, где новички учатся стоять на доске, тормозить и делать первые повороты. Индивидуальный урок на 2 часа с инструктором Almaty Snowboard School стоит 50 000 ₸, групповой — 25 000 ₸ с человека. Ски-пасс и прокат оплачиваются отдельно. Время и место встречи согласуем при записи.",
+        "en": "Yes. Shymbulak has gentle learning slopes where beginners learn to stand on the board, stop and make their first turns. A 2-hour private lesson with an Almaty Snowboard School instructor costs 50,000 KZT, a group lesson 25,000 KZT per person. The ski pass and rental are paid separately. We agree the time and meeting point when you book."
+      }
+    },
+    {
+      "q": {
+        "ru": "Входит ли ски-пасс Шымбулака в цену урока?",
+        "en": "Is the Shymbulak ski pass included in the lesson price?"
+      },
+      "a": {
+        "ru": "Нет. Ски-пасс гость покупает сам в кассе Шымбулака, в стоимость урока Almaty Snowboard School он не входит. В цену урока входит работа сертифицированного инструктора всё оплаченное время и помощь в выборе снаряжения в прокате. Актуальные цены на ски-пасс смотрите на официальном сайте курорта.",
+        "en": "No. Guests buy the ski pass themselves at the Shymbulak ticket office; it is not included in the Almaty Snowboard School lesson price. The lesson price covers a certified instructor for the whole booked time and help choosing rental gear. Check current ski pass prices on the resort's official website."
+      }
+    }
+  ],
+  "relatedArticles": [
+    "how-to-start-snowboarding-almaty",
+    "first-snowboard-lesson-preparation"
+  ],
+  "relatedServices": [
+    "private-lessons",
+    "group-courses",
+    "kids-training"
+  ],
+  "getYourGuideUrl": null,
+  "seo": {
+    "title": {
+      "ru": "Уроки сноуборда на Шымбулаке с инструктором — от 25 000 ₸",
+      "en": "Snowboard Lessons at Shymbulak with an Instructor"
+    },
+    "description": {
+      "ru": "Уроки сноуборда на Шымбулаке с сертифицированным инструктором: индивидуально от 50 000 ₸ за 2 часа, в группе 25 000 ₸ с человека. Запись: +7 700 525 98 85.",
+      "en": "Snowboard lessons at Shymbulak with a certified instructor: private from 50,000 KZT for 2 hours, group 25,000 KZT per person. Book: +7 700 525 98 85."
+    }
+  }
+}

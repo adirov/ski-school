@@ -16,8 +16,10 @@ try {
   renameSync(parked, api);
 }
 
+// Absolute canonical when the public origin is known (relative canonicals are ignored by some crawlers).
+const origin = /^https?:\/\//.test(process.env.NEXT_PUBLIC_SITE_URL || "") ? new URL(process.env.NEXT_PUBLIC_SITE_URL).origin : "";
 const redirectPage = (to) =>
-  `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Almaty Snowboard</title><link rel="canonical" href="${to}"><meta http-equiv="refresh" content="0; url=${to}"><a href="${to}">${to}</a>`;
+  `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Almaty Snowboard</title><link rel="canonical" href="${origin}${to}"><meta http-equiv="refresh" content="0; url=${to}"><a href="${to}">${to}</a>`;
 writeFileSync("out/index.html", redirectPage(`${base}/ru/`));
 for (const r of JSON.parse(readFileSync("content/redirects.json", "utf8"))) {
   const file = join("out", r.source, "index.html");
@@ -71,8 +73,8 @@ if (!base) {
     ...(host ? ["RewriteCond %{HTTP_HOST} ^www\\. [NC]", `RewriteRule ^ ${forceHttps ? "https" : "http"}://${host}%{REQUEST_URI} [R=301,L]`] : []),
     "# Old page addresses (content/redirects.json, editable in the CMS).",
     ...JSON.parse(readFileSync("content/redirects.json", "utf8")).map((r) => `RewriteRule ^${esc(r.source)}/?$ ${r.destination} [R=301,L]`),
-    "# Language root. Temporary, so the default language can change later.",
-    "RewriteRule ^$ /ru/ [R=302,L]",
+    "# Language root: Russian is the default language (x-default), so a permanent redirect.",
+    "RewriteRule ^$ /ru/ [R=301,L]",
     "</IfModule>",
     "",
     "<IfModule mod_headers.c>",

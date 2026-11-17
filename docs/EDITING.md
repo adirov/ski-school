@@ -20,7 +20,7 @@
 
 ## Добавить тур
 
-1. Скопируйте `content/tours/shymbulak-first-snowboard-day.json` в новый файл, например `content/tours/ak-bulak-weekend.json`.
+1. Скопируйте `content/tours/shymbulak-snowboard-lessons.json` в новый файл, например `content/tours/ak-bulak-weekend.json`.
 2. `slug` — латиница, цифры и дефисы, совпадает с адресом: `/ru/tours/ak-bulak-weekend/`.
 3. Заполните поля. Текст на двух языках: `{ "ru": "…", "en": "…" }`. Если английского нет, уберите `en`: тур не появится в EN-версии, и hreflang не будет ссылаться на несуществующую страницу.
 4. Поля с неизвестным значением оставьте `"value": null` и опишите в `"todo"`, что нужно узнать.

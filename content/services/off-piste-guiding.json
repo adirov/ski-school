@@ -55,5 +55,82 @@
       "ru": "Сноуборд вне трасс с гидом в горах Алматы для опытных райдеров: выезд на полный день, маршрут по снегу и погоде. Цена по запросу: +7 700 525 98 85.",
       "en": "Guided off-piste snowboarding near Almaty for experienced riders: a full-day outing, route chosen by snow and weather. Price on request: +7 700 525 98 85."
     }
-  }
+  },
+  "sections": [
+    {
+      "title": {
+        "ru": "Кому подходит",
+        "en": "Who it is for"
+      },
+      "list": {
+        "ru": [
+          "Опытным райдерам, которые уверенно спускаются по красным и чёрным трассам.",
+          "Тем, кто хочет кататься по целине в горах Алматы с гидом, а не в одиночку.",
+          "Если вы пока катаетесь только по трассам, начните с индивидуального урока: инструктор подготовит вас к выезду."
+        ],
+        "en": [
+          "Experienced riders who are confident on red and black runs.",
+          "Riders who want powder in the Almaty mountains with a guide rather than alone.",
+          "If you only ride groomed runs so far, start with a private lesson: the instructor will get you ready for off-piste."
+        ]
+      }
+    },
+    {
+      "title": {
+        "ru": "Снаряжение",
+        "en": "Equipment"
+      },
+      "list": {
+        "ru": [
+          "Лавинный датчик (бипер), лопата и щуп у каждого участника, и умение ими пользоваться.",
+          "Шлем, маска и многослойная одежда с непромокаемой мембраной.",
+          "Рюкзак, вода и перекус на полный день.",
+          "Какое снаряжение нужно и где его взять, согласуем с вами до выезда."
+        ],
+        "en": [
+          "An avalanche transceiver, a shovel and a probe for every rider, and the skills to use them.",
+          "A helmet, goggles and layered clothing with a waterproof shell.",
+          "A backpack, water and food for a full day.",
+          "We agree what gear you need and where to get it with you before the trip."
+        ]
+      }
+    },
+    {
+      "title": {
+        "ru": "Безопасность и погода",
+        "en": "Safety and weather"
+      },
+      "body": {
+        "ru": [
+          "Маршрут гид выбирает по снегу, погоде и уровню группы, и окончательное решение о спуске принимает он. Если лавинная опасность высокая или погода плохая, выезд переносим на другой день по договорённости с вами."
+        ],
+        "en": [
+          "The guide chooses the route by snow, weather and the group's ability and makes the final call on every descent. If avalanche danger is high or the weather is bad, we move the outing to another day agreed with you."
+        ]
+      }
+    }
+  ],
+  "showPlaces": true,
+  "faq": [
+    {
+      "q": {
+        "ru": "Можно ли новичку поехать на фрирайд?",
+        "en": "Can a beginner go off-piste?"
+      },
+      "a": {
+        "ru": "Нет. Внетрассовое катание с гидом в Almaty Snowboard School рассчитано на опытных райдеров, которые уверенно спускаются по красным и чёрным трассам. Для выезда нужны лавинный датчик, лопата и щуп и умение ими пользоваться, а окончательное решение о маршруте принимает гид. Если вы пока катаетесь только по трассам, начните с индивидуального урока с инструктором.",
+        "en": "No. Guided off-piste riding at Almaty Snowboard School is for experienced riders who are confident on red and black runs. You need an avalanche transceiver, a shovel and a probe and the skills to use them, and the guide makes the final call on the route. If you only ride groomed runs so far, start with a private lesson with an instructor."
+      }
+    },
+    {
+      "q": {
+        "ru": "Сколько стоит фрирайд с гидом в Алматы?",
+        "en": "How much does guided off-piste riding in Almaty cost?"
+      },
+      "a": {
+        "ru": "Цена внетрассового катания с гидом зависит от маршрута, размера группы и снаряжения, поэтому её называем по запросу: WhatsApp или телефон +7 700 525 98 85. Выезд рассчитан на полный день. Ски-пасс, если маршрут начинается с подъёмника курорта, гость покупает сам. Маршрут и условия переноса из-за погоды согласуем до выезда.",
+        "en": "The price of guided off-piste riding depends on the route, group size and equipment, so we quote it on request by WhatsApp or phone on +7 700 525 98 85. An outing takes a full day. If the route starts from a resort lift, guests buy the ski pass themselves. We agree the route and weather rescheduling terms before the trip."
+      }
+    }
+  ]
 }

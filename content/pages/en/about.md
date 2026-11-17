@@ -20,7 +20,7 @@ See all prices on the [Prices page](/en/prices/).
 
 ## Where lessons take place
 
-Lessons take place at four ski resorts near Almaty: **Shymbulak**, **Ak-Bulak**, **Oi-Karagai** and **Lesnaya Skazka**. We agree the resort, time and meeting point when you book. Guests buy a half-day or full-day ski pass themselves at the resort ticket office; rental gear is paid separately, and the instructor helps you choose a board and boots.
+Lessons take place at four ski resorts near Almaty: **Shymbulak**, **Ak-Bulak**, **Oi-Karagai** and **Lesnaya Skazka**. We agree the resort, time and meeting point when you book. Guests buy the ski pass themselves at the resort ticket office; rental gear is paid separately, and the instructor helps you choose a board and boots.
 
 ## How we work
 

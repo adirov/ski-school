@@ -11,7 +11,7 @@ updated: "2026-11-16"
 cover: "/images/snowboarder-carving-blue-jacket.jpg"
 answer: "To start snowboarding in Almaty you need warm waterproof clothing, a helmet and one or two lessons with an instructor on a gentle learning slope. Beginners are better off renting a board and boots. The closest large resort to the city is Shymbulak, above Medeu. Check opening hours, prices and slope conditions on the resort's official website on the day you go."
 relatedServices: [private-lessons, group-courses]
-relatedTours: [shymbulak-first-snowboard-day]
+relatedTours: [shymbulak-snowboard-lessons]
 relatedArticles: [first-snowboard-lesson-preparation, what-to-bring-to-the-mountains-almaty]
 sources:
   - title: "Shymbulak resort official website (hours, lift passes, slope conditions)"

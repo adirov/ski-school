@@ -8,7 +8,7 @@
       "todo": "Юридическое лицо или ИП, БИН/ИИН: нужно для политики конфиденциальности и условий бронирования."
     },
     "shortDescription": {
-      "ru": "Almaty Snowboard School — школа сноуборда в Алматы, обучаем с 2005 года: индивидуальные и групповые уроки, занятия для детей от 5 лет и внетрассовое катание с гидом. Уроки проходят на курортах Шымбулак, Ак-Булак, Ой-Карагай и Лесная сказка.",
+      "ru": "Almaty Snowboard School — школа сноуборда в Алматы, обучаем с 2005 года: индивидуальные и групповые уроки, занятия для детей от 5 лет и внетрассовое катание с гидом. Уроки проходят на курортах Шымбулак, Ак-Булак, Ой-Карагай и Лесная Сказка.",
       "en": "Almaty Snowboard School is a snowboard school in Almaty, teaching since 2005: private and group lessons, kids' sessions from age 5 and guided off-piste riding. Lessons take place at Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka resorts."
     },
     "logo": "/brand/logo.svg",
@@ -90,7 +90,7 @@
       ]
     },
     "confirmed": true,
-    "todo": "Город и горы над ним следуют из названия и материалов школы. Курорты (Шымбулак, Ак-Булак, Ой-Карагай, Лесная сказка) подтверждены владельцем 14.11.2026: content/places.json, placesConfirmed."
+    "todo": "Город и горы над ним следуют из названия и материалов школы. Курорты (Шымбулак, Ак-Булак, Ой-Карагай, Лесная Сказка) подтверждены владельцем 14.11.2026: content/places.json, placesConfirmed."
   },
   "languages": {
     "value": [

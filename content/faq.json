@@ -6,8 +6,52 @@
       "en": "What is Almaty Snowboard School?"
     },
     "a": {
-      "ru": "Almaty Snowboard School — школа сноуборда в Алматы. Мы проводим индивидуальные уроки, групповые курсы, детские тренировки и выезды вне трасс с гидом в горах Заилийского Алатау.",
-      "en": "Almaty Snowboard School is a snowboard school in Almaty. We run private lessons, group courses, kids training and guided off-piste trips in the Trans-Ili Alatau mountains."
+      "ru": "Almaty Snowboard School — школа сноуборда в Алматы, которая обучает с 2005 года. Сертифицированные инструкторы с опытом от 10 до 40 лет проводят индивидуальные уроки (от 50 000 ₸ за 2 часа), групповые уроки (25 000 ₸ с человека), занятия для детей от 5 лет и внетрассовое катание с гидом. Уроки проходят на курортах Шымбулак, Ак-Булак, Ой-Карагай и Лесная сказка. Запись: +7 700 525 98 85.",
+      "en": "Almaty Snowboard School is a snowboard school in Almaty that has been teaching since 2005. Certified instructors with 10 to 40 years of experience run private lessons (from 50,000 KZT for 2 hours), group lessons (25,000 KZT per person), sessions for children from age 5 and guided off-piste riding. Lessons take place at Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka. Booking: +7 700 525 98 85."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Сколько стоит урок сноуборда?",
+      "en": "How much does a snowboard lesson cost?"
+    },
+    "a": {
+      "ru": "Индивидуальный урок сноуборда с инструктором в Алматы на 2 часа стоит 50 000 ₸. Полдня (3 часа) — 65 000 ₸ в будни и 75 000 ₸ в выходные. Весь день (6 часов) — 130 000 ₸ в любой день. Групповой урок на 2 часа в группе от 2 до 5 человек — 25 000 ₸ с человека. Ски-пасс и прокат в цену не входят. Все цены — на странице «Цены».",
+      "en": "A 2-hour private snowboard lesson with an instructor in Almaty costs 50,000 KZT. A half day (3 hours) is 65,000 KZT on weekdays and 75,000 KZT at weekends. A full day (6 hours) is 130,000 KZT on any day. A 2-hour group lesson for 2 to 5 people is 25,000 KZT per person. The ski pass and rental gear are not included. See the Prices page for the full list."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Где проходят уроки сноуборда?",
+      "en": "Where do the snowboard lessons take place?"
+    },
+    "a": {
+      "ru": "Уроки Almaty Snowboard School проходят на четырёх горнолыжных курортах под Алматы: Шымбулак, Ак-Булак, Ой-Карагай и Лесная сказка. Курорт, время и место встречи с инструктором согласуем при записи по телефону или в WhatsApp +7 700 525 98 85. Ски-пасс на полдня или на день гость покупает сам в кассе выбранного курорта, в стоимость урока он не входит.",
+      "en": "Almaty Snowboard School lessons take place at four ski resorts near Almaty: Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka. We agree the resort, time and meeting point with the instructor when you book by phone or WhatsApp on +7 700 525 98 85. Guests buy a half-day or full-day ski pass themselves at the chosen resort's ticket office; it is not included in the lesson price."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Сколько длится урок сноуборда?",
+      "en": "How long is a snowboard lesson?"
+    },
+    "a": {
+      "ru": "Индивидуальный урок длится 2 часа, полдня — 3 часа, весь день — 6 часов. Групповой урок для 2–5 человек длится 2 часа. Детское занятие для детей от 5 лет — полтора часа. Внетрассовое катание с гидом — выезд на полный день для опытных райдеров. Длительность и время начала подтверждаем при записи в Almaty Snowboard School.",
+      "en": "A private lesson lasts 2 hours, a half day 3 hours and a full day 6 hours. A group lesson for 2 to 5 people lasts 2 hours. A kids' session for children from age 5 lasts an hour and a half. Guided off-piste riding is a full-day outing for experienced riders. Almaty Snowboard School confirms the length and start time when you book."
+    }
+  },
+  {
+    "confirmed": true,
+    "q": {
+      "ru": "Какой опыт у инструкторов?",
+      "en": "How experienced are the instructors?"
+    },
+    "a": {
+      "ru": "Занятия в Almaty Snowboard School ведут сертифицированные инструкторы с опытом от 10 до 40 лет. Школа обучает сноуборду в Алматы с 2005 года: от первого дня на доске до техники на крутых трассах и катания вне трасс с гидом. Инструктора под ваш уровень и цель подбираем при записи по телефону или в WhatsApp +7 700 525 98 85.",
+      "en": "Almaty Snowboard School lessons are taught by certified instructors with 10 to 40 years of experience. The school has been teaching snowboarding in Almaty since 2005, from your first day on a board to technique on steep runs and guided off-piste riding. We match an instructor to your level and goal when you book by phone or WhatsApp on +7 700 525 98 85."
     }
   },
   {
@@ -17,19 +61,19 @@
       "en": "Is a request on the site a booking?"
     },
     "a": {
-      "ru": "Нет. Заявка — это запрос. Мы связываемся с вами, уточняем даты, уровень и условия. Бронирование считается подтверждённым только после нашего ответа с подтверждением.",
-      "en": "No. A request is an enquiry. We contact you to confirm dates, level and terms. A booking is confirmed only when we reply with a confirmation."
+      "ru": "Нет. Заявка на сайте или сообщение в WhatsApp — это запрос, а не бронирование. Мы связываемся с вами, уточняем даты, уровень и количество участников, подбираем формат, инструктора, курорт и время встречи. Цены опубликованы на странице «Цены». Бронирование считается подтверждённым только после нашего ответа с подтверждением и предоплаты по условиям бронирования.",
+      "en": "No. A request on the site or a WhatsApp message is an enquiry, not a booking. We get in touch to check your dates, level and group size, and suggest a format, instructor, resort and meeting time. Prices are published on the Prices page. A booking is confirmed only when we reply with a confirmation and the prepayment is made under the booking terms."
     }
   },
   {
     "confirmed": true,
     "q": {
-      "ru": "Как узнать цену?",
-      "en": "How do I find out the price?"
+      "ru": "Входит ли ски-пасс в стоимость урока?",
+      "en": "Is the ski pass included in the lesson price?"
     },
     "a": {
-      "ru": "Стоимость зависит от формата, длительности, дат и количества участников. Позвоните или оставьте заявку, и мы назовём цену до записи.",
-      "en": "The price depends on the format, length, dates and group size. Call us or send a request and we will quote a price before you book."
+      "ru": "Нет. Ски-пасс (абонемент на подъёмники) на полдня или на день гость покупает сам в кассе курорта: на Шымбулаке, Ак-Булаке, Ой-Карагае или в Лесной сказке. В стоимость урока Almaty Snowboard School входит работа инструктора: 2 часа — 50 000 ₸ индивидуально или 25 000 ₸ с человека в группе. Прокат снаряжения тоже оплачивается отдельно.",
+      "en": "No. Guests buy a half-day or full-day ski pass (lift ticket) themselves at the resort ticket office: at Shymbulak, Ak-Bulak, Oi-Karagai or Lesnaya Skazka. The Almaty Snowboard School lesson price covers the instructor: 2 hours cost 50,000 KZT one-to-one or 25,000 KZT per person in a group. Rental gear is paid separately too."
     }
   },
   {
@@ -39,19 +83,19 @@
       "en": "Do I need experience to start?"
     },
     "a": {
-      "ru": "Нет. Для новичков подходит занятие с инструктором на пологом учебном склоне. Подробнее в статье «Как начать кататься на сноуборде в Алматы».",
-      "en": "No. Beginners start with an instructor on a gentle learning slope. See our guide on how to start snowboarding in Almaty."
+      "ru": "Нет. Новичок начинает с инструктором на пологом учебном склоне: стойка, торможение, спуск «листиком» боком к склону и первые повороты. Для первого раза подходит индивидуальный урок на 2 часа (50 000 ₸) или групповой урок на 2 часа (25 000 ₸ с человека, группа от 2 до 5 человек). Подробнее — в статье «Как начать кататься на сноуборде в Алматы».",
+      "en": "No. A beginner starts with an instructor on a gentle learning slope: stance, stopping, the \"falling leaf\" sideways slide and first turns. For a first time, choose a 2-hour private lesson (50,000 KZT) or a 2-hour group lesson (25,000 KZT per person, groups of 2 to 5). See our guide on how to start snowboarding in Almaty for more."
     }
   },
   {
     "confirmed": true,
     "q": {
-      "ru": "Что выбрать: индивидуальный урок или групповой курс?",
-      "en": "Private lesson or group course: which should I choose?"
+      "ru": "Что выбрать: индивидуальный или групповой урок?",
+      "en": "Private or group lesson: which should I choose?"
     },
     "a": {
-      "ru": "Индивидуальный урок — занятие один на один с инструктором на 2 часа: подходит, если хотите прогрессировать быстрее или волнуетесь на склоне. Групповой курс — 5 занятий по 2 часа в группе, удобно учиться вместе с друзьями. Сравнение всех форматов есть на странице «Занятия».",
-      "en": "A private lesson is a 2-hour one-to-one session with an instructor: good if you want to progress faster or feel nervous on the slope. A group course is 5 sessions of 2 hours in a group, handy if you are learning with friends. All formats are compared on the Lessons page."
+      "ru": "Индивидуальный урок — занятие один на один с инструктором: 2 часа за 50 000 ₸. Он подходит, если хотите прогрессировать быстрее, волнуетесь на склоне или работаете над конкретной техникой. Групповой урок — 2 часа в группе от 2 до 5 человек за 25 000 ₸ с человека: удобно учиться с друзьями или семьёй и дешевле. Сравнение форматов — на странице «Занятия».",
+      "en": "A private lesson is one-to-one with an instructor: 2 hours for 50,000 KZT. It suits you if you want to progress faster, feel nervous on the slope or work on a specific technique. A group lesson is 2 hours in a group of 2 to 5 people for 25,000 KZT per person: handy if you learn with friends or family, and cheaper. All formats are compared on the Lessons page."
     }
   },
   {
@@ -72,8 +116,8 @@
       "en": "Do I need to buy equipment?"
     },
     "a": {
-      "ru": "Покупать доску до первых занятий не нужно: на крупных курортах Алматы работают пункты проката. Что взять с собой и нужно ли своё снаряжение, подскажем при записи. Шлем обязателен.",
-      "en": "You do not need to buy a board before your first lessons: the main Almaty resorts have rental shops. We will tell you what to bring when you book. A helmet is a must."
+      "ru": "Нет, покупать доску до первых занятий не нужно: на крупных курортах Алматы работают пункты проката. Инструктор Almaty Snowboard School поможет подобрать в прокате доску и ботинки по вашему уровню, а что ещё взять с собой, подскажем при записи. Прокат оплачивается отдельно от урока. Шлем на занятии обязателен.",
+      "en": "No, you do not need to buy a board before your first lessons: the main Almaty resorts have rental shops. An Almaty Snowboard School instructor helps you choose a rental board and boots for your level, and we tell you what else to bring when you book. Rental is paid separately from the lesson. A helmet is a must during the lesson."
     }
   },
   {
@@ -107,8 +151,8 @@
       "en": "What is the minimum age?"
     },
     "a": {
-      "ru": "Детские тренировки проводим с 5 лет. Занятие длится полтора часа.",
-      "en": "Kids' training starts from 5 years old. A session lasts an hour and a half."
+      "ru": "Детей в Almaty Snowboard School учат кататься на сноуборде с 5 лет. Детское занятие длится полтора часа, формат — индивидуально или в детской группе — согласуем с родителями при записи. Цена детского занятия — по запросу: +7 700 525 98 85. Взрослые занимаются на индивидуальных (от 50 000 ₸ за 2 часа) или групповых уроках (25 000 ₸ с человека).",
+      "en": "Almaty Snowboard School teaches children to snowboard from age 5. A kids' session lasts an hour and a half, and we agree the format, one-to-one or in a kids' group, with parents when you book. The price of a kids' session is on request: +7 700 525 98 85. Adults take private lessons (from 50,000 KZT for 2 hours) or group lessons (25,000 KZT per person)."
     }
   },
   {
@@ -118,8 +162,8 @@
       "en": "Can you help with an airport transfer and sightseeing?"
     },
     "a": {
-      "ru": "Да. Встречу в аэропорту, трансфер и экскурсии по Алматы и области организует наше партнёрское турагентство almaty-travel.kz: www.almaty-travel.kz/ru/pages/26.html.",
-      "en": "Yes. Airport meeting, transfers and tours around Almaty are arranged by our partner travel agency almaty-travel.kz: www.almaty-travel.kz/en/pages/26.html."
+      "ru": "Да. Встречу в аэропорту, трансфер до курортов и экскурсии по Алматы и области организует наше партнёрское турагентство almaty-travel.kz: www.almaty-travel.kz/ru/pages/26.html. Уроки сноуборда при этом бронируются напрямую в Almaty Snowboard School по телефону или в WhatsApp +7 700 525 98 85. Трансфер в стоимость урока не входит.",
+      "en": "Yes. Airport meeting, transfers to the resorts and tours around Almaty are arranged by our partner travel agency almaty-travel.kz: www.almaty-travel.kz/en/pages/26.html. Snowboard lessons themselves are booked directly with Almaty Snowboard School by phone or WhatsApp on +7 700 525 98 85. The transfer is not included in the lesson price."
     }
   }
 ]

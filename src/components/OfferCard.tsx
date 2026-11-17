@@ -14,14 +14,16 @@ type Props = {
   status: "demo" | "confirmed" | "hidden" | "trash";
   kicker?: string;
   priority?: boolean;
+  /** Meaningful alt where the photo is the card's only image (catalog page); decorative otherwise. */
+  imageAlt?: string;
 };
 
-export function OfferCard({ locale, href, title, summary, image, levels, status, kicker, priority }: Props) {
+export function OfferCard({ locale, href, title, summary, image, levels, status, kicker, priority, imageAlt }: Props) {
   const d = getDict(locale);
   return (
     <article className="card" data-levels={levels.join(" ")}>
       <div className="card__media">
-        <Pic id={image} locale={locale} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px" decorative priority={priority} />
+        <Pic id={image} locale={locale} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px" {...(imageAlt ? { alt: imageAlt } : { decorative: true })} priority={priority} />
         {status === "demo" && <Badge kind="demo">{d.badge.demo}</Badge>}
       </div>
       <div className="card__body">

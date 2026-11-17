@@ -87,6 +87,8 @@ const SiteSchema = z.object({
     logo: z.string(),
     foundedNote: Fact,
     credentialsNote: Fact,
+    /** Instructors' experience, e.g. "10 to 40 years". Optional: hidden when absent or unconfirmed. */
+    experienceNote: Fact.optional(),
   }),
   contacts: z.object({ person: Fact, phone: Fact, whatsapp: Fact, email: Fact, instagram: Fact, telegram: Fact }),
   address: Fact,
@@ -129,6 +131,20 @@ const ServiceSchema = z.object({
   /** Typical duration / age shown on the site. Set by Emil 04.11.2026 as defaults until the owner gives exact values. */
   duration: LText.optional(),
   age: LText.optional(),
+  /** Minimum age as a number, for schema.org audience (suggestedMinAge). */
+  minAge: z.number().optional(),
+  /** Page heading (H1) when it should differ from the title used on cards and in the form. */
+  h1: LText.optional(),
+  /** H2 above the body paragraphs, e.g. "How a lesson goes". */
+  bodyTitle: LText.optional(),
+  /** H2 above the price table, e.g. "Private snowboard lesson prices". */
+  priceTitle: LText.optional(),
+  /** Show the "Where lessons take place" block with the resorts from content/places.json. */
+  showPlaces: z.boolean().default(false),
+  /** Extra sections with an H2 each: paragraphs and an optional bullet list. */
+  sections: z.array(z.object({ title: LText, body: LList.optional(), list: LList.optional() })).default([]),
+  /** Questions shown on the page and marked up as FAQPage. */
+  faq: z.array(z.object({ q: LText, a: LText })).default([]),
   image: z.string(),
   todo: z.array(z.string()).default([]),
   seo: Seo,
@@ -263,6 +279,60 @@ export function getPage(name: string, locale: Locale) {
   return { title: String(data.title), description: String(data.description), body: content };
 }
 
-/** Resorts shown in "Where we ride". Visible in production only once site.serviceArea is confirmed. */
-const PlacesSchema = z.array(z.object({ name: LText, text: LText, image: z.string() }));
+/** Resorts shown in "Where we ride". Visible in production only once site.placesConfirmed is true. Image is optional. */
+const PlacesSchema = z.array(z.object({ name: LText, text: LText, image: z.string().optional() }));
 export const places = PlacesSchema.parse(readJson("places.json"));
+
+/* ---------- prices ---------- */
+const PriceItem = z.object({
+  key: z.string(),
+  name: LText,
+  /** any: every day · weekday: Mon–Fri · weekend: Sat–Sun */
+  days: z.enum(["any", "weekday", "weekend"]),
+  hours: z.number(),
+  price: z.number(),
+  /** lesson: price for the lesson · person: price per person */
+  unit: z.enum(["lesson", "person"]),
+});
+const PricesSchema = z.object({
+  updated: z.string(),
+  currency: z.string(),
+  groups: z.array(z.object({ key: z.string(), service: z.string().optional(), title: LText, note: LText.optional(), items: z.array(PriceItem) })),
+  notIncluded: LText,
+});
+export type PriceItem = z.infer<typeof PriceItem>;
+export type PriceGroup = z.infer<typeof PricesSchema>["groups"][number];
+export const prices = PricesSchema.parse(clean(readJson("prices.json")));
+/** Price groups whose service is visible (or that have no service). */
+export const getPriceGroups = (locale: Locale) => prices.groups.filter((g) => !g.service || getService(g.service, locale));
+export const priceGroupFor = (service: string) => prices.groups.find((g) => g.service === service);
+/** "65 000 ₸" (ru) / "65,000 KZT" (en), with non-breaking spaces so a price never wraps. */
+export const fmtPrice = (n: number, locale: Locale) =>
+  locale === "ru" ? `${new Intl.NumberFormat("ru-RU").format(n).replace(/[\u00a0\u202f ]/g, "\u00a0")}\u00a0₸` : `${new Intl.NumberFormat("en-US").format(n)}\u00a0KZT`;
+/** Lowest price in a group, for "from …" labels. */
+export const minPrice = (g: PriceGroup) => Math.min(...g.items.map((i) => i.price));
+/** Highest price in a group. */
+export const maxPrice = (g: PriceGroup) => Math.max(...g.items.map((i) => i.price));
+
+/** "2 часа" / "2 hours", with Russian plural forms. */
+export const hoursLabel = (h: number, locale: Locale) => {
+  if (locale !== "ru") return `${h} ${h === 1 ? "hour" : "hours"}`;
+  if (!Number.isInteger(h)) return `${String(h).replace(".", ",")} часа`;
+  const n = h % 100;
+  const w = n % 10 === 1 && n !== 11 ? "час" : n % 10 >= 2 && n % 10 <= 4 && (n < 12 || n > 14) ? "часа" : "часов";
+  return `${h} ${w}`;
+};
+
+/**
+ * Short price label for cards and fact lists. A group with one fixed price shows it as is ("25 000 ₸ с человека"),
+ * so it is never retold as "from 25 000"; a group with several prices shows "from <lowest>".
+ */
+export function priceLabel(g: PriceGroup, locale: Locale) {
+  const ru = locale === "ru";
+  if (g.items.length === 1) {
+    const it = g.items[0];
+    const unit = it.unit === "person" ? (ru ? "с человека" : "per person") : ru ? `за ${hoursLabel(it.hours, locale)}` : `for ${hoursLabel(it.hours, locale)}`;
+    return `${fmtPrice(it.price, locale)} ${unit}`;
+  }
+  return `${ru ? "от" : "from"} ${fmtPrice(minPrice(g), locale)}`;
+}

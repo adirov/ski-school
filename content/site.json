@@ -8,8 +8,8 @@
       "todo": "Юридическое лицо или ИП, БИН/ИИН: нужно для политики конфиденциальности и условий бронирования."
     },
     "shortDescription": {
-      "ru": "Almaty Snowboard School — школа сноуборда в Алматы: индивидуальные уроки, групповые курсы, детские тренировки и внетрассовое катание с гидом в горах Заилийского Алатау.",
-      "en": "Almaty Snowboard School is a snowboard school in Almaty: private lessons, group courses, kids training and guided off-piste riding in the Trans-Ili Alatau mountains."
+      "ru": "Almaty Snowboard School — школа сноуборда в Алматы, обучаем с 2005 года: индивидуальные и групповые уроки, занятия для детей от 5 лет и внетрассовое катание с гидом. Уроки проходят на курортах Шымбулак, Ак-Булак, Ой-Карагай и Лесная сказка.",
+      "en": "Almaty Snowboard School is a snowboard school in Almaty, teaching since 2005: private and group lessons, kids' sessions from age 5 and guided off-piste riding. Lessons take place at Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka resorts."
     },
     "logo": "/brand/logo.svg",
     "foundedNote": {
@@ -17,16 +17,24 @@
         "ru": "Обучаем с 2005 года",
         "en": "Teaching since 2005"
       },
-      "confirmed": false,
-      "todo": "Фраза взята с макета визитки. Подтвердить год и кого он касается (школа, тренер)."
+      "confirmed": true,
+      "todo": "Подтверждено владельцем 14.11.2026 и прайсом 16.11.2026 («since 2005»)."
     },
     "credentialsNote": {
       "value": {
-        "ru": "Дипломированные тренеры",
-        "en": "Certified coaches"
+        "ru": "Сертифицированные инструкторы",
+        "en": "Certified instructors"
       },
-      "confirmed": false,
-      "todo": "С макета визитки. Нужны реальные документы: какой диплом или сертификат, у кого из тренеров."
+      "confirmed": true,
+      "todo": "Формулировка с прайса владельца 16.11.2026 («Certified instructors since 2005»). Документы для раздела «Команда» всё ещё нужны."
+    },
+    "experienceNote": {
+      "value": {
+        "ru": "Опыт инструкторов — от 10 до 40 лет",
+        "en": "Instructors with 10–40 years of experience"
+      },
+      "confirmed": true,
+      "todo": "Подтверждено владельцем 14.11.2026: опыт инструкторов от 10 до 40 лет."
     }
   },
   "contacts": {
@@ -40,7 +48,7 @@
     },
     "phone": {
       "value": "+77005259885",
-      "display": "+7 700 525 9885",
+      "display": "+7 700 525 98 85",
       "confirmed": true,
       "todo": "С визитки школы (материалы владельца, 04.11.2026). Перепроверить при запуске; если этот номер в WhatsApp, заполнить contacts.whatsapp."
     },
@@ -82,7 +90,7 @@
       ]
     },
     "confirmed": true,
-    "todo": "Город и горы над ним следуют из названия и материалов школы. Конкретные курорты (Шымбулак, Ак-Булак, Космостанция) подтверждаются отдельно: placesConfirmed."
+    "todo": "Город и горы над ним следуют из названия и материалов школы. Курорты (Шымбулак, Ак-Булак, Ой-Карагай, Лесная сказка) подтверждены владельцем 14.11.2026: content/places.json, placesConfirmed."
   },
   "languages": {
     "value": [
@@ -103,7 +111,7 @@
     "confirmed": false,
     "todo": "Сезон работы школы (месяцы). Не публикуем даты курортов без официального источника."
   },
-  "placesConfirmed": false,
+  "placesConfirmed": true,
   "partner": {
     "_readme": "Турагентство владельца. Блок «Приезжаете в Алматы?» на главной, страницах услуг и в контактах. Ссылки проверены на живом сайте 11.11.2026.",
     "name": "almaty-travel.kz",

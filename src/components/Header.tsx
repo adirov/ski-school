@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { getArticles, site } from "@/lib/content";
+import { getArticles, getPriceGroups, site } from "@/lib/content";
 import { LangSwitch } from "./LangSwitch";
 import { MobileNav } from "./MobileNav";
 
@@ -9,6 +9,7 @@ export function Header({ locale, pathsByLocale }: { locale: Locale; pathsByLocal
   const d = getDict(locale);
   const links = [
     { href: `/${locale}/tours/`, label: d.nav.tours },
+    ...(getPriceGroups(locale).length ? [{ href: `/${locale}/prices/`, label: d.prices.nav }] : []),
     ...(getArticles(locale).length ? [{ href: `/${locale}/guides/`, label: d.nav.guides }] : []),
     { href: `/${locale}/about/`, label: d.nav.about },
     ...(site.team.length ? [{ href: `/${locale}/team/`, label: d.nav.team }] : []),

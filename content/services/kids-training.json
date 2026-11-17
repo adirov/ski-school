@@ -2,7 +2,7 @@
   "slug": "kids-training",
   "status": "confirmed",
   "order": 3,
-  "source": "WhatsApp 03.11.2026: «Детские тренировки». Направление подтверждено владельцем; длительность, цены и расписание сообщаются по заявке.",
+  "source": "WhatsApp 03.11.2026: «Детские тренировки». Направление подтверждено владельцем; дети с 5 лет, занятие 1,5 часа. Цена не опубликована в прайсе: «Цена по запросу».",
   "title": {
     "ru": "Детские тренировки",
     "en": "Kids' snowboard training"
@@ -12,8 +12,8 @@
     "en": "Kids training"
   },
   "summary": {
-    "ru": "Занятия для детей с инструктором.",
-    "en": "Snowboard sessions for children with an instructor."
+    "ru": "Занятия сноубордом для детей от 5 лет с инструктором, 1,5 часа.",
+    "en": "Snowboard sessions for children aged 5 and up with an instructor, 1.5 hours."
   },
   "body": {
     "ru": [
@@ -38,8 +38,31 @@
     "ru": "от 5 лет",
     "en": "from 5 years"
   },
+  "minAge": 5,
+  "h1": {
+    "ru": "Сноуборд для детей в Алматы — занятия с 5 лет",
+    "en": "Kids' snowboard lessons in Almaty from age 5"
+  },
+  "bodyTitle": {
+    "ru": "Как проходят детские занятия",
+    "en": "How kids' sessions go"
+  },
+  "showPlaces": true,
+  "faq": [
+    {
+      "q": {
+        "ru": "С какого возраста ребёнок может заниматься сноубордом?",
+        "en": "From what age can a child learn to snowboard?"
+      },
+      "a": {
+        "ru": "В Almaty Snowboard School детей учат кататься на сноуборде с 5 лет. Занятие длится полтора часа. Формат — индивидуально или в детской группе — согласуем с родителями при записи. Цена детского занятия — по запросу по телефону или в WhatsApp +7 700 525 98 85. Занятия проходят на курортах под Алматы, ски-пасс покупается отдельно.",
+        "en": "Almaty Snowboard School teaches children from age 5. A session lasts an hour and a half. We agree the format, one-to-one or in a kids' group, with parents when you book. The price of a kids' session is on request by phone or WhatsApp on +7 700 525 98 85. Lessons take place at resorts near Almaty, and the ski pass is bought separately."
+      }
+    }
+  ],
   "image": "/images/shymbulak-beginner-slope.jpg",
   "todo": [
+    "Цена детского занятия",
     "Индивидуально или группы",
     "Шлем и защита",
     "Фото с детских занятий (с согласием родителей)"
@@ -50,8 +73,8 @@
       "en": "Kids' snowboard lessons in Almaty from age 5"
     },
     "description": {
-      "ru": "Детские тренировки по сноуборду в Алматы с инструктором: для детей от 5 лет, занятие 1,5 часа, индивидуально или в группе. Цена по заявке.",
-      "en": "Snowboard training for children in Almaty with an instructor: ages 5 and up, 1.5-hour sessions, one-to-one or in a group. Price on request."
+      "ru": "Занятия сноубордом для детей от 5 лет в Алматы с сертифицированным инструктором: 1,5 часа, индивидуально или в группе. Цена по запросу: +7 700 525 98 85.",
+      "en": "Snowboard lessons for kids aged 5+ in Almaty with a certified instructor: 1.5-hour sessions, one-to-one or in a group. Price on request: +7 700 525 98 85."
     }
   }
 }

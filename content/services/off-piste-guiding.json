@@ -2,7 +2,7 @@
   "slug": "off-piste-guiding",
   "status": "confirmed",
   "order": 4,
-  "source": "Макет плаката и WhatsApp 03.11.2026: «Внетрассовое катание/гиды». Направление подтверждено владельцем; длительность, цены и расписание сообщаются по заявке.",
+  "source": "Макет плаката и WhatsApp 03.11.2026: «Внетрассовое катание/гиды». Направление подтверждено владельцем; полный день для опытных райдеров. Цена не опубликована в прайсе: «Цена по запросу».",
   "title": {
     "ru": "Внетрассовое катание с гидом",
     "en": "Guided off-piste riding"
@@ -33,6 +33,10 @@
     "ru": "Полный день",
     "en": "Full day"
   },
+  "bodyTitle": {
+    "ru": "Как проходит выезд",
+    "en": "How the day goes"
+  },
   "image": "/images/freeride-tracks-from-above.jpg",
   "todo": [
     "Квалификация гидов (документы)",
@@ -44,12 +48,12 @@
   ],
   "seo": {
     "title": {
-      "ru": "Фрирайд в Алматы с гидом: катание вне трасс",
-      "en": "Freeride in Almaty with a guide: off-piste riding"
+      "ru": "Фрирайд в Алматы с гидом: сноуборд вне трасс",
+      "en": "Guided Off-Piste Snowboarding in Almaty (Freeride)"
     },
     "description": {
-      "ru": "Внетрассовое катание на сноуборде с гидом в горах Алматы для опытных райдеров: выезд на полный день. Условия и цену обсуждаем по заявке.",
-      "en": "Guided off-piste snowboarding in the mountains near Almaty for experienced riders, full-day outing. Terms and price are agreed on request."
+      "ru": "Сноуборд вне трасс с гидом в горах Алматы для опытных райдеров: выезд на полный день, маршрут по снегу и погоде. Цена по запросу: +7 700 525 98 85.",
+      "en": "Guided off-piste snowboarding near Almaty for experienced riders: a full-day outing, route chosen by snow and weather. Price on request: +7 700 525 98 85."
     }
   }
 }

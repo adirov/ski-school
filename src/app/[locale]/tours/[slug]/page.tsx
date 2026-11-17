@@ -89,7 +89,7 @@ export default async function TourPage({ params }: P) {
     [T.languages, <Val key="l" v={x.languages.value?.join(", ")} todo={x.languages.todo} tbd={T.tbd} />],
     [T.season, <Val key="s" v={t(x.season.value, locale)} todo={x.season.todo} tbd={T.tbd} />],
     [T.availability, T.availabilityRequest],
-    [T.price, <Val key="p" v={price} todo={x.price.todo} tbd={T.priceOnRequest} />],
+    [T.price, <Val key="p" v={price} todo={x.price.todo} tbd={T.onRequest} />],
   ];
 
   const blocks: [string, React.ReactNode, string | null | undefined, boolean][] = [

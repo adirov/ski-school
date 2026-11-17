@@ -8,13 +8,15 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LeadBlock } from "@/components/LeadBlock";
 import { Todo } from "@/components/Badge";
 import { PartnerBlock } from "@/components/PartnerBlock";
+import { PlaceList } from "@/components/PlaceList";
+import Link from "next/link";
 
 type P = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: P) {
   const locale = (await params).locale as Locale;
   const d = getDict(locale);
-  return buildMetadata({ locale, path: "/contact/", title: d.contact.h1, description: d.contact.lead, available: availableLocales("/contact/") });
+  return buildMetadata({ locale, path: "/contact/", title: d.contact.seoTitle, description: d.contact.seoDescription, available: availableLocales("/contact/") });
 }
 
 export default async function ContactPage({ params }: P) {
@@ -30,7 +32,9 @@ export default async function ContactPage({ params }: P) {
       <Breadcrumbs label="Breadcrumbs" items={[{ name: d.breadcrumbs.home, href: `/${locale}/` }, { name: d.contact.h1, href: `/${locale}/contact/` }]} />
       <header className="page__head">
         <h1>{d.contact.h1}</h1>
-        <p className="lead">{d.contact.lead}</p>
+        <p className="lead">
+          {d.contact.lead} <Link href={`/${locale}/prices/`}>{d.contact.pricesLink}</Link>
+        </p>
       </header>
       <div className="form-wrap">
         <div className="contact-info">
@@ -74,6 +78,7 @@ export default async function ContactPage({ params }: P) {
               </p>
             </>
           )}
+          <PlaceList locale={locale} title={d.service.placesTitle} as="h3" />
         </div>
         <LeadBlock locale={locale} />
       </div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { getArticles, getFaq, getServices, getTours, site, factVisible, places, t } from "@/lib/content";
+import { getArticles, getFaq, getServices, getTours, site, factVisible, places, t, priceGroupFor, priceLabel } from "@/lib/content";
 import { buildMetadata, organizationLd, websiteLd } from "@/lib/seo";
 import { availableLocales } from "@/lib/routes";
 import { IS_PREVIEW } from "@/lib/env";
@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: P) {
   return buildMetadata({
     locale,
     path: "/",
-    title: locale === "ru" ? "Школа сноуборда в Алматы — Almaty Snowboard School" : "Snowboard school in Almaty — Almaty Snowboard School",
-    description: d.home.lead,
+    title: d.home.seoTitle,
+    description: d.home.seoDescription,
     available: availableLocales("/"),
     image: "snowboarder-powder-spray",
   });
@@ -79,7 +79,7 @@ export default async function Home({ params }: P) {
           <div className="hero__meta">
             <div className="wrap">
               {places.map((pl) => (
-                <span key={pl.image}>{t(pl.name, locale)}</span>
+                <span key={pl.name.ru}>{t(pl.name, locale)}</span>
               ))}
               {!site.placesConfirmed && <Todo>{site.serviceArea.todo}</Todo>}
             </div>
@@ -140,7 +140,11 @@ export default async function Home({ params }: P) {
                 </li>
                 <li>
                   <span>{T.price}</span>
-                  <span className="tbd">{T.priceOnRequest}</span>
+                  {priceGroupFor(s.slug) ? (
+                    <Link href={`/${locale}/prices/`}>{priceLabel(priceGroupFor(s.slug)!, locale)}</Link>
+                  ) : (
+                    <span className="tbd">{T.onRequest}</span>
+                  )}
                 </li>
               </ul>
               <div className="btns">
@@ -182,14 +186,29 @@ export default async function Home({ params }: P) {
           <div className="wrap">
             <h2 id="places-h">{H.placesTitle}</h2>
             {!site.placesConfirmed && <Todo>{site.serviceArea.todo}</Todo>}
+            {/* Resorts with a photo get a photo card; the rest share one text card, so no empty image boxes. */}
             <div className="places__grid">
-              {places.map((pl) => (
-                <article key={pl.image} className="place">
-                  <Pic id={pl.image} locale={locale} sizes="(max-width: 820px) 100vw, 400px" alt={t(pl.name, locale)} />
-                  <h3>{t(pl.name, locale)}</h3>
-                  <p>{t(pl.text, locale)}</p>
-                </article>
-              ))}
+              {places
+                .filter((pl) => pl.image)
+                .map((pl) => (
+                  <article key={pl.name.ru} className="place">
+                    <Pic id={pl.image!} locale={locale} sizes="(max-width: 640px) 100vw, (max-width: 820px) 50vw, 300px" alt={t(pl.name, locale)} />
+                    <h3>{t(pl.name, locale)}</h3>
+                    <p>{t(pl.text, locale)}</p>
+                  </article>
+                ))}
+              {places.some((pl) => !pl.image) && (
+                <div className="places__more">
+                  {places
+                    .filter((pl) => !pl.image)
+                    .map((pl) => (
+                      <article key={pl.name.ru} className="place place--text">
+                        <h3>{t(pl.name, locale)}</h3>
+                        <p>{t(pl.text, locale)}</p>
+                      </article>
+                    ))}
+                </div>
+              )}
             </div>
           </div>
         </section>

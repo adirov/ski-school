@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/dictionaries";
-import { getServices, getTours, t } from "@/lib/content";
+import { getServices, getTours, priceGroupFor, priceLabel, t } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { availableLocales } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: P) {
   const locale = (await params).locale as Locale;
   const d = getDict(locale);
   const empty = getServices(locale).length + getTours(locale).length === 0;
-  return buildMetadata({ locale, path: "/tours/", title: d.tours.h1, description: d.tours.lead, available: availableLocales("/tours/"), image: "kosmostantsiya-freeride-slopes", noindex: empty });
+  return buildMetadata({ locale, path: "/tours/", title: d.tours.h1, description: d.tours.seoDescription, available: availableLocales("/tours/"), image: "shymbulak-beginner-slope", noindex: empty });
 }
 
 export default async function ToursPage({ params }: P) {
@@ -41,7 +41,7 @@ export default async function ToursPage({ params }: P) {
               <h2 id="svc-h">{d.tours.services}</h2>
               <div className="grid grid--4">
                 {services.map((s, i) => (
-                  <OfferCard priority={i < 2} key={s.slug} locale={locale} href={`/${locale}/services/${s.slug}/`} title={t(s.title, locale)!} summary={t(s.summary, locale)!} image={s.image} levels={s.levels} status={s.status} />
+                  <OfferCard priority={i < 2} key={s.slug} locale={locale} href={`/${locale}/services/${s.slug}/`} title={t(s.title, locale)!} summary={t(s.summary, locale)!} image={s.image} imageAlt={t(s.h1, locale) || t(s.title, locale)} levels={s.levels} status={s.status} />
                 ))}
               </div>
             </section>
@@ -82,6 +82,9 @@ export default async function ToursPage({ params }: P) {
                     <td data-label={d.tours.compareCols[2]}>{d.format[s.format]}</td>
                     <td data-label={d.tours.compareCols[3]}>{t(s.duration, locale) ?? "—"}</td>
                     <td data-label={d.tours.compareCols[4]}>{t(s.age, locale) ?? "—"}</td>
+                    <td data-label={d.tours.compareCols[5]}>
+                      {priceGroupFor(s.slug) ? <Link href={`/${locale}/prices/`}>{priceLabel(priceGroupFor(s.slug)!, locale)}</Link> : d.tour.onRequest}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -94,7 +97,7 @@ export default async function ToursPage({ params }: P) {
             ))}
           </ul>
           <p>
-            {d.tours.priceNote} <Link href={`/${locale}/contact/`}>{d.cta.ask}</Link>
+            {d.tours.priceNote} <Link href={`/${locale}/prices/`}>{d.prices.all}</Link>
           </p>
         </section>
       )}

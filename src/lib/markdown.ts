@@ -38,8 +38,12 @@ export function renderMarkdown(md: string): { html: string; toc: TocItem[] } {
       },
       table(this: unknown, token: Tokens.Table) {
         const head = token.header.map((c) => `<th scope="col">${marked.parseInline(c.text)}</th>`).join("");
-        const rows = token.rows.map((r) => `<tr>${r.map((c) => `<td>${marked.parseInline(c.text)}</td>`).join("")}</tr>`).join("");
-        return `<div class="table-wrap"><table><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>\n`;
+        // First cell is the row header; the others carry their column name, so phones can show each row as a card (.cmp).
+        const label = (i: number) => plain(String(marked.parseInline(token.header[i]?.text ?? ""))).replace(/"/g, "&quot;");
+        const rows = token.rows
+          .map((r) => `<tr>${r.map((c, i) => (i === 0 ? `<th scope="row">${marked.parseInline(c.text)}</th>` : `<td data-label="${label(i)}">${marked.parseInline(c.text)}</td>`)).join("")}</tr>`)
+          .join("");
+        return `<div class="table-wrap cmp cmp--md"><table><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>\n`;
       },
     },
   });

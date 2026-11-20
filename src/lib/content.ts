@@ -139,6 +139,8 @@ const ServiceSchema = z.object({
   bodyTitle: LText.optional(),
   /** H2 above the price table, e.g. "Private snowboard lesson prices". */
   priceTitle: LText.optional(),
+  /** Key of a group in content/prices.json when the service shares another service's prices (e.g. ski lessons use "private"). */
+  priceGroup: z.string().optional(),
   /** Show the "Where lessons take place" block with the resorts from content/places.json. */
   showPlaces: z.boolean().default(false),
   /** Extra sections with an H2 each: paragraphs and an optional bullet list. */
@@ -305,7 +307,10 @@ export type PriceGroup = z.infer<typeof PricesSchema>["groups"][number];
 export const prices = PricesSchema.parse(clean(readJson("prices.json")));
 /** Price groups whose service is visible (or that have no service). */
 export const getPriceGroups = (locale: Locale) => prices.groups.filter((g) => !g.service || getService(g.service, locale));
-export const priceGroupFor = (service: string) => prices.groups.find((g) => g.service === service);
+export const priceGroupFor = (service: string) => {
+  const key = allServices.find((s) => s.slug === service)?.priceGroup;
+  return prices.groups.find((g) => (key ? g.key === key : g.service === service));
+};
 /** "65 000 ₸" (ru) / "65,000 KZT" (en), with non-breaking spaces so a price never wraps. */
 export const fmtPrice = (n: number, locale: Locale) =>
   locale === "ru" ? `${new Intl.NumberFormat("ru-RU").format(n).replace(/[\u00a0\u202f ]/g, "\u00a0")}\u00a0₸` : `${new Intl.NumberFormat("en-US").format(n)}\u00a0KZT`;

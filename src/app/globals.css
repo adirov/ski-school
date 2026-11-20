@@ -129,6 +129,7 @@ p { margin: 0 0 1em; }
 .idx__head h2 { margin: 0; }
 .idx__head p { max-width: 30em; color: var(--muted); margin: 0; }
 .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tiles--5 { grid-template-columns: repeat(5, 1fr); }
 .tiles--3 { grid-template-columns: repeat(3, 1fr); }
 .tiles--2 { grid-template-columns: repeat(2, 1fr); }
 .tile { position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; color: #fff; text-decoration: none; background: var(--field); max-width: 100%; border-bottom: 4px solid var(--accent); }
@@ -408,6 +409,7 @@ p { margin: 0 0 1em; }
   .nav, .hdr__cta { display: none; }
   .mnav { display: block; }
   .tiles, .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .tiles--5 > :last-child { grid-column: 1 / -1; aspect-ratio: auto; min-height: 220px; }
 }
 @media (max-width: 900px) {
   .form-wrap, .detail, .split, .article__grid { grid-template-columns: 1fr; }

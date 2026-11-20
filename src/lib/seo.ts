@@ -94,12 +94,12 @@ export function organizationLd(locale: Locale) {
     logo: abs("/brand/logo-512.png"),
     image: abs("/brand/logo-512.png"),
     description: site.brand.shortDescription[locale] ?? site.brand.shortDescription.ru,
-    alternateName: ["Almaty Snowboard", locale === "ru" ? "Школа сноуборда Алматы" : "Almaty snowboard school"],
-    knowsAbout: locale === "ru" ? ["сноуборд", "обучение сноуборду", "фрирайд", "Заилийский Алатау"] : ["snowboarding", "snowboard lessons", "freeride", "Trans-Ili Alatau"],
+    alternateName: locale === "ru" ? ["Almaty Snowboard", "Школа сноуборда Алматы", "Школа сноуборда и горных лыж Алматы"] : ["Almaty Snowboard", "Almaty snowboard school", "Almaty ski and snowboard school"],
+    knowsAbout: locale === "ru" ? ["сноуборд", "обучение сноуборду", "горные лыжи", "обучение горным лыжам", "фрирайд", "Заилийский Алатау"] : ["snowboarding", "snowboard lessons", "skiing", "ski lessons", "freeride", "Trans-Ili Alatau"],
     currenciesAccepted: prices.currency,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: locale === "ru" ? "Занятия по сноуборду" : "Snowboard lessons",
+      name: locale === "ru" ? "Уроки сноуборда и горных лыж" : "Snowboard and ski lessons",
       itemListElement: getServices(locale)
         .filter((x) => x.status === "confirmed")
         .map((x) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: t(x.title, locale), url: abs(`/${locale}/services/${x.slug}/`) } })),

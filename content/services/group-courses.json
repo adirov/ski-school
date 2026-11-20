@@ -1,27 +1,27 @@
 {
   "slug": "group-courses",
   "status": "confirmed",
-  "order": 2,
+  "order": 3,
   "source": "Направление: макет визитки и WhatsApp 03.11.2026. Формат и цена: прайс владельца 16.11.2026 — групповой урок 2 часа, группы от 2 до 5 человек (content/prices.json).",
   "title": {
-    "ru": "Групповые уроки сноуборда",
-    "en": "Group snowboard lessons"
+    "ru": "Групповые уроки сноуборда и лыж",
+    "en": "Group snowboard and ski lessons"
   },
   "shortTitle": {
     "ru": "Групповые уроки",
     "en": "Group lessons"
   },
   "summary": {
-    "ru": "Урок с инструктором в группе от 2 до 5 человек, 2 часа.",
-    "en": "A 2-hour lesson with an instructor in a group of 2 to 5 people."
+    "ru": "Занятия сноубордом или горными лыжами с инструктором в группе от 2 до 5 человек, 2 часа.",
+    "en": "A 2-hour snowboard or ski lesson with an instructor in a group of 2 to 5 people."
   },
   "body": {
     "ru": [
-      "Групповой формат подходит тем, кто хочет учиться вместе с друзьями или семьёй: инструктор ведёт группу и подбирает упражнения под её общий уровень.",
+      "Групповой формат подходит тем, кто хочет учиться кататься на сноуборде или горных лыжах вместе с друзьями или семьёй: инструктор ведёт группу и подбирает упражнения под её общий уровень.",
       "В группе от 2 до 5 человек, урок длится 2 часа и стоит 40 000 ₸ с каждого участника. Ски-пасс покупается отдельно. Свободные даты подтверждаем в ответ на заявку."
     ],
     "en": [
-      "The group format suits people who want to learn with friends or family: the instructor leads the group and picks drills for its overall level.",
+      "The group format suits people who want to learn to snowboard or ski with friends or family: the instructor leads the group and picks drills for its overall level.",
       "Groups are 2 to 5 people, a lesson lasts 2 hours and costs 40,000 KZT per participant. The ski pass is bought separately. We confirm available dates in reply to your request."
     ]
   },
@@ -35,8 +35,8 @@
     "en": "2 hours"
   },
   "h1": {
-    "ru": "Групповые уроки сноуборда в Алматы",
-    "en": "Group snowboard lessons in Almaty"
+    "ru": "Групповые уроки сноуборда и горных лыж в Алматы",
+    "en": "Group snowboard and ski lessons in Almaty"
   },
   "bodyTitle": {
     "ru": "Как проходит групповой урок",
@@ -106,12 +106,12 @@
   "faq": [
     {
       "q": {
-        "ru": "Сколько стоит групповой урок сноуборда в Алматы?",
-        "en": "How much is a group snowboard lesson in Almaty?"
+        "ru": "Сколько стоит групповой урок сноуборда или лыж в Алматы?",
+        "en": "How much is a group snowboard or ski lesson in Almaty?"
       },
       "a": {
-        "ru": "Групповой урок сноуборда в Almaty Snowboard School длится 2 часа и стоит 40 000 ₸ с каждого участника. В группе от 2 до 5 человек, поэтому урок для троих обойдётся в 120 000 ₸. Ски-пасс каждый покупает сам в кассе курорта, прокат снаряжения тоже оплачивается отдельно. Запись: +7 700 525 98 85.",
-        "en": "A group snowboard lesson at Almaty Snowboard School lasts 2 hours and costs 40,000 KZT per participant. Groups are 2 to 5 people, so a lesson for three comes to 120,000 KZT. Everyone buys their own ski pass at the resort ticket office, and rental gear is paid separately too. Booking: +7 700 525 98 85."
+        "ru": "Групповой урок сноуборда или горных лыж в Almaty Snowboard School длится 2 часа и стоит 40 000 ₸ с каждого участника. В группе от 2 до 5 человек, поэтому урок для троих обойдётся в 120 000 ₸. Ски-пасс каждый покупает сам в кассе курорта, прокат снаряжения тоже оплачивается отдельно. Запись: +7 700 525 98 85.",
+        "en": "A group snowboard or ski lesson at Almaty Snowboard School lasts 2 hours and costs 40,000 KZT per participant. Groups are 2 to 5 people, so a lesson for three comes to 120,000 KZT. Everyone buys their own ski pass at the resort ticket office, and rental gear is paid separately too. Booking: +7 700 525 98 85."
       }
     },
     {
@@ -142,12 +142,12 @@
   ],
   "seo": {
     "title": {
-      "ru": "Групповые уроки сноуборда в Алматы — 40 000 ₸ с человека",
-      "en": "Group snowboard lessons in Almaty — 40,000 KZT per person"
+      "ru": "Групповые занятия сноубордом и лыжами в Алматы — 40 000 ₸",
+      "en": "Group Snowboard & Ski Lessons in Almaty — 40,000 KZT"
     },
     "description": {
-      "ru": "Групповой урок сноуборда с инструктором в Алматы: группы от 2 до 5 человек, 2 часа, 40 000 ₸ с человека. Для новичков и продолжающих. Ски-пасс не входит.",
-      "en": "Group snowboard lesson with an instructor in Almaty: groups of 2 to 5, 2 hours, 40,000 KZT per person. For beginners and improvers. Ski pass not included."
+      "ru": "Групповые уроки сноуборда и горных лыж с инструктором в Алматы: группы 2–5 человек, 2 часа, 40 000 ₸ с человека. Для новичков и продолжающих. Ски-пасс не входит.",
+      "en": "Group snowboard and ski lessons with an instructor in Almaty: groups of 2 to 5, 2 hours, 40,000 KZT per person. Beginners and improvers. Ski pass not included."
     }
   }
 }

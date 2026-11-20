@@ -11,10 +11,21 @@
     }
   },
   {
+    "q": {
+      "ru": "Вы учите кататься на горных лыжах?",
+      "en": "Do you teach skiing too?"
+    },
+    "a": {
+      "ru": "Да. Almaty Snowboard School учит и сноуборду, и горным лыжам: индивидуальные и групповые уроки для новичков и опытных лыжников, цены те же, что у сноуборда — от 45 000 ₸ за индивидуальный урок 1,5 часа и 40 000 ₸ с человека в группе. Занятия проходят на Шымбулаке, Ак-Булаке, Ой-Карагае и в Лесной Сказке.",
+      "en": "Yes. Almaty Snowboard School teaches both snowboarding and skiing: private and group lessons for beginner and experienced skiers at the same prices as snowboarding, from 45,000 KZT for a 1.5-hour private lesson and 40,000 KZT per person in a group. Lessons take place at Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka."
+    },
+    "confirmed": true
+  },
+  {
     "confirmed": true,
     "q": {
-      "ru": "Сколько стоит урок сноуборда?",
-      "en": "How much does a snowboard lesson cost?"
+      "ru": "Сколько стоит урок сноуборда или горных лыж?",
+      "en": "How much does a snowboard or ski lesson cost?"
     },
     "a": {
       "ru": "Индивидуальный урок сноуборда с инструктором в Алматы на 1,5 часа стоит 45 000 ₸, на 2 часа — 60 000 ₸. Полдня (3 часа) — 120 000 ₸, полный день (6 часов) — 240 000 ₸. Ночное катание (2 часа) — 80 000 ₸. Групповой урок на 2 часа в группе от 2 до 5 человек — 40 000 ₸ с человека. Ски-пасс и прокат в цену не входят. Все цены — на странице «Цены».",

@@ -64,7 +64,7 @@ const ORG_URL = `${SITE_URL}/ru/`;
 /** One entity everywhere: a local sports school. Sub-types of Organization, so Organization consumers still read it. */
 const ORG_TYPE = ["SportsActivityLocation", "LocalBusiness"];
 
-/** "25 000–130 000 ₸" / "25,000–130,000 KZT": lowest to highest published lesson price. */
+/** "40 000–240 000 ₸" / "40,000–240,000 KZT": lowest to highest published lesson price. */
 function priceRange(locale: Locale) {
   if (!prices.groups.length) return undefined;
   const lo = Math.min(...prices.groups.map(minPrice));

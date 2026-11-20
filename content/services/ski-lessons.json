@@ -1,0 +1,168 @@
+{
+  "slug": "ski-lessons",
+  "status": "confirmed",
+  "order": 2,
+  "source": "Прайс-лист школы 20.11.2026: «для начинающих и опытных лыжников и сноубордистов». Цены те же, что у сноуборда (content/prices.json, группа private).",
+  "title": {
+    "ru": "Уроки горных лыж",
+    "en": "Ski lessons"
+  },
+  "shortTitle": {
+    "ru": "Горные лыжи",
+    "en": "Ski lessons"
+  },
+  "summary": {
+    "ru": "Обучение катанию на горных лыжах с инструктором: индивидуально или в группе, с нуля или чтобы улучшить технику.",
+    "en": "Learn to ski with an instructor: private or in a group, from your first day or to improve your technique."
+  },
+  "body": {
+    "ru": [
+      "Almaty Snowboard School учит не только сноуборду: инструкторы школы ведут занятия на горных лыжах для новичков и тех, кто уже катается, а также для детей с 5 лет. Школа работает в Алматы с 2005 года, опыт инструкторов — от 10 до 40 лет.",
+      "На первом уроке катания на лыжах инструктор показывает стойку, торможение «плугом» и первые повороты на пологом учебном склоне. Тем, кто уже катается, помогаем перейти к параллельным поворотам, уверенно ехать по синим и красным трассам и кататься быстрее без лишнего напряжения.",
+      "Индивидуальный урок горных лыж стоит 45 000 ₸ за 1,5 часа и 60 000 ₸ за 2 часа, полдня (3 часа) — 120 000 ₸, полный день (6 часов) — 240 000 ₸, ночное катание (2 часа) — 80 000 ₸. Групповое занятие на 2 часа для 2–5 человек — 40 000 ₸ с человека. Ски-пасс и прокат оплачиваются отдельно."
+    ],
+    "en": [
+      "Almaty Snowboard School teaches more than snowboarding: the school's instructors also give ski lessons to beginners, to skiers who already ride and to children from age 5. The school has been teaching in Almaty since 2005, and its instructors have 10 to 40 years of experience.",
+      "In a first ski lesson the instructor shows you the stance, the snowplough stop and your first turns on a gentle learning slope. If you already ski, we help you move on to parallel turns, ride blue and red runs with confidence and go faster without tension.",
+      "A private ski lesson costs 45,000 KZT for 1.5 hours and 60,000 KZT for 2 hours, a half day (3 hours) 120,000 KZT, a full day (6 hours) 240,000 KZT and a 2-hour night skiing lesson 80,000 KZT. A 2-hour group lesson for 2 to 5 people is 40,000 KZT per person. The ski pass and rental are paid separately."
+    ]
+  },
+  "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+  ],
+  "format": "both",
+  "duration": {
+    "ru": "1,5 или 2 часа, полдня (3 часа) или день (6 часов)",
+    "en": "1.5 or 2 hours, half day (3 hours) or full day (6 hours)"
+  },
+  "h1": {
+    "ru": "Обучение горным лыжам в Алматы: уроки с инструктором",
+    "en": "Ski lessons in Almaty with an instructor"
+  },
+  "bodyTitle": {
+    "ru": "Как проходят занятия на лыжах",
+    "en": "How ski lessons go"
+  },
+  "priceTitle": {
+    "ru": "Стоимость урока горных лыж",
+    "en": "Ski lesson prices"
+  },
+  "priceGroup": "private",
+  "showPlaces": true,
+  "sections": [
+    {
+      "title": {
+        "ru": "Кому подойдут уроки",
+        "en": "Who the lessons are for"
+      },
+      "list": {
+        "ru": [
+          "Взрослым, которые ни разу не стояли на лыжах и хотят научиться кататься спокойно и безопасно.",
+          "Тем, кто катается «плугом» и хочет перейти к параллельным поворотам.",
+          "Уверенным лыжникам, которым нужна работа над техникой на крутых трассах или ночное катание с инструктором.",
+          "Друзьям и семьям: групповой урок на 2–5 человек, если уровень у всех примерно одинаковый."
+        ],
+        "en": [
+          "Adults who have never skied and want to learn calmly and safely.",
+          "Skiers who still snowplough and want to move to parallel turns.",
+          "Confident skiers who want technique work on steeper runs or a night skiing session with an instructor.",
+          "Friends and families: a group lesson for 2 to 5 people when everyone is at a similar level."
+        ]
+      }
+    },
+    {
+      "title": {
+        "ru": "Что входит в стоимость",
+        "en": "What the price includes"
+      },
+      "list": {
+        "ru": [
+          "Работа сертифицированного инструктора по горным лыжам всё оплаченное время.",
+          "Программа под ваш уровень: от первых шагов на лыжах до техники на красных трассах.",
+          "Помощь в выборе лыж, ботинок и палок в прокате, если своего снаряжения нет."
+        ],
+        "en": [
+          "A certified ski instructor for the whole booked time.",
+          "A plan built around your level, from your first steps on skis to technique on red runs.",
+          "Help choosing skis, boots and poles at the rental shop if you have no gear of your own."
+        ]
+      }
+    },
+    {
+      "title": {
+        "ru": "Что оплачивается отдельно",
+        "en": "What you pay for separately"
+      },
+      "list": {
+        "ru": [
+          "Ски-пасс: гость покупает его сам в кассе курорта.",
+          "Прокат лыж, ботинок, палок и шлема.",
+          "Дорога до курорта. Трансфер может организовать партнёрское агентство almaty-travel.kz."
+        ],
+        "en": [
+          "The ski pass: guests buy it themselves at the resort ticket office.",
+          "Ski, boot, pole and helmet rental.",
+          "Getting to the resort. Our partner agency almaty-travel.kz can arrange a transfer."
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "ru": "Сколько стоит урок горных лыж с инструктором в Алматы?",
+        "en": "How much is a ski lesson with an instructor in Almaty?"
+      },
+      "a": {
+        "ru": "Индивидуальный урок горных лыж в Almaty Snowboard School стоит 45 000 ₸ за 1,5 часа и 60 000 ₸ за 2 часа. Полдня (3 часа) — 120 000 ₸, полный день (6 часов) — 240 000 ₸, ночное катание (2 часа) — 80 000 ₸. Групповой урок на 2 часа — 40 000 ₸ с человека, в группе 2–5 человек. Ски-пасс и прокат оплачиваются отдельно.",
+        "en": "A private ski lesson with Almaty Snowboard School costs 45,000 KZT for 1.5 hours and 60,000 KZT for 2 hours. A half day (3 hours) is 120,000 KZT, a full day (6 hours) 240,000 KZT and a 2-hour night skiing lesson 80,000 KZT. A 2-hour group lesson is 40,000 KZT per person, for groups of 2 to 5. The ski pass and rental are paid separately."
+      }
+    },
+    {
+      "q": {
+        "ru": "Можно научиться кататься на лыжах с нуля взрослому?",
+        "en": "Can an adult learn to ski from scratch?"
+      },
+      "a": {
+        "ru": "Да. Большинство взрослых учеников приходят без опыта. На первом занятии инструктор Almaty Snowboard School учит стоять на лыжах, тормозить «плугом» и поворачивать на пологом склоне. Для первого раза удобен индивидуальный урок на 1,5–2 часа: темп подстраивается под вас.",
+        "en": "Yes. Most adult students start with no experience. In the first lesson an Almaty Snowboard School instructor teaches you to stand on skis, stop with a snowplough and turn on a gentle slope. A 1.5 to 2-hour private lesson is a good start, as the pace follows you."
+      }
+    },
+    {
+      "q": {
+        "ru": "Где проходят уроки катания на лыжах?",
+        "en": "Where do the ski lessons take place?"
+      },
+      "a": {
+        "ru": "Уроки горных лыж проходят на четырёх курортах под Алматы: Шымбулак, Ак-Булак, Ой-Карагай и Лесная Сказка. Курорт, время и место встречи согласуем при записи по телефону или в WhatsApp +7 700 525 98 85.",
+        "en": "Ski lessons take place at four resorts near Almaty: Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka. We agree the resort, time and meeting point when you book by phone or WhatsApp on +7 700 525 98 85."
+      }
+    },
+    {
+      "q": {
+        "ru": "Что выбрать новичку: лыжи или сноуборд?",
+        "en": "Skiing or snowboarding: which is better for a beginner?"
+      },
+      "a": {
+        "ru": "На лыжах обычно проще в первый день: легче стоять и тормозить. На сноуборде первые занятия даются тяжелее, но связанные повороты многие осваивают за несколько уроков. В Almaty Snowboard School можно учиться и тому, и другому по одним и тем же ценам; если сомневаетесь, напишите нам, и инструктор подскажет.",
+        "en": "Skiing is usually easier on day one: standing and stopping come quicker. Snowboarding is harder at first, but many people link turns within a few lessons. At Almaty Snowboard School you can learn either at the same prices; if you are unsure, message us and an instructor will advise."
+      }
+    }
+  ],
+  "image": "/images/shymbulak-slopes-blue-sky.jpg",
+  "todo": [
+    "Фото с уроков горных лыж"
+  ],
+  "seo": {
+    "title": {
+      "ru": "Инструктор по горным лыжам в Алматы: уроки катания на лыжах",
+      "en": "Ski Lessons in Almaty: Private Ski Instructor at Shymbulak"
+    },
+    "description": {
+      "ru": "Обучение горным лыжам в Алматы с инструктором: Шымбулак, Ак-Булак. Индивидуально от 45 000 ₸ за 1,5 часа, в группе 40 000 ₸ с человека. Для новичков и опытных.",
+      "en": "Ski lessons in Almaty with a certified instructor at Shymbulak and Ak-Bulak: private from 45,000 KZT for 1.5 hours, group 40,000 KZT per person. Beginners welcome."
+    }
+  }
+}

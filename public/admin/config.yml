@@ -984,6 +984,11 @@ collections:
     fields:
     - {name: ru, label: Русский, widget: string, required: false}
     - {name: en, label: English, widget: string, required: false}
+  - name: priceGroup
+    label: Взять цены из группы прайса
+    widget: string
+    required: false
+    hint: Ключ группы из «Цены на уроки» (например private), если у направления нет своей группы. Уроки горных лыж используют private.
   - name: showPlaces
     label: Показывать блок «Где проходят уроки» (курорты)
     widget: boolean

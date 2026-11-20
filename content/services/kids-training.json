@@ -1,27 +1,27 @@
 {
   "slug": "kids-training",
   "status": "confirmed",
-  "order": 3,
-  "source": "WhatsApp 03.11.2026: «Детские тренировки». Направление подтверждено владельцем; дети с 5 лет, занятие 1,5 часа. Цена не опубликована в прайсе: «Цена по запросу».",
+  "order": 4,
+  "source": "WhatsApp 03.11.2026: «Детские тренировки». Направление подтверждено владельцем; дети с 5 лет, занятие 1,5 часа. Цена не опубликована в прайсе: «Цена по запросу». 20.11.2026: Эмиль подтвердил детские занятия и на горных лыжах.",
   "title": {
     "ru": "Детские тренировки",
-    "en": "Kids' snowboard training"
+    "en": "Kids' ski and snowboard training"
   },
   "shortTitle": {
     "ru": "Детские тренировки",
     "en": "Kids training"
   },
   "summary": {
-    "ru": "Занятия сноубордом для детей от 5 лет с инструктором, 1,5 часа.",
-    "en": "Snowboard sessions for children aged 5 and up with an instructor, 1.5 hours."
+    "ru": "Занятия сноубордом и горными лыжами для детей от 5 лет с инструктором, 1,5 часа.",
+    "en": "Snowboard and ski sessions for children aged 5 and up with an instructor, 1.5 hours."
   },
   "body": {
     "ru": [
-      "Тренировки для детей с инструктором: спокойный темп, понятные упражнения и внимание к безопасности.",
+      "Тренировки для детей на сноуборде или горных лыжах с инструктором: спокойный темп, понятные упражнения и внимание к безопасности.",
       "Занимаемся с детьми от 5 лет, занятие длится полтора часа. Формат (индивидуально или в детской группе) обсуждаем с родителями при записи."
     ],
     "en": [
-      "Snowboard sessions for children with an instructor: a calm pace, clear drills and attention to safety.",
+      "Snowboard and ski sessions for children with an instructor: a calm pace, clear drills and attention to safety.",
       "We teach children from 5 years old, and a session lasts an hour and a half. We agree on the format (private or in a kids group) with parents when you book."
     ]
   },
@@ -40,8 +40,8 @@
   },
   "minAge": 5,
   "h1": {
-    "ru": "Сноуборд для детей в Алматы — занятия с 5 лет",
-    "en": "Kids' snowboard lessons in Almaty from age 5"
+    "ru": "Сноуборд и горные лыжи для детей в Алматы — занятия с 5 лет",
+    "en": "Kids' ski and snowboard lessons in Almaty from age 5"
   },
   "bodyTitle": {
     "ru": "Как проходят детские занятия",
@@ -57,6 +57,16 @@
       "a": {
         "ru": "В Almaty Snowboard School детей учат кататься на сноуборде с 5 лет. Занятие длится полтора часа. Формат — индивидуально или в детской группе — согласуем с родителями при записи. Цена детского занятия — по запросу по телефону или в WhatsApp +7 700 525 98 85. Занятия проходят на курортах под Алматы, ски-пасс покупается отдельно.",
         "en": "Almaty Snowboard School teaches children from age 5. A session lasts an hour and a half. We agree the format, one-to-one or in a kids' group, with parents when you book. The price of a kids' session is on request by phone or WhatsApp on +7 700 525 98 85. Lessons take place at resorts near Almaty, and the ski pass is bought separately."
+      }
+    },
+    {
+      "q": {
+        "ru": "Учите ли вы детей кататься на горных лыжах?",
+        "en": "Do you teach children to ski?"
+      },
+      "a": {
+        "ru": "Да. В Almaty Snowboard School дети с 5 лет занимаются и на сноуборде, и на горных лыжах. Занятие длится полтора часа, индивидуально или в детской группе. Цена — по запросу по телефону или в WhatsApp +7 700 525 98 85. Лыжи, ботинки и шлем по размеру ребёнка можно взять в прокате на курорте.",
+        "en": "Yes. At Almaty Snowboard School children from age 5 learn both snowboarding and skiing. A session lasts an hour and a half, one-to-one or in a kids group. The price is on request by phone or WhatsApp on +7 700 525 98 85. Skis, boots and a helmet in your child's size can be rented at the resort."
       }
     },
     {
@@ -79,12 +89,12 @@
   ],
   "seo": {
     "title": {
-      "ru": "Сноуборд для детей в Алматы: тренировки с 5 лет",
-      "en": "Kids' snowboard lessons in Almaty from age 5"
+      "ru": "Обучение детей сноуборду и горным лыжам в Алматы с 5 лет",
+      "en": "Kids' Ski & Snowboard Lessons in Almaty from Age 5"
     },
     "description": {
-      "ru": "Занятия сноубордом для детей от 5 лет в Алматы с сертифицированным инструктором: 1,5 часа, индивидуально или в группе. Цена по запросу: +7 700 525 98 85.",
-      "en": "Snowboard lessons for kids aged 5+ in Almaty with a certified instructor: 1.5-hour sessions, one-to-one or in a group. Price on request: +7 700 525 98 85."
+      "ru": "Занятия сноубордом и горными лыжами для детей от 5 лет в Алматы с сертифицированным инструктором: 1,5 часа, индивидуально или в группе. Цена по запросу: +7 700 525 98 85.",
+      "en": "Ski and snowboard lessons for kids aged 5+ in Almaty with a certified instructor: 1.5-hour sessions, one-to-one or in a group. Price on request: +7 700 525 98 85."
     }
   },
   "sections": [

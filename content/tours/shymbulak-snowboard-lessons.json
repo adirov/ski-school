@@ -3,22 +3,22 @@
   "status": "confirmed",
   "order": 1,
   "title": {
-    "ru": "Уроки сноуборда на Шымбулаке",
-    "en": "Snowboard lessons at Shymbulak"
+    "ru": "Уроки сноуборда и горных лыж на Шымбулаке",
+    "en": "Snowboard and ski lessons at Shymbulak"
   },
   "summary": {
-    "ru": "Индивидуальные и групповые уроки сноуборда с сертифицированным инструктором на Шымбулаке — главном курорте Алматы над Медеу.",
-    "en": "Private and group snowboard lessons with a certified instructor at Shymbulak, Almaty's main ski resort above Medeu."
+    "ru": "Индивидуальные и групповые уроки сноуборда и горных лыж с сертифицированным инструктором на Шымбулаке — главном курорте Алматы над Медеу.",
+    "en": "Private and group snowboard and ski lessons with a certified instructor at Shymbulak, Almaty's main ski resort above Medeu."
   },
   "description": {
     "ru": [
       "Шымбулак — ближайший к городу крупный горнолыжный курорт: он находится над Медеу, в горах Заилийского Алатау. Здесь есть пологие учебные склоны для первых занятий и длинные трассы для тех, кто уже катается.",
-      "Almaty Snowboard School проводит на Шымбулаке индивидуальные и групповые уроки. Инструктор подбирает программу под ваш уровень: от первой стойки на доске до уверенных поворотов и техники на крутых трассах.",
+      "Almaty Snowboard School проводит на Шымбулаке индивидуальные и групповые уроки сноуборда и горных лыж. Инструктор подбирает программу под ваш уровень: от первой стойки на доске или лыжах до уверенных поворотов и техники на крутых трассах.",
       "Индивидуальный урок на 1,5 часа стоит 45 000 ₸, на 2 часа — 60 000 ₸, полдня (3 часа) — 120 000 ₸, полный день (6 часов) — 240 000 ₸, ночное катание (2 часа) — 80 000 ₸. Групповой урок на 2 часа для 2–5 человек стоит 40 000 ₸ с человека. Ски-пасс гость покупает сам в кассе курорта."
     ],
     "en": [
       "Shymbulak is the closest large ski resort to the city: it sits above Medeu in the Trans-Ili Alatau mountains. It has gentle learning slopes for first lessons and long runs for riders who already ride.",
-      "Almaty Snowboard School runs private and group lessons at Shymbulak. The instructor builds the lesson around your level, from your first stance on a board to confident turns and technique on steeper runs.",
+      "Almaty Snowboard School runs private and group snowboard and ski lessons at Shymbulak. The instructor builds the lesson around your level, from your first stance on a board or skis to confident turns and technique on steeper runs.",
       "A private lesson costs 45,000 KZT for 1.5 hours or 60,000 KZT for 2 hours, a half day (3 hours) 120,000 KZT, a full day (6 hours) 240,000 KZT and a 2-hour night skiing lesson 80,000 KZT. A 2-hour group lesson for 2–5 people costs 40,000 KZT per person. Guests buy the ski pass themselves at the resort ticket office."
     ]
   },
@@ -162,18 +162,19 @@
   ],
   "relatedServices": [
     "private-lessons",
+    "ski-lessons",
     "group-courses",
     "kids-training"
   ],
   "getYourGuideUrl": null,
   "seo": {
     "title": {
-      "ru": "Уроки сноуборда на Шымбулаке с инструктором — от 40 000 ₸",
-      "en": "Snowboard Lessons at Shymbulak with an Instructor"
+      "ru": "Инструктор на Шымбулаке: уроки сноуборда и лыж — от 40 000 ₸",
+      "en": "Shymbulak Ski & Snowboard Lessons with an Instructor"
     },
     "description": {
-      "ru": "Уроки сноуборда на Шымбулаке с сертифицированным инструктором: индивидуально от 45 000 ₸ за 1,5 часа, в группе 40 000 ₸ с человека. Запись: +7 700 525 98 85.",
-      "en": "Snowboard lessons at Shymbulak with a certified instructor: private from 45,000 KZT for 1.5 hours, group 40,000 KZT per person. Book: +7 700 525 98 85."
+      "ru": "Уроки сноуборда и горных лыж на Шымбулаке с сертифицированным инструктором: индивидуально от 45 000 ₸ за 1,5 часа, в группе 40 000 ₸ с человека. Запись: +7 700 525 98 85.",
+      "en": "Snowboard and ski lessons at Shymbulak with a certified instructor: private from 45,000 KZT for 1.5 hours, group 40,000 KZT per person. Book: +7 700 525 98 85."
     }
   }
 }

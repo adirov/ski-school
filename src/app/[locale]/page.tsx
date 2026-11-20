@@ -92,9 +92,9 @@ export default async function Home({ params }: P) {
         <section className="idx" aria-labelledby="idx-h">
           <div className="wrap">
             <div className="idx__head">
-              <h2 id="idx-h">{services.length === 4 ? H.idxTitle : d.tours.services}</h2>
+              <h2 id="idx-h">{H.idxTitle}</h2>
             </div>
-            <div className={`tiles tiles--${Math.min(services.length, 4)}`}>
+            <div className={`tiles tiles--${Math.min(services.length, 5)}`}>
               {services.map((s, i) => (
                 <Link key={s.slug} className="tile" href={`#svc-${s.slug}`}>
                   <Pic id={s.image} locale={locale} sizes="(max-width: 1080px) 50vw, 300px" decorative />

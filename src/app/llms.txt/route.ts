@@ -15,11 +15,11 @@ export async function GET() {
   // Canonical identity first: assistants confuse the school with the partner travel agency.
   lines.push(
     `Official website of ${site.brand.name}: ${SITE_URL}/ (Russian: ${SITE_URL}/ru/, English: ${SITE_URL}/en/).` +
-      (site.partner ? ` ${site.partner.name} is a partner travel agency (airport transfers, tours); snowboard lessons are booked directly with the school.` : ""),
+      (site.partner ? ` ${site.partner.name} is a partner travel agency (airport transfers, tours); snowboard and ski lessons are booked directly with the school.` : ""),
     "",
   );
   const facts: string[] = [];
-  if (site.brand.foundedNote.confirmed) facts.push("- Founded: 2005 (teaching snowboarding in Almaty since 2005)");
+  if (site.brand.foundedNote.confirmed) facts.push("- Founded: 2005 (teaching snowboarding and skiing in Almaty since 2005)");
   if (site.brand.credentialsNote.confirmed) facts.push("- Certified instructors");
   if (site.brand.experienceNote?.confirmed) facts.push("- Instructors have 10 to 40 years of experience");
   if (site.placesConfirmed && places.length) facts.push(`- Resorts where lessons take place: ${places.map((p) => `${p.name.en} (${p.name.ru})`).join(", ")}`);

@@ -1,32 +1,45 @@
 {
-  "_readme": "Цены школы. Источник: прайс владельца (постер «Lesson prices» и сообщение в WhatsApp, переслано Эмилем 16.11.2026). Цены в тенге. Меняйте здесь: страница /prices/, блоки на главной и страницах услуг, JSON-LD и llms.txt обновятся сами.",
-  "updated": "2026-11-16",
+  "_readme": "Цены школы. Источник: прайс владельца (официальный прайс-лист школы, прислан Эмилем 20.11.2026). Цены в тенге. Меняйте здесь: страница /prices/, блоки на главной и страницах услуг, JSON-LD и llms.txt обновятся сами.",
+  "updated": "2026-11-20",
   "currency": "KZT",
   "groups": [
     {
       "key": "private",
       "service": "private-lessons",
-      "title": { "ru": "Индивидуальные уроки", "en": "Private lessons" },
-      "note": { "ru": "Инструктор занимается только с вами.", "en": "The instructor works with you alone." },
+      "title": {
+        "ru": "Индивидуальные уроки",
+        "en": "Private lessons"
+      },
+      "note": {
+        "ru": "Инструктор занимается только с вами: индивидуальный подход к каждому ученику. Для начинающих и опытных лыжников и сноубордистов.",
+        "en": "The instructor works with you alone: personalised instruction for each student. For beginner and advanced skiers and snowboarders."
+      },
       "items": [
-        { "key": "private-2h", "name": { "ru": "Индивидуальный урок", "en": "Private lesson" }, "days": "any", "hours": 2, "price": 50000, "unit": "lesson" },
-        { "key": "weekday-half", "name": { "ru": "Полдня", "en": "Half day" }, "days": "weekday", "hours": 3, "price": 65000, "unit": "lesson" },
-        { "key": "weekend-half", "name": { "ru": "Полдня", "en": "Half day" }, "days": "weekend", "hours": 3, "price": 75000, "unit": "lesson" },
-        { "key": "full-day", "name": { "ru": "Весь день, любой день", "en": "Full day, any day" }, "days": "any", "hours": 6, "price": 130000, "unit": "lesson" }
+        { "key": "private-1-5h", "name": { "ru": "Индивидуальный урок", "en": "Private lesson" }, "days": "any", "hours": 1.5, "price": 45000, "unit": "lesson" },
+        { "key": "private-2h", "name": { "ru": "Индивидуальный урок", "en": "Private lesson" }, "days": "any", "hours": 2, "price": 60000, "unit": "lesson" },
+        { "key": "half-day", "name": { "ru": "Полдня", "en": "Half day" }, "days": "any", "hours": 3, "price": 120000, "unit": "lesson" },
+        { "key": "full-day", "name": { "ru": "Полный день", "en": "Full day" }, "days": "any", "hours": 6, "price": 240000, "unit": "lesson" },
+        { "key": "night-2h", "name": { "ru": "Ночное катание", "en": "Night skiing lesson" }, "days": "any", "hours": 2, "price": 80000, "unit": "lesson" }
       ]
     },
     {
       "key": "group",
       "service": "group-courses",
-      "title": { "ru": "Групповые уроки", "en": "Group lessons" },
-      "note": { "ru": "Группы от 2 до 5 человек.", "en": "Groups of 2 to 5 people." },
+      "title": {
+        "ru": "Групповые уроки",
+        "en": "Group lessons"
+      },
+      "note": {
+        "ru": "Группы от 2 до 5 человек.",
+        "en": "Groups of 2 to 5 people."
+      },
       "items": [
-        { "key": "group-2h", "name": { "ru": "Групповой урок", "en": "Group lesson" }, "days": "any", "hours": 2, "price": 25000, "unit": "person" }
+        { "key": "group-2h", "name": { "ru": "Групповой урок", "en": "Group lesson" }, "days": "any", "hours": 2, "price": 40000, "unit": "person" }
       ]
     }
   ],
   "notIncluded": {
-    "ru": "Ски-пасс (подъёмники) в стоимость урока не входит: ски-пасс гость покупает сам в кассе курорта. Прокат снаряжения тоже оплачивается отдельно, подобрать доску и ботинки поможет инструктор.",
-    "en": "The ski pass (lift ticket) is not included in the lesson price: guests buy the pass themselves at the resort ticket office. Rental gear is paid separately too, and the instructor helps you choose a board and boots."
+    "ru": "Подъёмники (ски-пасс) и прокат оборудования оплачиваются отдельно: ски-пасс гость покупает сам в кассе курорта, подобрать снаряжение в прокате поможет инструктор.",
+    "en": "Ski passes (lift tickets) and equipment rental are charged separately: guests buy the ski pass themselves at the resort ticket office, and the instructor helps you choose rental gear."
   }
 }

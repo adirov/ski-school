@@ -19,12 +19,12 @@
     "ru": [
       "Инструктор работает только с вами, поэтому темп и упражнения подстраиваются под ваш уровень и цель. Уроки ведут сертифицированные инструкторы с опытом от 10 до 40 лет; школа обучает сноуборду в Алматы с 2005 года.",
       "С новичком обычно начинают со стойки, торможения и первых поворотов на пологом склоне. Если вы уже катаетесь, занятие можно посвятить конкретной задаче: связанным поворотам, скорости или уверенности на более крутых трассах.",
-      "Можно взять урок на 2 часа (50 000 ₸), на полдня — 3 часа (65 000 ₸ в будни, 75 000 ₸ в выходные) или на весь день — 6 часов (130 000 ₸ в любой день). Ски-пасс покупается отдельно."
+      "Можно взять урок на 1,5 часа (45 000 ₸) или 2 часа (60 000 ₸), на полдня — 3 часа (120 000 ₸), на полный день — 6 часов (240 000 ₸) или ночное катание — 2 часа (80 000 ₸). Ски-пасс и прокат оплачиваются отдельно."
     ],
     "en": [
       "The instructor works only with you, so pace and drills follow your level and goal. Lessons are taught by certified instructors with 10 to 40 years of experience; the school has been teaching snowboarding in Almaty since 2005.",
       "Beginners usually start with stance, stopping and first turns on a gentle slope. If you already ride, the lesson can focus on one goal: linked turns, speed or confidence on steeper runs.",
-      "Book a 2-hour lesson (50,000 KZT), a half day of 3 hours (65,000 KZT on weekdays, 75,000 KZT at weekends) or a full day of 6 hours (130,000 KZT any day). The ski pass is bought separately."
+      "Book a 1.5-hour lesson (45,000 KZT), a 2-hour lesson (60,000 KZT), a half day of 3 hours (120,000 KZT), a full day of 6 hours (240,000 KZT) or a 2-hour night skiing lesson (80,000 KZT). The ski pass and rental are charged separately."
     ]
   },
   "levels": [
@@ -58,12 +58,12 @@
       },
       "list": {
         "ru": [
-          "Работа сертифицированного инструктора всё оплаченное время: 2 часа, полдня (3 часа) или весь день (6 часов).",
+          "Работа сертифицированного инструктора всё оплаченное время: 1,5 или 2 часа, полдня (3 часа), полный день (6 часов) или ночное катание (2 часа).",
           "Программа под ваш уровень и цель: от первой стойки на доске до техники на крутых трассах.",
           "Помощь в выборе снаряжения в прокате, если своего нет."
         ],
         "en": [
-          "A certified instructor for the whole booked time: 2 hours, a half day (3 hours) or a full day (6 hours).",
+          "A certified instructor for the whole booked time: 1.5 or 2 hours, a half day (3 hours), a full day (6 hours) or a 2-hour night skiing lesson.",
           "A plan built around your level and goal, from your first stance on a board to technique on steeper runs.",
           "Help choosing rental gear if you do not have your own."
         ]
@@ -113,8 +113,8 @@
         "en": "How much is a private snowboard lesson in Almaty?"
       },
       "a": {
-        "ru": "Индивидуальный урок сноуборда с инструктором Almaty Snowboard School на 2 часа стоит 50 000 ₸. Полдня (3 часа) — 65 000 ₸ в будни и 75 000 ₸ в выходные. Весь день (6 часов) — 130 000 ₸ в любой день недели. Ски-пасс гость покупает сам в кассе курорта, прокат снаряжения тоже оплачивается отдельно.",
-        "en": "A 2-hour private snowboard lesson with an Almaty Snowboard School instructor costs 50,000 KZT. A half day (3 hours) is 65,000 KZT on weekdays and 75,000 KZT at weekends. A full day (6 hours) is 130,000 KZT on any day of the week. Guests buy the ski pass themselves at the resort ticket office, and rental gear is paid separately too."
+        "ru": "Индивидуальный урок сноуборда с инструктором Almaty Snowboard School на 1,5 часа стоит 45 000 ₸, на 2 часа — 60 000 ₸. Полдня (3 часа) — 120 000 ₸, полный день (6 часов) — 240 000 ₸. Ночное катание (2 часа) — 80 000 ₸. Ски-пасс гость покупает сам в кассе курорта, прокат снаряжения тоже оплачивается отдельно.",
+        "en": "A 2-hour private snowboard lesson with an Almaty Snowboard School instructor costs 60,000 KZT, and a 1.5-hour lesson 45,000 KZT. A half day (3 hours) is 120,000 KZT and a full day (6 hours) 240,000 KZT. A 2-hour night skiing lesson is 80,000 KZT. Guests buy the ski pass themselves at the resort ticket office, and rental gear is paid separately too."
       }
     },
     {
@@ -143,8 +143,8 @@
         "en": "Is a private lesson worth it if I already ride?"
       },
       "a": {
-        "ru": "Да. Индивидуальный урок можно посвятить одной задаче: связанным поворотам, скорости или уверенности на более крутых трассах. Инструкторы школы с опытом от 10 до 40 лет подстраивают упражнения под ваш уровень. Для работы над техникой удобно взять полдня (3 часа, от 65 000 ₸) или весь день (6 часов, 130 000 ₸).",
-        "en": "Yes. A private lesson can focus on one goal: linked turns, speed or confidence on steeper runs. The school's instructors, with 10 to 40 years of experience, adapt the drills to your level. For technique work a half day (3 hours, from 65,000 KZT) or a full day (6 hours, 130,000 KZT) gives you more time on the slope."
+        "ru": "Да. Индивидуальный урок можно посвятить одной задаче: связанным поворотам, скорости или уверенности на более крутых трассах. Инструкторы школы с опытом от 10 до 40 лет подстраивают упражнения под ваш уровень. Для работы над техникой удобно взять полдня (3 часа, 120 000 ₸) или полный день (6 часов, 240 000 ₸).",
+        "en": "Yes. A private lesson can focus on one goal: linked turns, speed or confidence on steeper runs. The school's instructors, with 10 to 40 years of experience, adapt the drills to your level. For technique work a half day (3 hours, 120,000 KZT) or a full day (6 hours, 240,000 KZT) gives you more time on the slope."
       }
     }
   ],
@@ -161,8 +161,8 @@
       "en": "Private snowboard lessons in Almaty with an instructor"
     },
     "description": {
-      "ru": "Индивидуальные уроки сноуборда с инструктором в Алматы: 2 часа — 50 000 ₸, полдня — от 65 000 ₸, день — 130 000 ₸. С нуля или для работы над техникой.",
-      "en": "Private snowboard lessons with an instructor in Almaty: 2 hours 50,000 KZT, half day from 65,000 KZT, full day 130,000 KZT. Beginners or technique work."
+      "ru": "Индивидуальные уроки сноуборда с инструктором в Алматы: 1,5 часа — 45 000 ₸, 2 часа — 60 000 ₸, полдня — 120 000 ₸, день — 240 000 ₸. С нуля или для работы над техникой.",
+      "en": "Private snowboard lessons with an instructor in Almaty: 1.5 h 45,000 KZT, 2 h 60,000 KZT, half day 120,000 KZT, full day 240,000 KZT. Beginners or technique work."
     }
   }
 }

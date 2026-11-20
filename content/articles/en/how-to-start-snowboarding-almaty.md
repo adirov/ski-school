@@ -34,10 +34,10 @@ Start with the basics rather than trying to turn straight away. On day one a beg
 | Format | Who it suits | What to keep in mind |
 |---|---|---|
 | Private lesson | People who want to learn faster or are nervous about falling | The instructor focuses only on you, but it costs more |
-| Group lesson (2 h, 2–5 people, 25,000 KZT pp) | People learning with friends or who enjoy company | The group should be at the same level |
+| Group lesson (2 h, 2–5 people, 40,000 KZT pp) | People learning with friends or who enjoy company | The group should be at the same level |
 | On your own | People with ski or skateboard experience | Higher risk of bad habits and injury |
 
-Almaty Snowboard School offers private lessons, group lessons and kids training; see [lesson prices](/en/prices/): a 2-hour private lesson is 50,000 KZT, a group lesson 25,000 KZT per person, ski pass not included. Book on the [contact page](/en/contact/) or via WhatsApp on +7 700 525 98 85.
+Almaty Snowboard School offers private lessons, group lessons and kids training; see [lesson prices](/en/prices/): a 2-hour private lesson is 60,000 KZT, a group lesson 40,000 KZT per person, ski pass not included. Book on the [contact page](/en/contact/) or via WhatsApp on +7 700 525 98 85.
 
 ## Step 2. Sort out equipment
 

@@ -70,7 +70,7 @@ const ru = {
     choose: [
       "Хотите кататься на лыжах, а не на доске: уроки горных лыж, индивидуально или в группе.",
       "Никогда не стояли на доске: начните с индивидуального урока, если хотите быстрее и спокойнее, или с группового урока, если учитесь с друзьями.",
-      "Ребёнку от 5 лет: детские тренировки с инструктором.",
+      "Ребёнку от 5 лет: детские тренировки на сноуборде или лыжах с инструктором.",
       "Уверенно катаетесь по трассам и хотите в целину: внетрассовое катание с гидом.",
     ],
     services: "Направления",
@@ -290,7 +290,7 @@ const en: Dict = {
     choose: [
       "Want to ski rather than ride a board: ski lessons, private or in a group.",
       "Never stood on a board: start with a private lesson if you want to progress faster and calmer, or a group lesson if you are learning with friends.",
-      "For a child aged 5 or older: kids training with an instructor.",
+      "For a child aged 5 or older: kids snowboard or ski training with an instructor.",
       "Confident on groomed runs and want powder: guided off-piste riding.",
     ],
     services: "What we offer",

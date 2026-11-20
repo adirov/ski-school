@@ -17,12 +17,12 @@
   },
   "body": {
     "ru": [
-      "Almaty Snowboard School учит не только сноуборду: инструкторы школы ведут занятия на горных лыжах для взрослых новичков и тех, кто уже катается. Школа работает в Алматы с 2005 года, опыт инструкторов — от 10 до 40 лет.",
+      "Almaty Snowboard School учит не только сноуборду: инструкторы школы ведут занятия на горных лыжах для новичков и тех, кто уже катается, а также для детей с 5 лет. Школа работает в Алматы с 2005 года, опыт инструкторов — от 10 до 40 лет.",
       "На первом уроке катания на лыжах инструктор показывает стойку, торможение «плугом» и первые повороты на пологом учебном склоне. Тем, кто уже катается, помогаем перейти к параллельным поворотам, уверенно ехать по синим и красным трассам и кататься быстрее без лишнего напряжения.",
       "Индивидуальный урок горных лыж стоит 45 000 ₸ за 1,5 часа и 60 000 ₸ за 2 часа, полдня (3 часа) — 120 000 ₸, полный день (6 часов) — 240 000 ₸, ночное катание (2 часа) — 80 000 ₸. Групповое занятие на 2 часа для 2–5 человек — 40 000 ₸ с человека. Ски-пасс и прокат оплачиваются отдельно."
     ],
     "en": [
-      "Almaty Snowboard School teaches more than snowboarding: the school's instructors also give ski lessons to adult beginners and to skiers who already ride. The school has been teaching in Almaty since 2005, and its instructors have 10 to 40 years of experience.",
+      "Almaty Snowboard School teaches more than snowboarding: the school's instructors also give ski lessons to beginners, to skiers who already ride and to children from age 5. The school has been teaching in Almaty since 2005, and its instructors have 10 to 40 years of experience.",
       "In a first ski lesson the instructor shows you the stance, the snowplough stop and your first turns on a gentle learning slope. If you already ski, we help you move on to parallel turns, ride blue and red runs with confidence and go faster without tension.",
       "A private ski lesson costs 45,000 KZT for 1.5 hours and 60,000 KZT for 2 hours, a half day (3 hours) 120,000 KZT, a full day (6 hours) 240,000 KZT and a 2-hour night skiing lesson 80,000 KZT. A 2-hour group lesson for 2 to 5 people is 40,000 KZT per person. The ski pass and rental are paid separately."
     ]
@@ -153,8 +153,7 @@
   ],
   "image": "/images/shymbulak-slopes-blue-sky.jpg",
   "todo": [
-    "Фото с уроков горных лыж",
-    "Детские занятия на лыжах: подтвердить у Артура"
+    "Фото с уроков горных лыж"
   ],
   "seo": {
     "title": {

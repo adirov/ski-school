@@ -50,4 +50,4 @@ In accordance with Article 395 of the Civil Code of the Republic of Kazakhstan, 
 - Name: IE "KAZAKHSTAN TRAVEL AGENCY"
 - IIN: 890211300427
 - Legal address: 28 Khodji Mukana St., office 26, Almaty, Republic of Kazakhstan, 050051
-- School: Almaty Snowboard School, phone and WhatsApp +7 700 525 98 85 ([Contact](/en/contact/))
+- School: Almaty Snowboard School, phone and WhatsApp +7 777 525 98 85 ([Contact](/en/contact/))

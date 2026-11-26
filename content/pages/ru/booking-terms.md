@@ -50,4 +50,4 @@ description: "Публичная оферта Almaty Snowboard School: как з
 - Наименование: ИП «KAZAKHSTAN TRAVEL AGENCY»
 - ИИН: 890211300427
 - Юридический адрес: Республика Казахстан, 050051, г. Алматы, ул. Ходжи Мукана, 28, офис 26
-- Школа: Almaty Snowboard School, телефон и WhatsApp +7 700 525 98 85 ([«Контакты»](/ru/contact/))
+- Школа: Almaty Snowboard School, телефон и WhatsApp +7 777 525 98 85 ([«Контакты»](/ru/contact/))

@@ -5,7 +5,7 @@ description: "Almaty Snowboard School has taught snowboarding in Almaty since 20
 
 ## In short
 
-Almaty Snowboard School has been teaching snowboarding in Almaty since 2005. Lessons are taught by certified instructors with 10 to 40 years of experience at Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka resorts. A 2-hour private lesson costs 60,000 KZT, a group lesson 40,000 KZT per person. Contact: Artur Kovalevskiy, +7 700 525 98 85 (phone and WhatsApp).
+Almaty Snowboard School has been teaching snowboarding in Almaty since 2005. Lessons are taught by certified instructors with 10 to 40 years of experience at Shymbulak, Ak-Bulak, Oi-Karagai and Lesnaya Skazka resorts. A 2-hour private lesson costs 60,000 KZT, a group lesson 40,000 KZT per person. Contact: Artur Kovalevskiy, +7 777 525 98 85 (phone and WhatsApp).
 
 We help you start from scratch, improve your technique or go off-piste with a guide.
 

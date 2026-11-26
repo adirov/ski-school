@@ -107,5 +107,14 @@
       "ru": "Заснеженные склоны и хребет у Космостанции",
       "en": "Snowy slopes and ridge near Kosmostantsiya"
     }
+  },
+  "ski-instructor-carving": {
+    "src": "/images/ski-instructor-carving.jpg",
+    "width": 1800,
+    "height": 1350,
+    "alt": {
+      "ru": "Инструктор школы на горных лыжах закладывает поворот на подготовленной трассе",
+      "en": "A school instructor carving a turn on skis on a groomed slope"
+    }
   }
 }

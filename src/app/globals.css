@@ -584,3 +584,7 @@ html, body, h1, h2, h3, h4, .h3, .tile__h, .prog__txt h2, .lf__opts button { -we
   .price__table th, .price__table td { padding: 10px 10px; font-size: 15px; }
   .price__sum b { font-size: 16px; }
 }
+
+/* About page: instructor portrait under the heading */
+.page-figure { margin: 0 0 28px; }
+.page-figure img { display: block; width: 100%; max-width: 440px; height: auto; }

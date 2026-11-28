@@ -116,5 +116,68 @@
       "ru": "Инструктор школы на горных лыжах закладывает поворот на подготовленной трассе",
       "en": "A school instructor carving a turn on skis on a groomed slope"
     }
+  },
+  "ski-instructor-night-carving": {
+    "src": "/images/ski-instructor-night-carving.jpg",
+    "width": 1800,
+    "height": 1350,
+    "alt": {
+      "ru": "Инструктор школы на лыжах в повороте на вечерней трассе",
+      "en": "School ski instructor carving a turn on a floodlit evening slope"
+    }
+  },
+  "snowboard-instructor-jump": {
+    "src": "/images/snowboard-instructor-jump.jpg",
+    "width": 1280,
+    "height": 854,
+    "alt": {
+      "ru": "Инструктор школы в прыжке на сноуборде на фоне гор",
+      "en": "School snowboard instructor jumping against the mountains"
+    }
+  },
+  "snowboard-instructor-carving": {
+    "src": "/images/snowboard-instructor-carving.jpg",
+    "width": 854,
+    "height": 1280,
+    "alt": {
+      "ru": "Инструктор школы ведёт сноуборд в глубоком повороте, касаясь снега рукой",
+      "en": "School snowboard instructor in a deep carve, hand touching the snow"
+    }
+  },
+  "snowboard-instructor-backlit-turn": {
+    "src": "/images/snowboard-instructor-backlit-turn.jpg",
+    "width": 854,
+    "height": 1280,
+    "alt": {
+      "ru": "Сноубордист в повороте против солнца на склоне под Алматы",
+      "en": "Snowboarder turning into the sun on a slope near Almaty"
+    }
+  },
+  "snowboarder-shymbulak-slope": {
+    "src": "/images/snowboarder-shymbulak-slope.jpg",
+    "width": 854,
+    "height": 1280,
+    "alt": {
+      "ru": "Сноубордист на трассе Шымбулака под заснеженной вершиной",
+      "en": "Snowboarder on a Shymbulak run below a snowy peak"
+    }
+  },
+  "kids-ski-lesson-instructor": {
+    "src": "/images/kids-ski-lesson-instructor.jpg",
+    "width": 1206,
+    "height": 904,
+    "alt": {
+      "ru": "Инструктор школы с ребёнком на детском занятии по горным лыжам",
+      "en": "School instructor with a child during a kids ski lesson"
+    }
+  },
+  "instructor-portrait": {
+    "src": "/images/instructor-portrait.jpg",
+    "width": 930,
+    "height": 1240,
+    "alt": {
+      "ru": "Инструктор Almaty Snowboard School в горах",
+      "en": "Almaty Snowboard School instructor in the mountains"
+    }
   }
 }

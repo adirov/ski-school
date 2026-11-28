@@ -9,6 +9,7 @@ import { JsonLd } from "./JsonLd";
 import { availableLocales } from "@/lib/routes";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { Prose } from "./Prose";
+import { Pic } from "./Pic";
 
 export const LEGAL_PAGES = ["booking-terms", "privacy"];
 
@@ -30,6 +31,11 @@ export function MdPage({ name, locale, legal }: { name: string; locale: Locale; 
       {name === "about" && <JsonLd data={[{ "@context": "https://schema.org", "@type": "AboutPage", url: abs(`/${locale}/about/`), name: p.title, about: { "@id": abs("/#organization") } }, organizationLd(locale)]} />}
       <Breadcrumbs label="Breadcrumbs" items={[{ name: d.breadcrumbs.home, href: `/${locale}/` }, { name: p.title, href: `/${locale}/${name}/` }]} />
       <h1>{p.title}</h1>
+      {name === "about" && (
+        <figure className="page-figure">
+          <Pic id="instructor-portrait" locale={locale} sizes="(max-width: 640px) 100vw, 440px" priority />
+        </figure>
+      )}
       {legal && !site.legal.approved && IS_PREVIEW && <p className="alert alert--warn">{d.legalDraft}</p>}
       <Prose html={html} />
     </div>
